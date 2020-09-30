@@ -17,7 +17,7 @@ const Header = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 16px;
-		padding-left: 0;
+    padding-left: 0;
     margin-bottom: 16px;
 `
 const Container = styled.div`
@@ -64,22 +64,22 @@ export default function HomePage() {
     const [isNextDisabled, setIsNextDisabled] = React.useState(true)
     const allSelectedOptions = React.useRef([])
     const selectedOption = React.useRef({})
-		const [currentSelectedIndex, setCurrentSelectedIndex] = React.useState(null)
-		React.useEffect(()=>{
-			async function getData(){
-				try{
-					const res = await fetch('https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/questions.json');
-					console.log(res);
-					const json = await res.json();
-					setCurrentSelectedIndex(json['SlideDrugQ1_0']);
-				}
-				catch(e){
-					console.log(e)
-				}
-			}
-			getData()
-			console.log('effec called')
-		},[])
+    const [currentSelectedIndex, setCurrentSelectedIndex] = React.useState(null)
+    React.useEffect(() => {
+        async function getData() {
+            try {
+                const res = await fetch(
+                    'https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/questions.json',
+                    {}
+                )
+								const json = await res.json()
+                setCurrentQuestion(json['SlideDrugQ1_0'])
+            } catch (e) {
+                console.log(e)
+            }
+        }
+        getData()
+    }, [])
     function handleClick(id) {
         push(`/list`)
     }
@@ -95,12 +95,11 @@ export default function HomePage() {
         allSelectedOptions.current.push(selectedOption.current)
         setIsNextDisabled(true)
         setCurrentSelectedIndex(null)
-        console.log(nextQuestion)
     }
-		const item = staticData.find((e) => e.id.toString() === id)
-		if(currentQuestion == null){
-			return null
-		}
+    const item = staticData.find((e) => e.id.toString() === id)
+    if (currentQuestion == null) {
+        return null
+    }
     return (
         <Wrapper>
             <Header>
