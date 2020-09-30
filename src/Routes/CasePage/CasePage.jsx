@@ -60,13 +60,26 @@ export const RadioBtn = styled(RadioButton)`
 export default function HomePage() {
     const { push } = useHistory()
     const { id } = useParams()
-    const [currentQuestion, setCurrentQuestion] = React.useState(
-        questions['SlideDrugQ1_0']
-    )
+    const [currentQuestion, setCurrentQuestion] = React.useState(null)
     const [isNextDisabled, setIsNextDisabled] = React.useState(true)
     const allSelectedOptions = React.useRef([])
     const selectedOption = React.useRef({})
-    const [currentSelectedIndex, setCurrentSelectedIndex] = React.useState(null)
+		const [currentSelectedIndex, setCurrentSelectedIndex] = React.useState(null)
+		React.useEffect(()=>{
+			async function getData(){
+				try{
+					const res = await fetch('https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/questions.json');
+					console.log(res);
+					const json = await res.json();
+					setCurrentSelectedIndex(json['SlideDrugQ1_0']);
+				}
+				catch(e){
+					console.log(e)
+				}
+			}
+			getData()
+			console.log('effec called')
+		},[])
     function handleClick(id) {
         push(`/list`)
     }
@@ -84,7 +97,10 @@ export default function HomePage() {
         setCurrentSelectedIndex(null)
         console.log(nextQuestion)
     }
-    const item = staticData.find((e) => e.id.toString() === id)
+		const item = staticData.find((e) => e.id.toString() === id)
+		if(currentQuestion == null){
+			return null
+		}
     return (
         <Wrapper>
             <Header>
