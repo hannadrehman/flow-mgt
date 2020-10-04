@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 
 import HomePage from './HomePage/HomePage.jsx'
 import ListPage from './ListPage/ListPage.jsx'
@@ -8,7 +8,7 @@ import CasePage from './CasePage/CasePage.jsx'
 
 export default function Router() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Switch>
                 <Route exact path="/">
                     <HomePage />
@@ -23,6 +23,6 @@ export default function Router() {
                     <CasePage />
                 </Route>
             </Switch>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
