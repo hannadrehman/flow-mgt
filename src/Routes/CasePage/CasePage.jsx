@@ -1,5 +1,5 @@
 import React from 'react'
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { Typography, Button, PageHeader } from 'antd'
@@ -177,47 +177,51 @@ export default function HomePage() {
                 />
             )}
             {!currentQuestion.successMessage && (
-                <TransitionGroup>
-                    <CSSTransition
-                        key={currentQuestion.question}
-                        classNames="slide"
-                        timeout={{ enter: 300, exit: 300 }}
-                    >
-                        <Main>
-                            <Question>
-                                <QuestionText>
-                                    {currentQuestion.question}
-                                </QuestionText>
-                            </Question>
+                <>
+                    <TransitionGroup>
+                        <CSSTransition
+                            key={currentQuestion.question}
+                            classNames="slide"
+                            timeout={{ enter: 300, exit: 300 }}
+                        >
+                            <Main>
+                                <Question>
+                                    <QuestionText>
+                                        {currentQuestion.question}
+                                    </QuestionText>
+                                </Question>
 
-                            <Options>
-                                <Choices
-                                    questionId={currentQuestion.question}
-                                    onOptionChange={onOptionChange}
-                                    currentSelectedIndex={currentSelectedIndex}
-                                    choices={currentQuestion.choices}
-                                />
-                                {currentQuestion.addOnTable && (
-                                    <AddonTable
-                                        addonTable={addonTable}
-                                        inputAnswer={inputAnswer}
-                                        handleChange={handleChange}
-                                        submitInput={submitInput}
+                                <Options>
+                                    <Choices
+                                        questionId={currentQuestion.question}
+                                        onOptionChange={onOptionChange}
+                                        currentSelectedIndex={
+                                            currentSelectedIndex
+                                        }
+                                        choices={currentQuestion.choices}
                                     />
-                                )}
-                            </Options>
-                            <NextButton
-                                type="primary"
-                                disabled={isNextDisabled}
-                                block
-                                onClick={goNext}
-                                size="large"
-                            >
-                                Next
-                            </NextButton>
-                        </Main>
-                    </CSSTransition>
-                </TransitionGroup>
+                                    {currentQuestion.addOnTable && (
+                                        <AddonTable
+                                            addonTable={addonTable}
+                                            inputAnswer={inputAnswer}
+                                            handleChange={handleChange}
+                                            submitInput={submitInput}
+                                        />
+                                    )}
+                                </Options>
+                            </Main>
+                        </CSSTransition>
+                    </TransitionGroup>
+                    <NextButton
+                        type="primary"
+                        disabled={isNextDisabled}
+                        block
+                        onClick={goNext}
+                        size="large"
+                    >
+                        Next
+                    </NextButton>
+                </>
             )}
         </Wrapper>
     )

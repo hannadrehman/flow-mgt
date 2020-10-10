@@ -26,7 +26,7 @@ export const Body = styled.div`
     justify-content: center;
     flex-direction: column;
     border: 1px solid lightgray;
-    padding: 16px;
+    padding: 0 16px;
 `
 function createMarkup(html) {
     return { __html: html }
@@ -36,6 +36,9 @@ export default function HomePage() {
     const { push, goBack } = useHistory()
     const { id } = useParams()
 
+    function handleStructureClick(id) {
+        push(`/create-structure/${item.id}`)
+    }
     function handleClick(id) {
         push(`/case/${item.id}`)
     }
@@ -59,7 +62,7 @@ export default function HomePage() {
                     Ask clarifying questions
                 </Button>
                 &nbsp;&nbsp;
-                <Button type="primary" block onClick={handleClick}>
+                <Button type="primary" block onClick={handleStructureClick}>
                     Create Strcuture
                 </Button>
             </Container>

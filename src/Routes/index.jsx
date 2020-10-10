@@ -5,6 +5,7 @@ import HomePage from './HomePage/HomePage.jsx'
 import ListPage from './ListPage/ListPage.jsx'
 import DetailsPage from './DetailsPage/DetailsPage.jsx'
 import CasePage from './CasePage/CasePage.jsx'
+import CreateStructure from './CreateStructure/CreateStructure.jsx'
 
 export default function Router() {
     return (
@@ -21,6 +22,9 @@ export default function Router() {
                 </Route>
                 <Route exact path="/case/:id">
                     <CasePage />
+                </Route>
+                <Route exact path="/create-structure/:id">
+                    <CreateStructure />
                 </Route>
             </Switch>
         </HashRouter>
