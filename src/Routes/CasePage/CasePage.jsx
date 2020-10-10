@@ -26,12 +26,17 @@ export const Question = styled.div`
     min-width: 50%;
     height: 100%;
     border-right: 1px solid #e1dddd;
+    background: #f9f9f9;
+    display: flex;
+    align-content: center;
+    align-items: center;
 `
 export const Options = styled.div`
     padding: 16px;
     width: 50%;
     min-width: 50%;
     height: 100%;
+    background: #f7f5f5;
 `
 
 export default function HomePage() {
@@ -164,7 +169,7 @@ export default function HomePage() {
             {!currentQuestion.successMessage && (
                 <Main>
                     <Question>
-                        <Title level={5}>{currentQuestion.question}</Title>
+                        <Title level={3}>{currentQuestion.question}</Title>
                     </Question>
                     <Options>
                         <Choices
