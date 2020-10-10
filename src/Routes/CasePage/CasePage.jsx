@@ -1,67 +1,37 @@
 import React from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
-import { Typography, Button, Input, List, Card } from 'antd'
+import { Typography, Button, PageHeader } from 'antd'
 import { staticData } from '../../Cases.fixtures'
-import { Radio } from 'antd'
+import Choices from './Choices.component'
+import Success from './Success.component'
+import AddonTable from './AddonTable.component'
 
-const RadioButton = Radio.Button
-const RadioGroup = Radio.Group
 const { Title, Text } = Typography
 
 const Wrapper = styled.div`
     margin: 0 auto;
 `
 const Header = styled.div`
-    display: flex;
-    justify-content: space-between;
-    padding: 16px;
-    padding-left: 0;
-    margin-bottom: 16px;
+    border-bottom: 1px solid #eadddd;
 `
 
 const Main = styled.div`
     display: flex;
-    height: 500px;
+    height: calc(100vh - 100px);
 `
 export const Question = styled.div`
     padding: 16px;
     width: 50%;
     min-width: 50%;
     height: 100%;
-    border-right: 1px solid gray;
+    border-right: 1px solid #e1dddd;
 `
 export const Options = styled.div`
     padding: 16px;
     width: 50%;
     min-width: 50%;
     height: 100%;
-`
-export const RadioContainer = styled(RadioGroup)`
-    &&& {
-        width: 100%;
-    }
-`
-export const RadioBtn = styled(RadioButton)`
-    display: block;
-    margin-bottom: 8px;
-    width: 100%;
-    height: auto;
-    line-height: 1.5;
-    padding: 8px;
-`
-export const Table = styled.table`
-    width: 100%;
-    margin-top: 16px;
-    border: 1px solid #d7cdcd;
-    td,
-    th {
-        padding: 4px;
-        border-right: 1px solid #d7cdcd;
-    }
-    tr {
-        border-bottom: 1px solid #d7cdcd;
-    }
 `
 
 export default function HomePage() {
@@ -98,7 +68,7 @@ export default function HomePage() {
         }
         getData()
     }, [])
-    function handleClick(id) {
+    function handleBack(id) {
         push(`/list`)
     }
     function onOptionChange(e) {
@@ -152,7 +122,6 @@ export default function HomePage() {
         inputRef.current = value
     }
     function submitInput() {
-        console.log('submit', inputRef.current)
         const value = parseInt(inputRef.current, 10)
         if (value === addonTable.correctAnswer) {
             setInputAnswer(addonTable.messageDescription)
@@ -180,32 +149,17 @@ export default function HomePage() {
         },
         { judgment: 0, rigor: 0, structuring: 0, synthesis: 0 }
     )
-    console.log(groupedScore)
+
     return (
         <Wrapper>
             <Header>
-                <Button onClick={handleClick} type="primary">
-                    Back to Case Library
-                </Button>
-                <Text>{item.title}</Text>
+                <PageHeader subTitle={item.title} onBack={handleBack} />
             </Header>
             {currentQuestion.successMessage && (
-                <div>
-                    <Title level={5}>{currentQuestion.successMessage}</Title>
-                    <br />
-                    <Title level={5}>Result</Title>
-                    <List
-                        grid={{ gutter: 16, column: 4 }}
-                        dataSource={Object.entries(
-                            groupedScore || {}
-                        ).map(([x, y]) => ({ title: x, value: y }))}
-                        renderItem={(item) => (
-                            <List.Item>
-                                <Card title={item.title}>{item.value}</Card>
-                            </List.Item>
-                        )}
-                    />
-                </div>
+                <Success
+                    currentQuestion={currentQuestion}
+                    groupedScore={groupedScore}
+                />
             )}
             {!currentQuestion.successMessage && (
                 <Main>
@@ -213,72 +167,19 @@ export default function HomePage() {
                         <Title level={5}>{currentQuestion.question}</Title>
                     </Question>
                     <Options>
-                        {currentQuestion.choices &&
-                            currentQuestion.choices.length > 0 && (
-                                <RadioContainer
-                                    onChange={onOptionChange}
-                                    defaultValue="a"
-                                    value={currentSelectedIndex}
-                                >
-                                    {currentQuestion.choices.map(
-                                        (item, index) => (
-                                            <RadioBtn key={index} value={index}>
-                                                {item.answer}
-                                            </RadioBtn>
-                                        )
-                                    )}
-                                </RadioContainer>
-                            )}
-                        {currentQuestion.addOnTable &&
-                            Object.keys(addonTable).length > 0 && (
-                                <div>
-                                    <Title level={5}>
-                                        {addonTable.question}
-                                    </Title>
-                                    {addonTable.tableData.tables.map(
-                                        (table, i) => (
-                                            <Table key={i}>
-                                                {table.title && (
-                                                    <tr>
-                                                        <th>{table.title}</th>
-                                                    </tr>
-                                                )}
-                                                {table.rows.map((row, id) => (
-                                                    <tr key={id}>
-                                                        {row.columns.map(
-                                                            (col) => (
-                                                                <td>
-                                                                    {col.label}
-                                                                </td>
-                                                            )
-                                                        )}
-                                                    </tr>
-                                                ))}
-                                            </Table>
-                                        )
-                                    )}
-                                    {addonTable.expectInput && (
-                                        <div>
-                                            <br />
-                                            <Input
-                                                onChange={handleChange}
-                                                placeholder="Enter value"
-                                                addonAfter={
-                                                    <span onClick={submitInput}>
-                                                        Submit
-                                                    </span>
-                                                }
-                                            />
-                                            <div>
-                                                <br />
-                                                {inputAnswer && (
-                                                    <Text>{inputAnswer}</Text>
-                                                )}
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-                            )}
+                        <Choices
+                            onOptionChange={onOptionChange}
+                            currentSelectedIndex={currentSelectedIndex}
+                            choices={currentQuestion.choices}
+                        />
+                        {currentQuestion.addOnTable && (
+                            <AddonTable
+                                addonTable={addonTable}
+                                inputAnswer={inputAnswer}
+                                handleChange={handleChange}
+                                submitInput={submitInput}
+                            />
+                        )}
                         <br />
                         <Button
                             type="primary"

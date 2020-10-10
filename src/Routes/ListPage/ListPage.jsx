@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
-import { Typography, Button } from 'antd'
+import { Typography, Button, PageHeader } from 'antd'
 import { staticData } from '../../Cases.fixtures'
 
 const { Title, Text } = Typography
@@ -10,10 +10,8 @@ const Wrapper = styled.div`
     margin: 0 auto;
 `
 const Header = styled.div`
-    display: flex;
-    justify-content: space-between;
-    padding: 16px;
-    padding-left:0;
+    border-bottom: 1px solid #eadddd;
+    margin-bottom:16px;
 `
 const Grid = styled.div`
     display: flex;
@@ -42,7 +40,7 @@ const Container = styled.div`
 `
 
 export default function HomePage() {
-    const { push,  } = useHistory()
+    const { push } = useHistory()
     function handleClick(id) {
         push(`/details/${id}`)
     }
@@ -52,18 +50,12 @@ export default function HomePage() {
     return (
         <Wrapper>
             <Header>
-                <Button onClick={goHome} type="primary">
-                    Back to Home
-                </Button>
-                <Title level={5}>Case Library</Title>
-                <span />
+                <PageHeader subTitle="Back to Home" onBack={goHome} />
             </Header>
+
             <Grid>
                 {staticData.map((item) => (
-                    <GridItem
-                        key={item.id}
-                        
-                    >
+                    <GridItem key={item.id}>
                         <GridImage color={item.color} />
                         <Container>
                             <Title level={5}>{item.title}</Title>
@@ -72,7 +64,13 @@ export default function HomePage() {
                             <Text>{item.description}</Text>
                         </Container>
                         <Container>
-                            <Button block danger onClick={() => handleClick(item.id)}>Try {item.title}</Button>
+                            <Button
+                                block
+                                danger
+                                onClick={() => handleClick(item.id)}
+                            >
+                                Try {item.title}
+                            </Button>
                         </Container>
                     </GridItem>
                 ))}
