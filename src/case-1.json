@@ -1,0 +1,16 @@
+[
+    {
+        "id":1,
+        "question": "Sure. What exactly would you like to know?",
+        "type":"image|text",
+        "imageUrl": "url",
+        "text": "Question description"
+    },
+    {
+            "id":2,
+            "question": "something",
+            "type":"image|text",
+            "imageUrl": "url",
+            "text": "Question description"
+    }
+]
