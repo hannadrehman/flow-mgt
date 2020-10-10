@@ -1,4 +1,5 @@
 import React from 'react'
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { Typography, Button, PageHeader } from 'antd'
@@ -7,10 +8,13 @@ import Choices from './Choices.component'
 import Success from './Success.component'
 import AddonTable from './AddonTable.component'
 
-const { Title, Text } = Typography
+const { Text } = Typography
 
 const Wrapper = styled.div`
     margin: 0 auto;
+`
+const QuestionText = styled(Text)`
+    font-size: 24px;
 `
 const Header = styled.div`
     border-bottom: 1px solid #eadddd;
@@ -36,9 +40,15 @@ export const Options = styled.div`
     width: 50%;
     min-width: 50%;
     height: 100%;
-    background: #f7f5f5;
 `
-
+export const NextButton = styled(Button)`
+    &&& {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+`
 export default function HomePage() {
     const { push } = useHistory()
     const { id } = useParams()
@@ -167,35 +177,47 @@ export default function HomePage() {
                 />
             )}
             {!currentQuestion.successMessage && (
-                <Main>
-                    <Question>
-                        <Title level={3}>{currentQuestion.question}</Title>
-                    </Question>
-                    <Options>
-                        <Choices
-                            onOptionChange={onOptionChange}
-                            currentSelectedIndex={currentSelectedIndex}
-                            choices={currentQuestion.choices}
-                        />
-                        {currentQuestion.addOnTable && (
-                            <AddonTable
-                                addonTable={addonTable}
-                                inputAnswer={inputAnswer}
-                                handleChange={handleChange}
-                                submitInput={submitInput}
-                            />
-                        )}
-                        <br />
-                        <Button
-                            type="primary"
-                            disabled={isNextDisabled}
-                            block
-                            onClick={goNext}
-                        >
-                            Next
-                        </Button>
-                    </Options>
-                </Main>
+                <TransitionGroup>
+                    <CSSTransition
+                        key={currentQuestion.question}
+                        classNames="slide"
+                        timeout={{ enter: 300, exit: 300 }}
+                    >
+                        <Main>
+                            <Question>
+                                <QuestionText>
+                                    {currentQuestion.question}
+                                </QuestionText>
+                            </Question>
+
+                            <Options>
+                                <Choices
+                                    questionId={currentQuestion.question}
+                                    onOptionChange={onOptionChange}
+                                    currentSelectedIndex={currentSelectedIndex}
+                                    choices={currentQuestion.choices}
+                                />
+                                {currentQuestion.addOnTable && (
+                                    <AddonTable
+                                        addonTable={addonTable}
+                                        inputAnswer={inputAnswer}
+                                        handleChange={handleChange}
+                                        submitInput={submitInput}
+                                    />
+                                )}
+                            </Options>
+                            <NextButton
+                                type="primary"
+                                disabled={isNextDisabled}
+                                block
+                                onClick={goNext}
+                                size="large"
+                            >
+                                Next
+                            </NextButton>
+                        </Main>
+                    </CSSTransition>
+                </TransitionGroup>
             )}
         </Wrapper>
     )

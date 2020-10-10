@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Radio } from 'antd'
+import { Radio,Typography } from 'antd'
 
 const RadioButton = Radio.Button
 const RadioGroup = Radio.Group
+const { Text } = Typography
 
 export const RadioContainer = styled(RadioGroup)`
     &&& {
@@ -17,6 +18,26 @@ export const RadioBtn = styled(RadioButton)`
     height: auto;
     line-height: 1.5;
     padding: 8px;
+`
+const OptionText = styled(Text)`
+  font-size: 16px;
+`
+const Wrapper = styled.div`
+.slide-enter {
+    transform: translateX(100%);
+  }
+  .slide-enter-active {
+    transform: translateX(0%);
+    transition: transform 300ms ease-in-out;
+  }
+  .slide-exit {
+    transform: translateX(0%);
+  }
+  .slide-exit-active {
+    transform: translateX(-100%);
+    transition: transform 300ms ease-in-out;
+  }
+  
 `
 function shuffle(array) {
     var currentIndex = array.length,
@@ -58,7 +79,7 @@ export default function Choices({
         >
             {shuffledChoices.map((item, index) => (
                 <RadioBtn key={index} value={index}>
-                    {item.answer}
+                    <OptionText>{item.answer}</OptionText>
                 </RadioBtn>
             ))}
         </RadioContainer>
