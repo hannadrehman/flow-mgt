@@ -66,7 +66,7 @@ export default function HomePage() {
         async function getData() {
             try {
                 const res = await fetch(
-                    'https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/questions.json',
+                    `https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/questions-${id}.json`,
                     {}
                 )
                 const json = await res.json()
