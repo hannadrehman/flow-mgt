@@ -39,8 +39,8 @@ export default function HomePage() {
     function handleStructureClick(id) {
         push(`/create-structure/${item.id}`)
     }
-    function handleClick(id) {
-        push(`/case/${item.id}`)
+    function handleClearifyingQuestionsClick(id) {
+        push(`/clearifying-questions/${item.id}`)
     }
     const item = staticData.find((e) => e.id.toString() === id)
     return (
@@ -58,7 +58,7 @@ export default function HomePage() {
             </Body>
             <br />
             <Container>
-                <Button type="primary" block onClick={handleClick}>
+                <Button type="primary" block onClick={handleClearifyingQuestionsClick}>
                     Ask clarifying questions
                 </Button>
                 &nbsp;&nbsp;

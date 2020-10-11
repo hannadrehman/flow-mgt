@@ -6,6 +6,7 @@ import ListPage from './ListPage/ListPage.jsx'
 import DetailsPage from './DetailsPage/DetailsPage.jsx'
 import CasePage from './CasePage/CasePage.jsx'
 import CreateStructure from './CreateStructure/CreateStructure.jsx'
+import ClearifyingQuestions from './ClearifyingQuestions/ClearifyingQuestions.jsx'
 
 export default function Router() {
     return (
@@ -25,6 +26,9 @@ export default function Router() {
                 </Route>
                 <Route exact path="/create-structure/:id">
                     <CreateStructure />
+                </Route>
+                <Route exact path="/clearifying-questions/:id">
+                    <ClearifyingQuestions />
                 </Route>
             </Switch>
         </HashRouter>

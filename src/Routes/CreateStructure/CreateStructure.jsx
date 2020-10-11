@@ -74,23 +74,58 @@ function createMarkup(html) {
     return { __html: html }
 }
 
-const defaultTree = {
-    id: 0,
-    children: [],
-}
-const defaultInput = {
-    id: 0,
-    children: [],
-}
+const defaultTree = [
+    {
+        id: 0,
+        children: [{ id: 0 }, { id: 1 }, { id: 2 }],
+    },
+    {
+        id: 1,
+        children: [{ id: 0 }, { id: 1 }, { id: 2 }],
+    },
+    {
+        id: 2,
+        children: [{ id: 0 }, { id: 1 }, { id: 2 }],
+    },
+]
+const defaultInput = [
+    {
+        id: 0,
+        children: [
+            { id: 0, value: '' },
+            { id: 1, value: '' },
+            { id: 2, value: '' },
+        ],
+    },
+    {
+        id: 1,
+        children: [
+            { id: 0, value: '' },
+            { id: 1, value: '' },
+            { id: 2, value: '' },
+        ],
+    },
+    {
+        id: 2,
+        children: [
+            { id: 0, value: '' },
+            { id: 1, value: '' },
+            { id: 2, value: '' },
+        ],
+    },
+]
 
 export default function CreateStructure() {
     const { goBack, push } = useHistory()
     const { id } = useParams()
-    const [treeData, setTreeData] = React.useState([defaultTree])
-    const inputRefs = React.useRef([defaultInput])
+    const [treeData, setTreeData] = React.useState(defaultTree)
+    const inputRefs = React.useRef(defaultInput)
 
     function handleClick(id) {
-        localStorage.setItem('structure',JSON.stringify(inputRefs.current || {}))
+        localStorage.setItem(
+            'structure',
+            JSON.stringify(inputRefs.current || {})
+        )
         push(`/case/${item.id}`)
     }
     function handleNodeEnterPress(ev) {
@@ -150,7 +185,7 @@ export default function CreateStructure() {
     return (
         <Wrapper>
             <Header>
-                <PageHeader subTitle="Back to Case Library" onBack={goBack} />
+                <PageHeader subTitle="Back to Case" onBack={goBack} />
             </Header>
             <Body>
                 <div
