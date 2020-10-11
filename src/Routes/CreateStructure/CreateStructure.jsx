@@ -153,11 +153,15 @@ export default function CreateStructure() {
     function handleAddNewBucket() {
         const child = {
             id: treeData.length,
-            children: [],
+            children: [{ id: 0 }, { id: 1 }, { id: 2 }],
         }
         const child2 = {
             id: treeData.length,
-            children: [],
+            children: [
+                { id: 0, value: '' },
+                { id: 1, value: '' },
+                { id: 2, value: '' },
+            ],
         }
         const tree = [...treeData]
         tree.push(child)
@@ -200,7 +204,7 @@ export default function CreateStructure() {
                         <RootNodeContainer>
                             <RootNode>
                                 <Input
-                                    placeholder="Bucket 1"
+                                    placeholder={`Bucket ${tree.id + 1}`}
                                     autoComplete="false"
                                     onPressEnter={handleNodeEnterPress}
                                     id={`root_${tree.id}`}
