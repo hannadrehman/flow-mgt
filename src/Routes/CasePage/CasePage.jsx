@@ -83,6 +83,7 @@ export default function HomePage() {
         }
         getData()
     }, [])
+    
     function handleBack(id) {
         push(`/list`)
     }

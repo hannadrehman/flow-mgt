@@ -43,9 +43,6 @@ const Question = styled.div`
     }
     background-color: ${(props) => (props.selected ? '#f3f0f0' : '')};
 `
-function createMarkup(html) {
-    return { __html: html }
-}
 export default function ClarifyingQuestions() {
     const { goBack, push } = useHistory()
     const { id } = useParams()
@@ -96,13 +93,6 @@ export default function ClarifyingQuestions() {
                 <PageHeader subTitle="Back to Case" onBack={goBack} />
             </Header>
             <Body>
-                {!selectedQuestion && (
-                    <div
-                        dangerouslySetInnerHTML={createMarkup(
-                            item.detailedDescription
-                        )}
-                    />
-                )}
                 {selectedQuestion && (
                     <div>
                         {selectedQuestion.type === 'text' && (
