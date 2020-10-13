@@ -1,5 +1,6 @@
 {
     "SlideDrugProblemStatement": {
+        "intro": true,
         "question": {
             "headerText": "Drug Case Overview",
             "titleText": "Today, we are going to discuss the case of a pharmaceutical company based in the U.S. The client has developed a new drug, PrevenT (Prevent Thrombosis), that helps reduce the rate at which a particular complication of hip-replacement surgery, deep-vein thrombosis (DVT), occurs. What you need to know is that DVT can lead to very serious medical conditions, including higher risk of pulmonary embolism (PE) or major bleeding. PrevenT will directly compete against Clearvenax, an established product that is also used to reduce rates of DVT and hence DVT-related complications. Clearvenax is sold at $4 per dose and has a variable production cost of $1 per dose. The client has asked you to help set a suitable price for PrevenT."
@@ -7,6 +8,7 @@
         "links_to": "SlideDrugInterviewer"
     },
     "SlideDrugInterviewer": {
+        "intro": true,
         "question": {
             "headerText": "I'm your interviewer, Aysha Malhotra",
             "titleText": "Today, we are going to discuss the case of a pharmaceutical company based in the U.S. The client has developed a new drug, PrevenT (Prevent Thrombosis), that helps reduce the rate at which a particular complication of hip-replacement surgery, deep-vein thrombosis (DVT), occurs. What you need to know is that DVT can lead to very serious medical conditions, including higher risk of pulmonary embolism (PE) or major bleeding. PrevenT will directly compete against Clearvenax, an established product that is also used to reduce rates of DVT and hence DVT-related complications. Clearvenax is sold at $4 per dose and has a variable production cost of $1 per dose. The client has asked you to help set a suitable price for PrevenT."

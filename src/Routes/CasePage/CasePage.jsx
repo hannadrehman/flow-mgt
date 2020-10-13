@@ -79,9 +79,10 @@ export default function HomePage() {
                 const json = await res.json()
                 allQuestionsRef.current = json
                 const initialQuestion =
-                    id === 1 ? 'SlideDrugQ1_0' : 'SlideAirlineQ_Rigor1_1' //'SlideAirlineQ1_0'
+                    id === "1" ? 'SlideDrugProblemStatement' : 'SlideAirlineQ_Rigor1_1' //'SlideAirlineQ1_0'
                 const currentQ = json[initialQuestion]
                 setCurrentQuestion(currentQ)
+                
                 if (json[currentQ.addOnTable]) {
                     setAddonTable(json[currentQ.addOnTable])
                 }
@@ -135,10 +136,6 @@ export default function HomePage() {
     }
     function getNextLink(item) {
         if (item.is_link_direct === false) {
-            console.log('---------------------------')
-            console.log(currentQuestionId.current)
-            console.log(item)
-            console.log('---------------------------')
             const qid = item.conditionId
             switch (qid) {
                 case 1:
@@ -283,7 +280,7 @@ export default function HomePage() {
                     groupedScore={groupedScore}
                 />
             )}
-            {!currentQuestion.successMessage && (
+            {!currentQuestion.successMessage && !currentQuestion.intro && (
                 <>
                     <TransitionGroup>
                         <CSSTransition
