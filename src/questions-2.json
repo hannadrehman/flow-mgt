@@ -1664,7 +1664,7 @@
 		"messageDescriptionLow": "With the given data, calculate first the current fuel and nonfuel costs, then the increase in revenues required to maintain the current profit.",
 		"messageHeadingHigh": "That's not quite right.",
 		"messageDescriptionHigh": "With the given data, calculate first the current fuel and nonfuel costs, then the increase in revenues required to maintain the current profit.",
-		"correctanswer": 13.3,
+		"correctAnswer": 13.3,
 
 		"links_to": "SlideAirlineQ_Rigor1_2",
 		"score": {

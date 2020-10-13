@@ -79,7 +79,7 @@ export default function HomePage() {
                 const json = await res.json()
                 allQuestionsRef.current = json
                 const initialQuestion =
-                    id === 1 ? 'SlideDrugQ1_0' : 'SlideAirlineQ3_110' //'SlideAirlineQ1_0'
+                    id === 1 ? 'SlideDrugQ1_0' : 'SlideAirlineQ_Rigor1_1' //'SlideAirlineQ1_0'
                 const currentQ = json[initialQuestion]
                 setCurrentQuestion(currentQ)
                 if (json[currentQ.addOnTable]) {
@@ -227,16 +227,34 @@ export default function HomePage() {
     }
     function submitInput() {
         const value = parseInt(inputRef.current, 10)
-        if (value === addonTable.correctAnswer) {
-            setInputAnswer(addonTable.messageDescription)
+        const hasTable = Object.keys(addonTable || {}).length > 0
+        console.log(currentQuestion, addonTable)
+        if (hasTable) {
+            if (value === addonTable.correctAnswer) {
+                setInputAnswer(addonTable.messageDescription)
+            }
+            if (value > addonTable.correctAnswer) {
+                setInputAnswer(addonTable.messageDescriptionHigh)
+            }
+            if (value < addonTable.correctAnswer) {
+                setInputAnswer(addonTable.messageDescriptionLow)
+            }
+            setIsNextDisabled(false)
+            return
         }
-        if (value > addonTable.correctAnswer) {
-            setInputAnswer(addonTable.messageDescriptionHigh)
+        if (currentQuestion.bulletData) {
+            if (value === currentQuestion.correctAnswer) {
+                setInputAnswer(currentQuestion.messageDescription)
+            }
+            if (value > currentQuestion.correctAnswer) {
+                setInputAnswer(currentQuestion.messageDescriptionHigh)
+            }
+            if (value < currentQuestion.correctAnswer) {
+                setInputAnswer(currentQuestion.messageDescriptionLow)
+            }
+            setIsNextDisabled(false)
+            return
         }
-        if (value < addonTable.correctAnswer) {
-            setInputAnswer(addonTable.messageDescriptionLow)
-        }
-        setIsNextDisabled(false)
     }
 
     const filteredScoresList = allSelectedOptions.current
