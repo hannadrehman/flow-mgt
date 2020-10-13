@@ -194,7 +194,7 @@ export default function HomePage() {
             return
         }
         setCurrentQuestion(nextQuestion)
-        allSelectedOptions.current.push(selectedOption.current)
+        allSelectedOptions.current.push(selectedOption.current || currentQuestion)
         if (nextQuestion.choices && nextQuestion.choices.length) {
             setIsNextDisabled(true)
         }
