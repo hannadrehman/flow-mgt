@@ -49,6 +49,9 @@ export const NextButton = styled(Button)`
         right: 0;
     }
 `
+export const Image = styled.img`
+    width: 100%;
+`
 export default function HomePage() {
     const { push } = useHistory()
     const { id } = useParams()
@@ -70,8 +73,9 @@ export default function HomePage() {
                     {}
                 )
                 const json = await res.json()
-                allQuestionsRef.current = json;
-                const initialQuestion = id === 1 ? 'SlideDrugQ1_0': 'SlideAirlineQ1_0'
+                allQuestionsRef.current = json
+                const initialQuestion =
+                    id === 1 ? 'SlideDrugQ1_0' : 'SlideAirlineQ_Rigor1_2' //'SlideAirlineQ1_0'
                 const currentQ = json[initialQuestion]
                 setCurrentQuestion(currentQ)
                 if (json[currentQ.addOnTable]) {
@@ -82,8 +86,8 @@ export default function HomePage() {
             }
         }
         getData()
-    }, [])
-    
+    }, [id])
+
     function handleBack(id) {
         push(`/list`)
     }
@@ -193,6 +197,23 @@ export default function HomePage() {
                                 </Question>
 
                                 <Options>
+                                    {currentQuestion.addOnTable && (
+                                        <div>
+                                            <AddonTable
+                                                addonTable={addonTable}
+                                                inputAnswer={inputAnswer}
+                                                handleChange={handleChange}
+                                                submitInput={submitInput}
+                                            />
+                                        </div>
+                                    )}
+                                    {currentQuestion.image && (
+                                        <div>
+                                            <Image
+                                                src={currentQuestion.image}
+                                            />
+                                        </div>
+                                    )}
                                     <Choices
                                         questionId={currentQuestion.question}
                                         onOptionChange={onOptionChange}
@@ -201,14 +222,6 @@ export default function HomePage() {
                                         }
                                         choices={currentQuestion.choices}
                                     />
-                                    {currentQuestion.addOnTable && (
-                                        <AddonTable
-                                            addonTable={addonTable}
-                                            inputAnswer={inputAnswer}
-                                            handleChange={handleChange}
-                                            submitInput={submitInput}
-                                        />
-                                    )}
                                 </Options>
                             </Main>
                         </CSSTransition>
