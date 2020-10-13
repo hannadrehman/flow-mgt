@@ -9,7 +9,7 @@ import Success from './Success.component'
 import AddonTable from './AddonTable.component'
 import Bullets from './Bullets.component'
 
-const { Text } = Typography
+const { Text, Title } = Typography
 
 const Wrapper = styled.div`
     margin: 0 auto;
@@ -54,6 +54,15 @@ export const Image = styled.img`
     width: 100%;
     padding-bottom: 16px;
 `
+
+const Body = styled.div`
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    padding: 16px;
+`
 export default function HomePage() {
     const { push } = useHistory()
     const { id } = useParams()
@@ -79,15 +88,18 @@ export default function HomePage() {
                 const json = await res.json()
                 allQuestionsRef.current = json
                 const initialQuestion =
-                    id === "1" ? 'SlideDrugProblemStatement' : 'SlideAirlineQ_Rigor1_1' //'SlideAirlineQ1_0'
+                    id === '1'
+                        ? 'SlideDrugProblemStatement'
+                        : 'SlideAirlineQ_Rigor1_1' //'SlideAirlineQ1_0'
                 const currentQ = json[initialQuestion]
                 setCurrentQuestion(currentQ)
-                
+
                 if (json[currentQ.addOnTable]) {
                     setAddonTable(json[currentQ.addOnTable])
                 }
                 if (
-                    (!currentQ.choices || currentQ.choices.length === 0) &&
+                    !currentQ.choices ||
+                    currentQ.choices.length === 0 ||
                     currentQ.expectInput === false
                 ) {
                     setIsNextDisabled(false)
@@ -191,7 +203,9 @@ export default function HomePage() {
             return
         }
         setCurrentQuestion(nextQuestion)
-        allSelectedOptions.current.push(selectedOption.current || currentQuestion)
+        allSelectedOptions.current.push(
+            selectedOption.current || currentQuestion
+        )
         if (nextQuestion.choices && nextQuestion.choices.length) {
             setIsNextDisabled(true)
         }
@@ -280,6 +294,26 @@ export default function HomePage() {
                     groupedScore={groupedScore}
                 />
             )}
+            {!currentQuestion.successMessage && currentQuestion.intro && (
+                <div>
+                    <Body>
+                        <Title level={5}>
+                            {currentQuestion.question.headerText}
+                        </Title>
+                        <Text>{currentQuestion.question.titleText}</Text>
+                    </Body>
+                    <NextButton
+                        type="primary"
+                        disabled={isNextDisabled}
+                        block
+                        onClick={goNext}
+                        size="large"
+                    >
+                        Next
+                    </NextButton>
+                </div>
+            )}
+
             {!currentQuestion.successMessage && !currentQuestion.intro && (
                 <>
                     <TransitionGroup>

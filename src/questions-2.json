@@ -1,5 +1,6 @@
 {
 	"SlideAirlineProblemStatement": {
+        "intro": true,
 		"question": {
 			"headerText": "HappyFly Airlines",
 			"titleText": "Today, we'll discuss the case of our client, HappyFly, a low-cost carrier (LCC) airline that is among the largest in Asia. After initial losses when it was established, a few years ago, it has finally become profitable. The company's profitability is now threatened, however, by a sharp increase in fuel prices, to the tune of more than 50 percent. The client is therefore questioning its business model and looking to develop an immediate response to the situation that will ensure a return to profitability. Your task is also to help develop a strategy to ensure that the company remains profitable for the years to come."
@@ -7,6 +8,7 @@
 		"links_to": "SlideAirlineInterviewer"
 	},
 	"SlideAirlineInterviewer": {
+        "intro": true,
 		"question": {
 			"headerText": "I'm your interviewer, Stephany Brady",
 			"titleText": "I'll be guiding you through the interview today. We'll start by selecting an approach to this specific case."
