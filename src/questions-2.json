@@ -1171,6 +1171,7 @@
 				"synthesis": 3
 			},
 			"is_link_direct": false,
+			"conditionId":1,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}, {
 			"answer": "It looks like the client would have to look for more opportunities in the market in order to offset the inevitable losses.",
@@ -1182,6 +1183,7 @@
 				"synthesis": 1
 			},
 			"is_link_direct": false,
+			"conditionId":1,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}]
 	},
@@ -1196,6 +1198,7 @@
 				"judgment": 3,
 				"synthesis": 3
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}, {
@@ -1207,6 +1210,7 @@
 				"judgment": 1,
 				"synthesis": 1
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}]
@@ -1222,6 +1226,7 @@
 				"judgment": 3,
 				"synthesis": 3
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}, {
@@ -1233,6 +1238,7 @@
 				"judgment": 1,
 				"synthesis": 1
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}]
@@ -1248,6 +1254,7 @@
 				"judgment": 3,
 				"synthesis": 3
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}, {
@@ -1259,6 +1266,7 @@
 				"judgment": 1,
 				"synthesis": 1
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}]
@@ -1275,6 +1283,8 @@
 				"synthesis": 3
 			},
 			"is_link_direct": false,
+			"conditionId":1,
+
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}, {
 			"answer": "It looks like the client would have to look for more opportunities in the market in order to offset the inevitable losses.",
@@ -1285,6 +1295,7 @@
 				"judgment": 1,
 				"synthesis": 1
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}]
@@ -1300,6 +1311,7 @@
 				"judgment": 3,
 				"synthesis": 3
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}, {
@@ -1311,6 +1323,7 @@
 				"judgment": 1,
 				"synthesis": 1
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}]
@@ -1326,6 +1339,7 @@
 				"judgment": 3,
 				"synthesis": 3
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}, {
@@ -1337,6 +1351,7 @@
 				"judgment": 1,
 				"synthesis": 1
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}]
@@ -1352,6 +1367,7 @@
 				"judgment": 3,
 				"synthesis": 3
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}, {
@@ -1363,6 +1379,7 @@
 				"judgment": 1,
 				"synthesis": 1
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}]
@@ -1378,6 +1395,7 @@
 				"judgment": 3,
 				"synthesis": 3
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}, {
@@ -1389,6 +1407,7 @@
 				"judgment": 1,
 				"synthesis": 1
 			},
+			"conditionId":1,
 			"is_link_direct": false,
 			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
 		}]
@@ -2026,6 +2045,7 @@
 				"synthesis": 0
 			},
 			"is_link_direct": false,
+			"conditionId":2,
 			"links_to": "if cost_path_flag == false then SlideAirlineQ4_59_3_0 else SlideAirlineQ4_59_6_0"
 		}]
 	},
@@ -2065,6 +2085,7 @@
 				"judgment": 3,
 				"synthesis": 3
 			},
+			"conditionId":3,
 			"is_link_direct": false,
 			"links_to": "(if non_ticket_revenue_path_flag == true (if cost_path_flag == false then SlideAirlineQ4_59_3_0 else SlideAirlineQ4_59_6_0) else (if cost_path_flag == false then SlideAirlineQ4_59_5_0b else SlideAirlineQ4_59_5_0c)"
 		}, {
@@ -2076,6 +2097,7 @@
 				"judgment": 1,
 				"synthesis": 1
 			},
+			"conditionId":3,
 			"is_link_direct": false,
 			"links_to": "(if non_ticket_revenue_path_flag == true (if cost_path_flag == false then SlideAirlineQ4_59_3_0 else SlideAirlineQ4_59_6_0) else (if cost_path_flag == false then SlideAirlineQ4_59_5_0b else SlideAirlineQ4_59_5_0c)"
 		}]
@@ -2091,6 +2113,7 @@
 				"judgment": 3,
 				"synthesis": 3
 			},
+			"conditionId":2,
 			"is_link_direct": false,
 			"links_to": "(if non_ticket_revenue_path_flag == true (if cost_path_flag == false then SlideAirlineQ4_59_3_0 else SlideAirlineQ4_59_6_0) else (if cost_path_flag == false then SlideAirlineQ4_59_5_0b else SlideAirlineQ4_59_5_0c)"
 		}, {
@@ -2102,6 +2125,7 @@
 				"judgment": 1,
 				"synthesis": 1
 			},
+			"conditionId":2,
 			"is_link_direct": false,
 			"links_to": "(if non_ticket_revenue_path_flag == true (if cost_path_flag == false then SlideAirlineQ4_59_3_0 else SlideAirlineQ4_59_6_0) else (if cost_path_flag == false then SlideAirlineQ4_59_5_0b else SlideAirlineQ4_59_5_0c)"
 

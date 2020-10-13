@@ -7,6 +7,7 @@ import { staticData } from '../../Cases.fixtures'
 import Choices from './Choices.component'
 import Success from './Success.component'
 import AddonTable from './AddonTable.component'
+import Bullets from './Bullets.component'
 
 const { Text } = Typography
 
@@ -51,6 +52,7 @@ export const NextButton = styled(Button)`
 `
 export const Image = styled.img`
     width: 100%;
+    padding-bottom: 16px;
 `
 export default function HomePage() {
     const { push } = useHistory()
@@ -64,6 +66,8 @@ export default function HomePage() {
     const [addonTable, setAddonTable] = React.useState({})
     const inputRef = React.useRef()
     const [inputAnswer, setInputAnswer] = React.useState('')
+    const globalFlags = React.useRef({})
+    const currentQuestionId = React.useRef('')
 
     React.useEffect(() => {
         async function getData() {
@@ -75,12 +79,19 @@ export default function HomePage() {
                 const json = await res.json()
                 allQuestionsRef.current = json
                 const initialQuestion =
-                    id === 1 ? 'SlideDrugQ1_0' : 'SlideAirlineQ_Rigor1_2' //'SlideAirlineQ1_0'
+                    id === 1 ? 'SlideDrugQ1_0' : 'SlideAirlineQ3_110' //'SlideAirlineQ1_0'
                 const currentQ = json[initialQuestion]
                 setCurrentQuestion(currentQ)
                 if (json[currentQ.addOnTable]) {
                     setAddonTable(json[currentQ.addOnTable])
                 }
+                if (
+                    (!currentQ.choices || currentQ.choices.length === 0) &&
+                    currentQ.expectInput === false
+                ) {
+                    setIsNextDisabled(false)
+                }
+                currentQuestionId.current = initialQuestion
             } catch (e) {
                 console.log(e)
             }
@@ -97,18 +108,87 @@ export default function HomePage() {
         selectedOption.current = option
         setIsNextDisabled(false)
     }
+    function setFlags(question) {
+        if (
+            question.revenue_path_flag ||
+            question.revenue_path_flag === false
+        ) {
+            globalFlags.current.revenue_path_flag = question.revenue_path_flag
+        }
+        if (question.cost_path_flag || question.cost_path_flag === false) {
+            globalFlags.current.cost_path_flag = question.cost_path_flag
+        }
+        if (
+            question.non_ticket_revenue_path_flag ||
+            question.non_ticket_revenue_path_flag === false
+        ) {
+            globalFlags.current.non_ticket_revenue_path_flag =
+                question.non_ticket_revenue_path_flag
+        }
+        if (
+            question.ticket_revenue_path_flag ||
+            question.ticket_revenue_path_flag === false
+        ) {
+            globalFlags.current.ticket_revenue_path_flag =
+                question.ticket_revenue_path_flag
+        }
+    }
+    function getNextLink(item) {
+        if (item.is_link_direct === false) {
+            console.log('---------------------------')
+            console.log(currentQuestionId.current)
+            console.log(item)
+            console.log('---------------------------')
+            const qid = item.conditionId
+            switch (qid) {
+                case 1:
+                    if (globalFlags.current.revenue_path_flag) {
+                        return 'SlideAirlineQ3_121_6_0'
+                    } else {
+                        return 'SlideAirlineQ3_121_2_0'
+                    }
+                case 2:
+                    if (globalFlags.current.cost_path_flag === false) {
+                        return 'SlideAirlineQ4_59_3_0'
+                    } else {
+                        return 'SlideAirlineQ4_59_6_0'
+                    }
+
+                case 3:
+                    if (globalFlags.current.non_ticket_revenue_path_flag) {
+                        if (globalFlags.current.cost_path_flag === false) {
+                            return 'SlideAirlineQ4_59_3_0'
+                        } else {
+                            return 'SlideAirlineQ4_59_6_0'
+                        }
+                    } else {
+                        if (globalFlags.current.cost_path_flag === false) {
+                            return 'SlideAirlineQ4_59_5_0b'
+                        } else {
+                            return 'SlideAirlineQ4_59_5_0c'
+                        }
+                    }
+                default:
+                    alert('mismatch')
+                    return
+            }
+        }
+        currentQuestionId.current = item.links_to
+        return item.links_to
+    }
     function goNext() {
         let nextQuestion = {}
         if (!currentQuestion.choices || currentQuestion.choices.length === 0) {
-            nextQuestion = allQuestionsRef.current[currentQuestion.links_to]
+            nextQuestion = allQuestionsRef.current[getNextLink(currentQuestion)]
         } else {
             nextQuestion =
-                allQuestionsRef.current[selectedOption.current.links_to]
+                allQuestionsRef.current[getNextLink(selectedOption.current)]
         }
+
         if (nextQuestion === undefined) {
             console.log('--------------------------------------------------')
             console.log(currentQuestion)
-            console.log(allQuestionsRef.current[currentQuestion.links_to])
+            console.log(allQuestionsRef.current[getNextLink(currentQuestion)])
             console.log(selectedOption.current)
             console.log('--------------------------------------------------')
             return
@@ -125,6 +205,10 @@ export default function HomePage() {
                 setIsNextDisabled(true)
             }
         }
+        if (nextQuestion.expectInput) {
+            setIsNextDisabled(true)
+        }
+        setFlags(nextQuestion)
         setCurrentSelectedIndex(null)
         setInputAnswer(null)
         selectedOption.current = null
@@ -201,6 +285,16 @@ export default function HomePage() {
                                         <div>
                                             <AddonTable
                                                 addonTable={addonTable}
+                                                inputAnswer={inputAnswer}
+                                                handleChange={handleChange}
+                                                submitInput={submitInput}
+                                            />
+                                        </div>
+                                    )}
+                                    {currentQuestion.bulletData && (
+                                        <div>
+                                            <Bullets
+                                                question={currentQuestion}
                                                 inputAnswer={inputAnswer}
                                                 handleChange={handleChange}
                                                 submitInput={submitInput}
