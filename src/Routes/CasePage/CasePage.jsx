@@ -70,9 +70,9 @@ export default function HomePage() {
                     {}
                 )
                 const json = await res.json()
-                allQuestionsRef.current = json
-                const currentQ = json['SlideDrugQ1_0']
-                // const currentQ = json['SlideDrugQ1_100a']
+                allQuestionsRef.current = json;
+                const initialQuestion = id === 1 ? 'SlideDrugQ1_0': 'SlideAirlineQ1_0'
+                const currentQ = json[initialQuestion]
                 setCurrentQuestion(currentQ)
                 if (json[currentQ.addOnTable]) {
                     setAddonTable(json[currentQ.addOnTable])

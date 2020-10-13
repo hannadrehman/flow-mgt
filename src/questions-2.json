@@ -1,0 +1,2957 @@
+{
+	"SlideAirlineProblemStatement": {
+		"question": {
+			"headerText": "HappyFly Airlines",
+			"titleText": "Today, we'll discuss the case of our client, HappyFly, a low-cost carrier (LCC) airline that is among the largest in Asia. After initial losses when it was established, a few years ago, it has finally become profitable. The company's profitability is now threatened, however, by a sharp increase in fuel prices, to the tune of more than 50 percent. The client is therefore questioning its business model and looking to develop an immediate response to the situation that will ensure a return to profitability. Your task is also to help develop a strategy to ensure that the company remains profitable for the years to come."
+		},
+		"links_to": "SlideAirlineInterviewer"
+	},
+	"SlideAirlineInterviewer": {
+		"question": {
+			"headerText": "I'm your interviewer, Stephany Brady",
+			"titleText": "I'll be guiding you through the interview today. We'll start by selecting an approach to this specific case."
+		},
+		"lnks_to": "SlideAirlineQ1_0"
+	},
+	"SlideAirlineQ1_0": {
+		"question": "How would you approach this case?",
+		"choices": [{
+			"answer": "I'd like to begin with looking at factors that affect our client's profitability.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_4"
+		}, {
+			"answer": "I'd like to understand what affects demand for our client's services.",
+			"direction": "middle",
+			"score": {
+				"rigor": 2,
+				"structuring": 2,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_5"
+		}, {
+			"answer": "Let me understand this. Our client wants to increase profits in the long term. It needs to increase sales for that.",
+			"direction": "right",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_6"
+		}]
+	},
+	"SlideAirlineQ1_4": {
+		"question": "What factors should we explore for their impact on our client's profitability?",
+		"choices": [{
+			"answer": "To increase profits, the client needs to either increase revenues, decrease costs, or both. So, I'd like some information on the key drivers of revenues and costs for our client.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_16"
+		}, {
+			"answer": "Profitability is significantly affected by the market situation. So, I'd like to explore what the competition is doing.",
+			"direction": "middle",
+			"score": {
+				"rigor": 2,
+				"structuring": 1,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_17"
+		}, {
+			"answer": "Profitability is revenue minus costs. Because the costs are going up anyway, the client needs to find ways to increase revenue.",
+			"direction": "right",
+			"score": {
+				"rigor": 1,
+				"structuring": 2,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_18"
+		}]
+	},
+	"SlideAirlineQ1_5": {
+		"question": "Okay. Why do you think demand is an important parameter to consider?",
+		"choices": [{
+			"answer": "Actually, it may be better to look at factors that affect profitability, because the client's business problem is tied to profitability.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_4"
+		}, {
+			"answer": "If we look at the factors that affect demand, we can figure out how to increase demand in order to increase revenues.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_19"
+		}, {
+			"answer": "It doesn't really matter where we start. Basically, sales need to increase for profit to increase.",
+			"direction": "right",
+			"score": {
+				"rigor": -5,
+				"structuring": 0,
+				"judgment": -5,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_6"
+		}]
+	},
+	"SlideAirlineQ1_6": {
+		"question": "Okay. Do you think you have enough information to draw that conclusion?",
+		"choices": [{
+			"answer": "I'd like to think about this a little. Profits are affected by revenues and costs. So, I'd like to consider both aspects of the equation.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_16"
+		}, {
+			"answer": "Costs are another factor to consider because lowering costs could increase profitability as well. So, I'd need more information on that.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_29_3_0"
+		}, {
+			"answer": "Yes, I think so. Increasing revenues is probably the best way to increase profits in the long term and thereby improve profitability.",
+			"direction": "right",
+			"score": {
+				"rigor": -15,
+				"structuring": -5,
+				"judgment": -15,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_28_2_0"
+		}]
+	},
+	"SlideAirlineQ1_16": {
+		"question": "Which of these factors would you like to explore first?",
+		"choices": [{
+			"answer": "I'd like to explore whether it's possible to increase revenues.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_28_2_0"
+		}, {
+			"answer": "I'd like to explore whether it's possible to lower costs.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_29_3_0"
+		}]
+	},
+	"SlideAirlineQ1_17": {
+		"question": "I'd agree that the market situation is important. Do you think the client should consider other internal factors first?",
+		"choices": [{
+			"answer": "I think profits would depend on revenues and costs, though the market situation plays an important role. So, I'd like to see whether the client can increase profits by increasing revenues, decreasing costs, or both.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_16"
+		}, {
+			"answer": "Sales are important too. So, the client can increase ticket sales by reducing ticket prices, which would help to gain more market share and increase profits.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_35"
+		}, {
+			"answer": "Yes, there are other factors that are highly relevant to the profitability of the company. For instance, gaining market share is an important factor in increasing profits.",
+			"direction": "middle",
+			"score": {
+				"rigor": -5,
+				"structuring": -5,
+				"judgment": -5,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_35"
+		}]
+	},
+	"SlideAirlineQ1_18": {
+		"question": "Would you say you have enough information to draw that conclusion?",
+		"choices": [{
+			"answer": "Well, actually I could use more information to fine-tune this recommendation. I would like to explore the revenue side further.",
+			"direction": "next",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_28_2_0"
+		}, {
+			"answer": "I would like to explore this further. I'd like more information on the key drivers of revenues and costs, and I'd like to see whether it is feasible to increase revenues, decrease costs, or both.",
+			"direction": "middle",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_16"
+		}, {
+			"answer": "Yes. Costs have been increasing sharply in the last several years. So, we need to find a way to increase revenues.",
+			"direction": "right",
+			"score": {
+				"rigor": -15,
+				"structuring": -5,
+				"judgment": -15,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_35"
+		}]
+	},
+	"SlideAirlineQ1_19": {
+		"question": "Our client's business problem is how to remain profitable in the face of a steep hike in fuel prices. Looking only at demand may not give you the whole picture in this case. What else do you think you could do?",
+		"choices": [{
+			"answer": "Because profitability is the difference between revenue and costs, I'd like to explore these two factors.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_16"
+		}, {
+			"answer": "Profitability is significantly affected by the market situation. So, I'd like to explore what the competition is doing.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_39"
+		}, {
+			"answer": "Profitability is revenue minus costs. Therefore, the client needs to increase revenues and decrease costs.",
+			"direction": "right",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_18"
+		}]
+	},
+	"SlideAirlineQ1_28_2_0": {
+		"question": "All right. What do you think are the key drivers of revenues for our client?",
+		"revenue_path_flag": true,
+		"choices": [{
+			"answer": "I think that revenues for an LCC player would be primarily driven by ticket sales and some other sources of revenue.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ2_4"
+		}, {
+			"answer": "I think that ticket sales would be the key driver of revenues for an LCC player.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ2_4"
+		}, {
+			"answer": "I think that revenues would be a function of the number of passengers traveling with that airline.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ2_5"
+		}]
+	},
+	"SlideAirlineQ1_29_3_0": {
+		"question": "Ok. What do you think are the key cost levers for the client?",
+		"cost_path_flag": true,
+		"choices": [{
+			"answer": "Well, fuel costs are the largest cost component. However, because fuel prices have gone up, the client cannot do much about its fuel costs. Therefore, I'd first like to ask if the client could reduce non-fuel costs.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_52"
+		}, {
+			"answer": "I would just focus on fuel and non-fuel costs. We know that fuel costs have gone up. I'd like to explore whether the client could purchase fuel at lower prices, and I'd like to look at reducing non-fuel costs.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 3,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_53"
+		}, {
+			"answer": "Fuel costs have increased, and staff costs are difficult to reduce. I would like to explore whether the client could reduce costs related to maintenance and overhaul.",
+			"direction": "right",
+			"score": {
+				"rigor": 0,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_54"
+		}]
+	},
+	"SlideAirlineQ1_35": {
+		"question": "Well, your suggestion is partly correct. Because profit is the difference between revenues and costs, you need to explore whether the client can increase revenues, decrease costs, or both in order to increase profits. Which of these factors would you like to look at first?",
+		"choices": [{
+			"answer": "I'd like to explore whether it's possible to increase revenues.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_28_2_0"
+		}, {
+			"answer": "I'd like to explore whether it's possible to lower costs.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_29_3_0"
+		}]
+	},
+	"SlideAirlineQ1_39": {
+		"question": "Let's focus on internal levers first. Because profit is the difference between revenues and costs, you need to explore whether the client can increase revenues, decrease costs, or both in order to increase profits. So, which of these factors would you like to look at first?",
+		"choices": [{
+			"answer": "I'd like to explore whether it's possible to increase revenues.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_28_2_0"
+		}, {
+			"answer": "I'd like to explore whether it's possible to lower costs.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ1_29_3_0"
+		}]
+	},
+
+	"SlideAirlineCompleted": {
+		"successMessage": "You have successfully completed the airline case study. Let's now review your results across the following criteria"
+	},
+	"SlideAirlineQ2_4": {
+		"question": "That's mostly right for our client; revenues are primarily driven by ticket sales, but our client also has some additional sources of revenue. What do you think our client can do to increase revenues?",
+		"entrySet": 2,
+		"choices": [{
+			"answer": "I would like to explore the option of increasing ticket sales first. The client needs to increase either the price of tickets or the number of customers, because sales revenue is ticket price multiplied by the number of tickets sold.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ2_8_4_0"
+		}, {
+			"answer": "Well, since you mention it, I'd like to explore the option of increasing non-ticket sources of revenue. An increase in these sources of revenue could have a tremendous effect on the overall revenues of the company.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ2_9_5_0"
+		}]
+	},
+	"SlideAirlineQ2_5": {
+		"question": "Okay. So, how would you like to proceed with this?",
+		"entrySet": 2,
+		"choices": [{
+			"answer": "I would like to explore the option of increasing ticket sales. The client needs to increase either the price of tickets or the number of customers, because sales revenue is ticket price multiplied by the number of tickets sold.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ2_8_4_0"
+		}, {
+			"answer": "Well, actually, thinking about it, I'd like to explore the option of increasing non-ticket sources of revenue. An increase in these sources of revenue could have a tremendous effect on the overall revenues of the company.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ2_9_5_0"
+		}]
+	},
+	"SlideAirlineQ2_8_4_0": {
+		"question": "How would you like to proceed?",
+		"ticket_revenue_path_flag": true,
+		"choices": [{
+			"answer": "I'd like to investigate whether it would be feasible to increase ticket prices.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 2,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_4"
+		}, {
+			"answer": "Ticket sales are a function of ticket prices and the number of tickets sold. So, increasing one or both of these would increase ticket sales.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_4"
+		}, {
+			"answer": "Revenues from ticket sales need to go up. Revenues will go up if more customers buy tickets. So, the client has to work toward increasing the number of customers by offering discounted ticket prices.",
+			"direction": "middle",
+			"score": {
+				"rigor": -5,
+				"structuring": -5,
+				"judgment": -5,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_8"
+		}]
+	},
+	"SlideAirlineQ2_9_5_0": {
+		"question": "What are the additional sources of revenue that the client could consider?",
+		"non_ticket_revenue_path_flag": true,
+		"choices": [{
+			"answer": "The client could think about approaching new areas. Cargo is one example, if the client doesn't have a presence in that area already.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ5_13"
+		}, {
+			"answer": "The client could provide value-added services to passengers and charge extra for these.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ5_15"
+		}]
+	},
+	"SlideAirlineQ3_52": {
+		"question": "Well, that's a feasible suggestion. Our past experience suggests that we may be able to reduce nonfuel costs by 5-10 percent in the short term. But do you think that would be enough, given the steep hike in fuel prices? (You may need the following information: sales are $1,500 million; profit margin is 20 percent; the expected fuel price increase is 50 percent; and current fuel costs are half as much as nonfuel costs.)",
+		"cost_path_flag": true,
+		"entrySet": 3,
+		"choices": [{
+			"answer": "That would reduce non-fuel costs by $40-80 million. But fuel costs would have gone up by $200 million, so the non-fuel reduction would not be enough. Apart from reducing non-fuel costs, the client should also explore ways of reducing fuel costs. Because the latter is a very significant proportion of total costs, it has considerable leverage in increasing profitability.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_62"
+		}, {
+			"answer": "That would reduce non-fuel costs by $30-60 million. But fuel costs would have gone up by $200 million, so the non-fuel reduction would not be enough. Apart from reducing non-fuel costs, the client should also explore ways of reducing fuel costs. Because the latter is a very significant proportion of total costs, it has considerable leverage in increasing profitability.",
+			"direction": "middle",
+			"score": {
+				"rigor": -5,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_64"
+		}]
+	},
+	"SlideAirlineQ3_53": {
+		"question": "Fuel costs are the most important lever in variable costs. But the client can try to reduce non-fuel costs, too.",
+		"cost_path_flag": true,
+		"entrySet": 3,
+		"choices": [{
+			"answer": "Fuel costs are going to increase. Reducing non-fuel costs would compensate for that.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_52"
+		}, {
+			"answer": "We know that fuel costs have gone up. Therefore, the client should look at reducing non-fuel costs.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_52"
+		}, {
+			"answer": "The client should look at discontinuing the least utilized flights to reduce fuel consumption.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": -5,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_61"
+		}]
+	},
+	"SlideAirlineQ3_54": {
+		"question": "Fixed costs tend to remain unchanged over a period of time; they do not vary with sales levels. Because fuel costs are going to increase, which costs should the client look at?",
+		"cost_path_flag": true,
+		"entrySet": 3,
+		"choices": [{
+			"answer": "Fuel costs are going to increase. Reducing non-fuel costs would compensate for that.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_52"
+		}, {
+			"answer": "We know that fuel costs have gone up. Therefore, the client should look at reducing non-fuel costs.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_52"
+		}, {
+			"answer": "The client should look at discontinuing the least utilized flights to reduce fuel consumption.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": -5,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_61"
+		}]
+	},
+	"SlideAirlineQ3_61": {
+		"question": "I would suggest investigating non-fuel costs. Our past experience suggests that we may be able to reduce non-fuel costs by 5-10 percent in the short term. But do you think that would be enough, given the steep hike in fuel prices? (You may need the following information: sales are $1,500 million; profit margin is 20 percent; expected fuel price increase is 50 percent; and current fuel costs are half as much as non-fuel costs.)",
+		"choices": [{
+			"answer": "That would reduce non-fuel costs by $40-80 million. But fuel costs would have gone up by $200 million, so the non-fuel reduction would not be enough. Apart from reducing non-fuel costs, the client should also explore ways of reducing fuel costs. Because the latter is a very significant proportion of total costs, it has considerable leverage in increasing profitability.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_62"
+		}, {
+			"answer": "That would reduce non-fuel costs by $30-60 million. But fuel costs would have gone up by $200 million, so the non-fuel reduction would not be enough. Apart from reducing non-fuel costs, the client should also explore ways of reducing fuel costs. Because the latter is a very significant proportion of total costs, it has considerable leverage in increasing profitability.",
+			"direction": "middle",
+			"score": {
+				"rigor": -5,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_64"
+		}]
+	},
+	"SlideAirlineQ3_62": {
+		"question": "Okay. How can the client nevertheless reduce fuel costs, when fuel prices have increased?",
+		"choices": [{
+			"answer": "The client could think about reducing fuel consumption",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_68"
+		}, {
+			"answer": "The client could take steps to reduce the fuel purchase price.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_69"
+		}, {
+			"answer": "The client could optimize its flight network to save on fuel and other operating expenses.",
+			"direction": "right",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_70"
+		}]
+	},
+	"SlideAirlineQ3_64": {
+		"question": "Well, reducing non-fuel costs by 5-10 percent actually means reducing them by $40-80 million. It seems as if the client has to explore ways of reducing fuel costs as well. How do you think that can be done?",
+		"choices": [{
+			"answer": "The client could think about reducing fuel consumption.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_68"
+		}, {
+			"answer": "The client could take steps to reduce the fuel purchase price.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_69"
+		}, {
+			"answer": "The client could optimize its flight network to save on fuel and other operating expenses.",
+			"direction": "right",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_70"
+		}]
+	},
+	"SlideAirlineQ3_68": {
+		"question": "How can fuel usage be reduced?",
+		"choices": [{
+			"answer": "The client should adjust the fleet mix to increase fuel efficiency or lower fuel consumption by reducing weight on the aircraft.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_80"
+		}, {
+			"answer": "The client should reduce the amount of baggage allowed per passenger.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_81"
+		}, {
+			"answer": "The client should cut back on the number of flights operated per day.",
+			"direction": "right",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_82"
+		}]
+	},
+	"SlideAirlineQ3_69": {
+		"question": "How can the client reduce the fuel purchase price?",
+		"choices": [{
+			"answer": "The client should partner with other airlines to establish buying cooperatives, so as to increase its buying power.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_83"
+		}, {
+			"answer": "The client should negotiate a better fuel-purchase price with the sellers.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_84"
+		}, {
+			"answer": "The client can reduce the volatility in fuel prices by hedging prices with the help of financial instruments.",
+			"direction": "right",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_85"
+		}]
+	},
+	"SlideAirlineQ3_70": {
+		"question": "How can the client optimize its flight network?",
+		"choices": [{
+			"answer": "Well, the client could optimize its flight network by canceling connections on which the utilization is below the breakeven point.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_86"
+		}, {
+			"answer": "The client could look at code-sharing arrangements with other airlines.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_87"
+		}, {
+			"answer": "The client could analyze the competition's buying patterns or look at takeover opportunities. This would enable more leverage in optimizing the flight network.",
+			"direction": "right",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_88"
+		}]
+	},
+	"SlideAirlineQ3_80": {
+		"question": "Because the client's fleet is relatively new, it is already fuel-efficient. What other options exist to reduce costs?",
+		"choices": [{
+			"answer": "In that case, the client could focus on reducing the fuel purchase price through buying cooperatives or mitigating price volatility through hedging with the help of financial instruments.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_95"
+		}, {
+			"answer": "Well, the client could optimize its flight network by canceling connections on which the utilization is below the breakeven point. This would help reduce fuel consumption.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_96"
+		}]
+	},
+	"SlideAirlineQ3_81": {
+		"question": "This is too small a lever to have a substantial impact on costs.",
+		"choices": [{
+			"answer": "In that case, the client could focus on reducing the fuel purchase price through buying cooperatives or mitigating price volatility through hedging with the help of financial instruments.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_95"
+		}, {
+			"answer": "Well, the client could optimize its flight network by canceling connections on which the utilization is below the breakeven point. This would help reduce fuel consumption.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_96"
+		}]
+	},
+	"SlideAirlineQ3_82": {
+		"question": "Cutting back on flights would reduce sales as well and thus have an adverse impact on revenues. What other options exist to reduce costs?",
+		"choices": [{
+			"answer": "In that case, the client could focus on reducing the fuel purchase price through buying cooperatives or mitigating price volatility through hedging with the help of financial instruments.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_95"
+		}, {
+			"answer": "Well, the client could optimize its flight network by canceling connections on which the utilization is below the breakeven point. This would help reduce fuel consumption.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_96"
+		}]
+	},
+	"SlideAirlineQ3_83": {
+		"question": "This would be difficult to negotiate in the short term, and given the selling power in this scenario, buying cooperatives stand limited chance of success.",
+		"choices": [{
+			"answer": "The client could look at reducing fuel usage by adjusting its fleet mix to increase fuel efficiency or reducing the amount of baggage allowed per passenger.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_97"
+		}, {
+			"answer": "Well, the client could optimize its flight network by canceling connections on which the utilization is below the breakeven point. This would help reduce fuel consumption.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_98"
+		}]
+	},
+	"SlideAirlineQ3_84": {
+		"question": "I see your point, but given the time frame we're looking at, it may be difficult to implement this. What other options exist to reduce costs?",
+		"choices": [{
+			"answer": "The client could look at reducing fuel usage by adjusting its fleet mix to increase fuel efficiency or reducing the amount of baggage allowed per passenger.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_97"
+		}, {
+			"answer": "Well, the client could optimize its flight network by canceling connections on which the utilization is below the breakeven point. This would help reduce fuel consumption.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_98"
+		}]
+	},
+	"SlideAirlineQ3_85": {
+		"question": "This is a feasible option, but it's too late to consider this for the current price explosion. However, the client can look at price hedging to reduce volatility in the future.",
+		"choices": [{
+			"answer": "The client could look at decreasing fuel usage by adjusting its fleet mix to increase fuel efficiency or reducing the amount of baggage allowed per passenger.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_97"
+		}, {
+			"answer": "Well, the client could optimize its flight network by canceling connections on which the utilization is below the breakeven point. This would help reduce fuel consumption.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_98"
+		}]
+	},
+	"SlideAirlineQ3_86": {
+		"question": "This is a feasible option, but how would it affect the client's image in the market? Moreover, reestablishing these connections in the next boom phase would entail substantial cost. What are the other available options?",
+		"choices": [{
+			"answer": "The client could look at decreasing fuel usage by adjusting its fleet mix to increase fuel efficiency or reducing the amount of baggage allowed per passenger.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_99"
+		}, {
+			"answer": "The client could focus on reducing the fuel purchase price through buying cooperatives or mitigating price volatility through hedging with the help of financial instruments.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_100"
+		}]
+	},
+	"SlideAirlineQ3_87": {
+		"question": "This may be feasible in the long term, depending on other airlines, but it cannot be considered in the short term. What other options exist to reduce costs?",
+		"choices": [{
+			"answer": "The client could look at reducing fuel usage by adjusting its fleet mix to increase fuel efficiency or reducing the amount of baggage allowed per passenger.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_99"
+		}, {
+			"answer": "The client could focus on reducing the fuel purchase price through buying cooperatives or mitigating price volatility through hedging with the help of financial instruments.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_100"
+		}]
+	},
+	"SlideAirlineQ3_88": {
+		"question": "This could be a feasible option in the long term, though the client cannot act upon this in the short term. What other options exist to reduce costs?",
+		"choices": [{
+			"answer": "The client could look at reducing fuel usage by adjusting its fleet mix to increase fuel efficiency or reducing the amount of baggage allowed per passenger.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_99"
+		}, {
+			"answer": "The client could focus on reducing the fuel purchase price through buying cooperatives or mitigating price volatility through hedging with the help of financial instruments.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_100"
+		}]
+	},
+	"SlideAirlineQ3_95": {
+		"question": "Buying cooperatives are difficult to negotiate in the short term. Moreover, given the selling power in this scenario, they stand limited chance of success. Hedging via financial instruments to reduce price volatility is a feasible option, but only in the long term. It is too late to use this option to compensate for the current price increase. What are the other available options?",
+		"choices": [{
+			"answer": "Well, the client could optimize its flight network by canceling connections on which the utilization is below the breakeven point. This would help reduce fuel consumption.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_110"
+		}, {
+			"answer": "The client could analyze the competition's buying patterns or look at takeover opportunities. That would bring in more revenue and help to optimize the flight network.",
+			"direction": "middle",
+			"score": {
+				"rigor": -5,
+				"structuring": 0,
+				"judgment": -5,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_111"
+		}]
+	},
+	"SlideAirlineQ3_96": {
+		"question": "This is a feasible option, but how would it affect the client's image in the market? Moreover, reestablishing these connections in the next boom phase would entail substantial cost. What are the other available options?",
+		"choices": [{
+			"answer": "The client could analyze the competition's buying patterns or look at takeover opportunities. That would bring in more revenue and help to optimize the flight network.",
+			"direction": "next",
+			"score": {
+				"rigor": -5,
+				"structuring": 0,
+				"judgment": -5,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_111"
+		}, {
+			"answer": "The client could focus on reducing the fuel purchase price through buying cooperatives or mitigating price volatility through hedging with the help of financial instruments.",
+			"direction": "middle",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_112"
+		}]
+	},
+	"SlideAirlineQ3_97": {
+		"question": "Because the client's fleet is relatively new, it is already fuel-efficient. Moreover, reducing the baggage limit per person is too small a lever to have a significant impact on profitability. What are the other available options?",
+		"choices": [{
+			"answer": "Well, the client could optimize its flight network by canceling connections on which the utilization is below the breakeven point. This would help reduce fuel consumption.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_113"
+		}, {
+			"answer": "The client could analyze the competition's buying patterns or look at takeover opportunities. That would bring in more revenue and help to optimize the flight network.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_114"
+		}]
+	},
+	"SlideAirlineQ3_98": {
+		"question": "This is a feasible option, but how would it affect the client's image in the market? Moreover, reestablishing these connections in the next boom phase would entail substantial cost. What are the other available options?",
+		"choices": [{
+			"answer": "The client could analyze the competition's buying patterns or look at takeover opportunities. That would bring in more revenue and help to optimize the flight network.",
+			"direction": "next",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_114"
+		}, {
+			"answer": "The client could look at decreasing fuel usage by adjusting its fleet mix to increase fuel efficiency or reducing the amount of baggage allowed per passenger.",
+			"direction": "middle",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_115"
+		}]
+	},
+	"SlideAirlineQ3_99": {
+		"question": "Because the client's fleet is relatively new, it is already fuel-efficient. Moreover, reducing the baggage limit per person is too small a lever to have a significant impact on profitability. What are the other available options?",
+		"choices": [{
+			"answer": "The client could focus on reducing the fuel purchase price through buying cooperatives or mitigating price volatility through hedging with the help of financial instruments.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_116"
+		}, {
+			"answer": "The client should cut back the number of flights operated per day in order to reduce costs.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_117"
+		}]
+	},
+	"SlideAirlineQ3_100": {
+		"question": "Buying cooperatives are difficult to negotiate in the short term. Moreover, given the selling power in this scenario, they stand limited chance of success. Hedging via financial instruments to reduce price volatility is a feasible option, but only in the long term. It is too late to use this option to compensate for the current price increase. What are the other available options?",
+		"choices": [{
+			"answer": "The client should cut back the number of flights operated per day in order to reduce costs.",
+			"direction": "next",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_117"
+		}, {
+			"answer": "The client could look at reducing fuel usage by adjusting its fleet mix to increase fuel efficiency or reducing the amount of baggage allowed per passenger.",
+			"direction": "middle",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_118"
+		}]
+	},
+	"SlideAirlineQ3_110": {
+		"question": "This is a feasible option. We've already done some work in this area, which suggested that there is an opportunity, albeit a small one, to improve the situation.  What are the other available options?",
+		"choices": [{
+			"answer": "It seems that it is difficult to reduce costs, at least immediately, to completely offset the increase in costs due to the rise in fuel prices.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}, {
+			"answer": "It looks like the client would have to look for more opportunities in the market in order to offset the inevitable losses.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}]
+	},
+	"SlideAirlineQ3_111": {
+		"question": "This could be a feasible option in the long term, though the client cannot act upon this in the short term. What do you conclude from the discussion so far?",
+		"choices": [{
+			"answer": "It seems that it is difficult to reduce costs, at least immediately, to completely offset the increase in costs due to the rise in fuel prices.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}, {
+			"answer": "It looks like the client would have to look for more opportunities in the market in order to offset the inevitable losses.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}]
+	},
+	"SlideAirlineQ3_112": {
+		"question": "Buying cooperatives are difficult to negotiate in the short term. Moreover, given the selling power in this scenario, they stand limited chance of success. Hedging via financial instruments to reduce price volatility is a feasible option, but only in the long term. It is too late to use this option to compensate for the current price increase. What do you conclude from the discussion so far?",
+		"choices": [{
+			"answer": "It seems that it is difficult to reduce costs, at least immediately, to completely offset the increase in costs due to the rise in fuel prices.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}, {
+			"answer": "It looks like the client would have to look for more opportunities in the market in order to offset the inevitable losses.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}]
+	},
+	"SlideAirlineQ3_113": {
+		"question": "This is a feasible option, but how would it affect the client's image in the market? Moreover, reestablishing these connections in the next boom phase would entail substantial cost. What are the other available options?",
+		"choices": [{
+			"answer": "It seems that it is difficult to reduce costs, at least immediately, to completely offset the increase in costs due to the rise in fuel prices.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}, {
+			"answer": "It looks like the client would have to look for more opportunities in the market in order to offset the inevitable losses.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}]
+	},
+	"SlideAirlineQ3_114": {
+		"question": "This could be a feasible option in the long term, though the client cannot act upon this in the short term. What do you conclude from the discussion so far?",
+		"choices": [{
+			"answer": "It seems that it is difficult to reduce costs, at least immediately, to completely offset the increase in costs due to the rise in fuel prices.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}, {
+			"answer": "It looks like the client would have to look for more opportunities in the market in order to offset the inevitable losses.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}]
+	},
+	"SlideAirlineQ3_115": {
+		"question": "Because the client's fleet is relatively new, it is already fuel-efficient. Moreover, reducing the baggage limit per person is too small a lever to have a significant impact on profitability. What do you conclude from the discussion so far?",
+		"choices": [{
+			"answer": "It seems that it is difficult to reduce costs, at least immediately, to completely offset the increase in costs due to the rise in fuel prices.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}, {
+			"answer": "It looks like the client would have to look for more opportunities in the market in order to offset the inevitable losses.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}]
+	},
+	"SlideAirlineQ3_116": {
+		"question": "Buying cooperatives are difficult to negotiate in the short term. Moreover, given the selling power in this scenario, they stand limited chance of success. Hedging via financial instruments to reduce price volatility is a feasible option, but only in the long term. It is too late to use this option to compensate for the current price increase. What do you conclude from the discussion so far? ",
+		"choices": [{
+			"answer": "It seems that it is difficult to reduce costs, at least immediately, in response to the fuel price hike.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}, {
+			"answer": "It looks like the client would have to look for more opportunities in the market in order to offset the inevitable losses.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}]
+	},
+	"SlideAirlineQ3_117": {
+		"question": "Cutting back on flights would reduce sales as well, which would have an adverse impact on revenues. What do you conclude from the discussion so far?",
+		"choices": [{
+			"answer": "It seems that it is difficult to reduce costs, at least immediately, in response to the fuel price hike.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}, {
+			"answer": "It looks like the client would have to look for more opportunities in the market in order to offset the inevitable losses.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}]
+	},
+	"SlideAirlineQ3_118": {
+		"question": "Because the client's fleet is relatively new, it is already fuel-efficient. Moreover, reducing the baggage limit per person is too small a lever to have significant impact on profitability. What do you conclude from the discussion so far?",
+		"choices": [{
+			"answer": "It seems that it is difficult to reduce costs, at least immediately, in response to the fuel price hike.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}, {
+			"answer": "It looks like the client would have to look for more opportunities in the market in order to offset the inevitable losses.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"is_link_direct": false,
+			"links_to": "if revenue_path_flag == true then SlideAirlineQ3_121_6_0 else SlideAirlineQ3_121_2_0"
+		}]
+	},
+	"SlideAirlineQ3_121_2_0": {
+		"question": "It is difficult to come up with measures to reduce costs in the short term as a response to the fuel price hike. Well, let's look at the other factor of profitability. What do you think are the key drivers of revenues for our client?",
+		"revenue_path_flag": true,
+		"choices": [{
+			"answer": "I think that revenues for an LCC player would be primarily driven by ticket sales and some other sources of revenue.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ2_4"
+		}, {
+			"answer": "I think that ticket sales would be the key driver of revenues for an LCC player.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ2_4"
+		}, {
+			"answer": "I think that revenues would be a function of the number of passengers traveling with that airline.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ2_5"
+		}]
+	},
+	"SlideAirlineQ3_121_6_0": {
+		"question": "It is difficult to come up with measures to reduce costs in the short term as a response to the fuel price hike. However, that does not mean that the client has no options left to ensure long-term profitability. How would you approach this?",
+		"choices": [{
+			"answer": "It looks like profits would deteriorate in the short term, but I'd like to investigate whether the situation can be salvaged over a longer period of time.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineQ6_8"
+		}, {
+			"answer": "Well, our discussion shows that the client cannot increase sales or reduce costs. I'm afraid the client will need to increase ticket prices in order to pass on some of the cost increase to the customers so that its losses are smaller.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 2,
+				"judgment": 2,
+				"synthesis": 2
+			},
+			"links_to": "SlideAirlineQ6_4"
+		}, {
+			"answer": "The client could look at retrenching staff and drastically reducing operations to stay profitable. Otherwise, it is bound to experience losses.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineQ6_4"
+		}]
+	},
+	"SlideAirlineQ4_4": {
+		"question": "How would you go about exploring the feasibility of increasing ticket prices?",
+		"entrySet": 4,
+		"choices": [{
+			"answer": "I'd like to find out more about the LCC business model.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_8"
+		}, {
+			"answer": "I'd like to find out more about the competition. I assume they're facing a similar situation.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 2,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_9"
+		}, {
+			"answer": "I'd like to investigate whether there are other factors in the market, such as regulatory mechanisms, which will prevent an increase in ticket prices.",
+			"direction": "right",
+			"score": {
+				"rigor": 0,
+				"structuring": -5,
+				"judgment": -5,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_10"
+		}]
+	},
+	"SlideAirlineQ4_8": {
+		"question": "Well, revenues for LCC players are mainly driven by ticket sales. Most operators in the LCC market offer low fares in order to provide attractive pricing for consumers and thereby stimulate demand. Therefore, keeping costs low as well as achieving growth to increase revenues are key components of their business model.",
+		"entrySet": 4,
+		"choices": [{
+			"answer": "Even though pricing is very competitive in the LCC market, I'd like to determine whether our client could increase prices to increase sales revenues.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineQ4_14"
+		}, {
+			"answer": "All right. I think increasing prices is not a real option for us, because we may lose out to the competition. So, ticket prices should remain stable.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 2,
+				"synthesis": 2
+			},
+			"links_to": "SlideAirlineQ4_15"
+		}, {
+			"answer": "I actually think our client needs to reduce prices in order to attract more customers and, therefore, increase revenues.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineQ4_15"
+		}]
+	},
+	"SlideAirlineQ4_9": {
+		"question": "The competition is in a similar situation. Some players operate on wafer-thin margins - the steep increase in fuel costs means that they may soon be operating in the red. Others have stronger growth and ancillary sources of revenue, which means that they can remain profitable for a longer period of time.",
+		"choices": [{
+			"answer": "Even though pricing is very competitive in the LCC market, I'd like to determine whether our client could increase prices to increase sales revenues.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineQ4_14"
+		}, {
+			"answer": "All right. I think increasing prices is not a real option for us, because we may lose out to the competition. So, ticket prices should remain stable.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 2,
+				"synthesis": 2
+			},
+			"links_to": "SlideAirlineQ4_15"
+		}, {
+			"answer": "I think our client needs to reduce prices in order to attract more customers and, therefore, increase revenues.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineQ4_15"
+		}]
+	},
+	"SlideAirlineQ4_10": {
+		"question": "There are no policies or regulatory mechanisms that prevent LCC players from increasing prices.",
+		"choices": [{
+			"answer": "That is good to know, because even though pricing is very competitive in the LCC market, I'd like to determine whether our client could increase prices to increase sales revenues.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineQ4_14"
+		}, {
+			"answer": "All right. Even so, I think increasing prices is not a real option for us, because we may lose out to the competition. So, ticket prices should remain stable.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 2,
+				"synthesis": 2
+			},
+			"links_to": "SlideAirlineQ4_15"
+		}, {
+			"answer": "Actually, I think our client needs to reduce prices in order to attract more customers and, therefore, increase revenues.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineQ4_15"
+		}]
+	},
+	"SlideAirlineQ4_14": {
+		"question": "How would you determine that?",
+		"choices": [{
+			"answer": "We could have a look at the data on the current sales and prices to determine the impact of a price hike.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"messageDescription": "That sounds reasonable. Here's the relevant data.",
+			"links_to": "SlideAirlineQ_Rigor1_1"
+		}, {
+			"answer": "We could look at sales data for the competition and draw some conclusions from that.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 2,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"messageDescription": "I'm afraid past data isn't available. You could look at the current sales and price data.",
+			"links_to": "SlideAirlineQ_Rigor1_1"
+		}, {
+			"answer": "We could look at past data on the impact of a ticket price increase on sales.",
+			"direction": "next",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"messageDescription": "I'm afraid past data isn't available. You could look at the current sales and price data.",
+			"links_to": "SlideAirlineQ_Rigor1_1"
+		}]
+	},
+	"SlideAirlineQ_Rigor1_1": {
+		"question": "By what percentage does the client need to increase the average ticket price to maintain its profits? (Round off to one decimal place)",
+		"messageHeading": "That's right!",
+		"messageDescription": "The client needs to increase the price by 13.3 percent.",
+		"messageHeadingLow": "That's not quite right.",
+		"messageDescriptionLow": "With the given data, calculate first the current fuel and nonfuel costs, then the increase in revenues required to maintain the current profit.",
+		"messageHeadingHigh": "That's not quite right.",
+		"messageDescriptionHigh": "With the given data, calculate first the current fuel and nonfuel costs, then the increase in revenues required to maintain the current profit.",
+		"correctanswer": 13.3,
+
+		"links_to": "SlideAirlineQ_Rigor1_2",
+		"score": {
+			"rigor": 2,
+			"structuring": 2,
+			"judgment": 2,
+			"synthesis": 2
+		},
+		"expectInput": true,
+		"bulletData": {
+			"title": "You are given the following information:",
+			"bullets": ["Sales: $1,500 millions", "Profit margin: 20%", "Expected fuel price increase: 50%", "Current fuel costs are half as high as non fuel costs"]
+		}
+	},
+
+	"SlideAirlineQ_Rigor1_2": {
+		"question": "If prices were increased by 13.3%, what would be the impact on demand?",
+		"image": "<graph1>",
+		"footnote": "Read each option carefully. Click to select one option as your answer and then click Next. Click Next to proceed with the case.",
+		"choices": [{
+			"answer": "Demand would drop by 13.3%.",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"direction": "right",
+			"messageHeading": "That's not quite right.",
+			"messageDescription": "An increase in prices by 13.3% would lead to a drop in demand by 26.6%.",
+			"links_to": "SlideAirlineQ4_28"
+		}, {
+			"answer": "Demand would increase by 26.6%.",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"direction": "right",
+			"messageHeading": "That's not quite right.",
+			"messageDescription": "An increase in prices by 13.3% would lead to a drop in demand by 26.6%.",
+			"links_to": "SlideAirlineQ4_28"
+		}, {
+			"answer": "Demand would drop by 26.6%.",
+			"isCorrect": 1,
+			"score": {
+				"rigor": 2,
+				"structuring": 2,
+				"judgment": 2,
+				"synthesis": 2
+			},
+			"direction": "right",
+			"messageHeading": "That's right!",
+			"messageDescription": "An increase in prices by 13.3% would lead to a drop in demand by 26.6%.",
+			"links_to": "SlideAirlineQ4_28"
+		}, {
+			"answer": "Demand would increase by 13.3%.",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"direction": "right",
+			"messageHeading": "That's not quite right.",
+			"messageDescription": "An increase in prices by 13.3% would lead to a drop in demand by 26.6%.",
+			"links_to": "SlideAirlineQ4_28"
+		}, {
+			"answer": "Demand would not change.",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"direction": "right",
+			"messageHeading": "That's not quite right.",
+			"messageDescription": "An increase in prices by 13.3% would lead to a drop in demand by 26.6%.",
+			"links_to": "SlideAirlineQ4_28"
+		}]
+	},
+	"SlideAirlineQ4_15": {
+		"question": "Is that your recommendation to the client? I'm afraid you've come to a rather hasty conclusion, without fully considering the various aspects of the client's problem. I'd suggest that you try to assess the impact of an increase in prices on the client's sales revenues. You could look at the current sales and price data.",
+		"choices": [{
+			"answer": "Well, let me reconsider this. Actually, I would like to determine, if possible, the impact of an increase in ticket prices on the client's sales revenues.",
+			"isCorrect": 1,
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": -5,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_14"
+		}, {
+			"answer": "Yes, I think that would be my recommendation.",
+			"direction": "middle",
+			"isCorrect": 0,
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": -15,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_15a"
+		}]
+	},
+	"SlideAirlineQ4_15a": {
+		"question": "I'm afraid you've come to a rather hasty conclusion, without fully considering the various aspects of the client's problem. I'd suggest that you try to assess the impact of an increase in prices on the client's sales revenues. You could look at the current sales and price data.",
+		"links_to": "SlideAirlineQ_Rigor1_1"
+	},
+	"SlideAirlineQ4_28": {
+		"question": "What do you conclude from your calculations?",
+		"choices": [{
+			"answer": "Well, demand in the LCC sector is price-elastic. A hike in ticket prices would lead to a drop in the number of tickets sold. Therefore, our client should resist the temptation to increase prices.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineQ4_32"
+		}, {
+			"answer": "Well, demand in this sector is relatively inelastic. A hike in ticket prices would not lead to a drop in the number of tickets sold. Therefore, the client should increase ticket prices to increase revenue.",
+			"direction": "middle",
+			"score": {
+				"rigor": -5,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineQ4_33"
+		}, {
+			"answer": "The client needs to increase the average ticket price by 13.3 percent. That would increase revenues sufficiently to counter the increase in fuel prices.",
+			"direction": "middle",
+			"score": {
+				"rigor": -5,
+				"structuring": 0,
+				"judgment": -5,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_33"
+		}]
+	},
+	"SlideAirlineQ4_32": {
+		"question": "You're saying that increasing ticket prices is not a feasible option. How would you like to proceed now?",
+		"choices": [{
+			"answer": "I'd like to explore whether there are ways to increase the number of tickets sold. That is, I'd like to explore ways of increasing the number of passengers.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_36"
+		}, {
+			"answer": "All right, because increasing prices is not a workable option, couldn't our client look at decreasing costs? That would increase profits too.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_37"
+		}]
+	},
+	"SlideAirlineQ4_33": {
+		"question": "Not really. Demand is price-elastic, and increasing ticket prices would lead to a drop in the number of tickets sold. Therefore, our client should not increase prices. How would you like to proceed now?",
+		"choices": [{
+			"answer": "I'd like to explore whether there are ways to increase the number of tickets sold. That is, I'd like to explore ways of increasing the number of passengers.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_36"
+		}, {
+			"answer": "All right, because increasing prices is not a workable option, couldn't our client look at decreasing costs? That would increase profits too.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_37"
+		}]
+	},
+	"SlideAirlineQ4_36": {
+		"question": "What would you like to know to judge the feasibility of this option?",
+		"choices": [{
+			"answer": "Well, I'd like to know whether most of the client's flights are flying at full capacity. If not, we could look at ways to increase the capacity utilization of flights.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_41"
+		}, {
+			"answer": "I'd like to know if our client could offer discounts or other promotional schemes to attract more customers to its flights.",
+			"direction": "middle",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_42"
+		}, {
+			"answer": "The client could opt for bigger aircraft in order to accommodate more passengers on each flight. Thus, the total number of passengers would increase.",
+			"direction": "right",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_43"
+		}]
+	},
+	"SlideAirlineQ4_37": {
+		"question": "Possibly. But since we have already looked at increasing prices, let's stay with ticket sales. What do you need to know to see if increasing the number of passengers is feasible?",
+		"choices": [{
+			"answer": "Well, I'd like to know whether most of the client's flights are flying at full capacity. If not, we could look at ways to increase the capacity utilization of flights.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_41"
+		}, {
+			"answer": "I'd like to know if our client could offer discounts or other promotional schemes to attract more customers to its flights.",
+			"direction": "middle",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_42"
+		}, {
+			"answer": "The client could opt for bigger aircraft in order to accommodate more passengers on each flight. Thus, the total number of passengers would increase.",
+			"direction": "right",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_43"
+		}]
+	},
+	"SlideAirlineQ4_41": {
+		"question": "What you're trying to ask about is called the load factor. Yes, the load factor for most flights is at or near industry best practice. It will be difficult to improve this further.",
+		"choices": [{
+			"answer": "Well, are there any flights at specific times of the day where the occupancy is low? The client could look at offering special discounts to customers for these flights.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_50"
+		}, {
+			"answer": "The client could opt for bigger aircraft to accommodate more passengers on each flight. Thus, the total number of passengers would increase.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_49"
+		}]
+	},
+	"SlideAirlineQ4_42": {
+		"question": "This would have a similar effect to reducing ticket prices. Given that load factors are very high, there isn't much upside in reducing ticket prices to increase passenger numbers. In fact, doing so might actually reduce revenues. Which other options could we consider?",
+		"choices": [{
+			"answer": "The client could opt for bigger aircraft to accommodate more passengers on each flight.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_49"
+		}, {
+			"answer": "Does the client have any unused capacity on existing aircraft? The client could look at ways to increase the occupancy of its existing flights.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_56"
+		}]
+	},
+	"SlideAirlineQ4_43": {
+		"question": "New aircraft have a very long lead time from order to delivery, so unfortunately that's not an option in the short term.",
+		"choices": [{
+			"answer": "Does the client have any unused capacity on existing aircraft? The client could look at ways to increase the occupancy of its existing flights.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_56"
+		}, {
+			"answer": "In that case, the client could increase the number of customers by offering discounted prices or promotional schemes.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_48"
+		}]
+	},
+	"SlideAirlineQ4_48": {
+		"question": "This would have a similar effect to reducing ticket prices. Given that load factors are very high, there isn't much upside in reducing ticket prices to increase passenger numbers. In fact, doing so might actually reduce revenues. Which other options could we consider?",
+		"choices": [{
+			"answer": "Well, the client could increase the frequency of flights or fly to new destinations.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_54"
+		}, {
+			"answer": "The client could opt for bigger aircraft to accommodate more passengers on each flight.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_49"
+		}]
+	},
+	"SlideAirlineQ4_49": {
+		"question": "New aircraft have a very long lead time from order to delivery, so unfortunately that's not an option in the short term.",
+		"choices": [{
+			"answer": "Okay. In that case, the client could increase the frequency of flights or fly to new destinations.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_54"
+		}, {
+			"answer": "Well, it doesn't look like the client can take any measures, at least in the short term, to increase the number of tickets sold.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"is_link_direct": false,
+			"links_to": "if cost_path_flag == false then SlideAirlineQ4_59_3_0 else SlideAirlineQ4_59_6_0"
+		}]
+	},
+
+	"SlideAirlineQ4_50": {
+		"question": "I'm afraid this lever would be too small to have a significant impact on revenues.",
+		"choices": [{
+			"answer": "Okay. In that case, the client could increase the frequency of flights or fly to new destinations.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_54"
+		}, {
+			"answer": "The client could opt for bigger aircraft to accommodate more passengers on each flight.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_49"
+		}]
+	},
+	"SlideAirlineQ4_54": {
+		"question": "I'm afraid slots are not available, at least immediately, to increase the frequency of flights. Your suggestion of flying to new destinations is perhaps workable in the longer term because it would probably involve expanding the client's market. However, new destinations require significant investments and typically take a while to become profitable, so in the short term your suggestion would hurt profitability.",
+		"choices": [{
+			"answer": "Well, it doesn't look like the client can take any measures, at least in the short term, to increase the number of tickets sold.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"is_link_direct": false,
+			"links_to": "(if non_ticket_revenue_path_flag == true (if cost_path_flag == false then SlideAirlineQ4_59_3_0 else SlideAirlineQ4_59_6_0) else (if cost_path_flag == false then SlideAirlineQ4_59_5_0b else SlideAirlineQ4_59_5_0c)"
+		}, {
+			"answer": "Well, the client should find some measures to increase the number of customers in order to increase revenues.",
+			"direction": "next",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"is_link_direct": false,
+			"links_to": "(if non_ticket_revenue_path_flag == true (if cost_path_flag == false then SlideAirlineQ4_59_3_0 else SlideAirlineQ4_59_6_0) else (if cost_path_flag == false then SlideAirlineQ4_59_5_0b else SlideAirlineQ4_59_5_0c)"
+		}]
+	},
+	"SlideAirlineQ4_56": {
+		"question": "What you're trying to ask about is called the load factor. Yes, the load factor for most flights is at or near industry best practice. It will be difficult to improve this further.",
+		"choices": [{
+			"answer": "Well, it doesn't look like the client can take any measures, at least in the short term, to increase the number of tickets sold.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"is_link_direct": false,
+			"links_to": "(if non_ticket_revenue_path_flag == true (if cost_path_flag == false then SlideAirlineQ4_59_3_0 else SlideAirlineQ4_59_6_0) else (if cost_path_flag == false then SlideAirlineQ4_59_5_0b else SlideAirlineQ4_59_5_0c)"
+		}, {
+			"answer": "Well, the client should find some measures to increase the number of customers in order to increase revenues.",
+			"direction": "next",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"is_link_direct": false,
+			"links_to": "(if non_ticket_revenue_path_flag == true (if cost_path_flag == false then SlideAirlineQ4_59_3_0 else SlideAirlineQ4_59_6_0) else (if cost_path_flag == false then SlideAirlineQ4_59_5_0b else SlideAirlineQ4_59_5_0c)"
+
+		}]
+	},
+	"SlideAirlineQ4_59_5_0b": {
+		"question": "Okay. How would you like to proceed now?",
+		"choices": [{
+			"answer": "The client could think about approaching new areas. Cargo is one example, if the client doesn't have a presence in that area already.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ5_13b"
+		}, {
+			"answer": "The client could provide value-added services to passengers and charge extra for these.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ5_15"
+		}]
+	},
+	"SlideAirlineQ4_59_5_0c": {
+		"question": "Okay. How would you like to proceed now?",
+		"choices": [{
+			"answer": "The client could think about approaching new areas. Cargo is one example, if the client doesn't have a presence in that area already.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ5_13c"
+		}, {
+			"answer": "The client could provide value-added services to passengers and charge extra for these.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ5_15"
+		}]
+	},
+	"SlideAirlineQ4_59_3_0": {
+		"question": "We've seen that increasing revenues doesn't look like a feasible option. How would you like to proceed?",
+		"choices": [{
+			"answer": "Well, fuel costs are the largest cost component. However, because fuel prices have gone up, the client cannot do much about its fuel costs. Therefore, I'd first like to ask if the client could reduce non-fuel costs.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_52"
+		}, {
+			"answer": "I would just focus on fuel and non-fuel costs. We know that fuel costs have gone up. I'd like to explore whether the client could purchase fuel at lower prices, and I'd like to look at reducing non-fuel costs.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 3,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_53"
+		}, {
+			"answer": "Fuel costs have increased, and staff costs are difficult to reduce. I would like to explore whether the client could reduce costs related to maintenance and overhaul.",
+			"direction": "right",
+			"score": {
+				"rigor": 0,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_54"
+		}]
+	},
+	"SlideAirlineQ4_59_6_0": {
+		"question": "Well, we've established that it is difficult to come up with measures to reduce costs in the short term as a response to the fuel price hike. However, that does not mean that the client has no options left to ensure long-term profitability. How would you approach this?",
+		"choices": [{
+			"answer": "It looks like profits would deteriorate in the short term, but I'd like to investigate whether the situation can be salvaged over a longer period of time.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineQ6_8"
+		}, {
+			"answer": "Well, our discussion shows that the client cannot increase sales or reduce costs. I'm afraid the client will need to increase ticket prices in order to pass on some of the cost increase to the customers so that its losses are smaller.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 2,
+				"judgment": 2,
+				"synthesis": 2
+			},
+			"links_to": "SlideAirlineQ6_4"
+		}, {
+			"answer": "The client could look at retrenching staff and drastically reducing operations to stay profitable. Otherwise, it is bound to experience losses.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineQ6_4"
+		}]
+	},
+	"SlideAirlineQ5_13": {
+		"question": "The client has no prior experience in this area. It would be too risky in the current environment. We've seen that increasing non-ticket sources of revenue doesn't look like a feasible option. How would you like to proceed?",
+		"entrySet": 5,
+		"choices": [{
+			"answer": "Well, because increasing non-ticket revenue is not a feasible option, I'd like to explore how the client could increase revenue from ticketing.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineQ5_18_4_0"
+		}, {
+			"answer": "I would like to see if the client could increase the number of customers.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 1,
+				"judgment": 2,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineQ5_18_4_0"
+		}]
+	},
+	"SlideAirlineQ5_13b": {
+		"question": "The client has no prior experience in this area. It would be too risky in the current environment. We've seen that increasing non-ticket sources of revenue doesn't look like a feasible option. How would you like to proceed?",
+		"entrySet": 5,
+		"choices": [{
+			"answer": "Well, since increasing revenue is not a feasible option, I'd like to explore how the client could reduce costs.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineQ5_18_3_0"
+		}, {
+			"answer": "The client should reduce its fuel consumption and save on fuel costs, given that revenues can't be increased.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 1,
+				"judgment": 2,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineQ5_18_3_0"
+		}]
+	},
+	"SlideAirlineQ5_13c": {
+		"question": "The client has no prior experience in this area. It would be too risky in the current environment. We've seen that increasing non-ticket sources of revenue doesn't look like a feasible option. How would you like to proceed?",
+		"entrySet": 5,
+		"choices": [{
+			"answer": "It seems that it is difficult to reduce costs or increase revenues, at least immediately, in response to the fuel price hike.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineQ5_18_6_0"
+		}, {
+			"answer": "It looks like the client will have to live with a loss-making scenario after the fuel price hike, because reducing costs or increasing revenues is not possible.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 1,
+				"judgment": 2,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineQ5_18_6_0"
+		}]
+	},
+	"SlideAirlineQ5_15": {
+		"question": "Our client is pretty active in this area and is at industry best practice for ancillary revenue, so it looks like there isn't much additional opportunity here. We've seen that increasing non-ticket sources of revenue doesn't look like a feasible option. How would you like to proceed?",
+		"entrySet": 5,
+		"choices": [{
+			"answer": "Well, because increasing non-ticket revenue is not a feasible option, I'd like to explore how the client could increase revenue from ticketing.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineQ5_18_4_0"
+		}, {
+			"answer": "I would like to see if the client could increase the number of customers.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 1,
+				"judgment": 2,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineQ5_18_4_0"
+		}]
+	},
+	"SlideAirlineQ5_18_6_0": {
+		"question": "Well, we've established that it is difficult to come up with measures to reduce costs in the short term as a response to the fuel price hike. However, that does not mean that the client has no options left to ensure long-term profitability. How would you approach this?",
+		"choices": [{
+			"answer": "It looks like profits would deteriorate in the short term, but I'd like to investigate whether the situation can be salvaged over a longer period of time.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineQ6_8"
+		}, {
+			"answer": "Well, our discussion shows that the client cannot increase sales or reduce costs. I'm afraid the client will need to increase ticket prices in order to pass on some of the cost increase to the customers so that its losses are smaller.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 2,
+				"judgment": 2,
+				"synthesis": 2
+			},
+			"links_to": "SlideAirlineQ6_4"
+		}, {
+			"answer": "The client could look at retrenching staff and drastically reducing operations to stay profitable. Otherwise, it is bound to experience losses.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineQ6_4"
+		}]
+	},
+	"SlideAirlineQ5_18_3_0": {
+		"question": "How would you like to proceed?",
+		"choices": [{
+			"answer": "Well, fuel costs are the largest cost component. However, because fuel prices have gone up, the client cannot do much about its fuel costs. Therefore, I'd first like to ask if the client could reduce non-fuel costs.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_52"
+		}, {
+			"answer": "I would just focus on fuel and non-fuel costs. We know that fuel costs have gone up. I'd like to explore whether the client could purchase fuel at lower prices, and I'd like to look at reducing non-fuel costs.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 3,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_53"
+		}, {
+			"answer": "Fuel costs have increased, and staff costs are difficult to reduce. I would like to explore whether the client could reduce costs related to maintenance and overhaul.",
+			"direction": "right",
+			"score": {
+				"rigor": 0,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ3_54"
+		}]
+	},
+	"SlideAirlineQ5_18_4_0": {
+		"question": "How would you like to proceed?",
+		"choices": [{
+			"answer": "I'd like to investigate whether it would be feasible to increase ticket prices.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 2,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_4"
+		}, {
+			"answer": "Ticket sales are a function of ticket prices and the number of tickets sold. So, increasing one or both of these would increase ticket sales.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_4"
+		}, {
+			"answer": "Revenues from ticket sales need to go up. Revenues will go up if more customers buy tickets. So, the client has to work toward increasing the number of customers by offering discounted ticket prices.",
+			"direction": "middle",
+			"score": {
+				"rigor": -5,
+				"structuring": -5,
+				"judgment": -5,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ4_8"
+		}]
+	},
+	"SlideAirlineQ6_4": {
+		"question": "Is this your recommendation to the client?",
+		"entrySet": 6,
+		"choices": [{
+			"answer": "I think I'd like to explore some more options before making a recommendation. For instance, we have figured out some measures that the client can use in the long term. Maybe there are other things the client can do to maintain or increase long-term profitability.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 2,
+				"judgment": 2,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_8"
+		}, {
+			"answer": "I think that's my recommendation, yes. A loss-making scenario is certain for the client, unless some drastic measures are taken.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": -5,
+				"judgment": -5,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_9"
+		}]
+	},
+	"SlideAirlineQ6_8": {
+		"question": "Fair enough. What information would you need for this?",
+		"messageDescription": "In fact, we do have data on this. Take a look.",
+		"entrySet": 6,
+		"choices": [{
+			"answer": "Well, the client's ability to withstand losses in the short term would really depend on its margins, compared with those of its competitors. Do we have any data on this?",
+			"direction": "next",
+			"isCorrect": 0,
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ_Rigor2"
+		}, {
+			"answer": "I'd like to know what the competition is doing to maintain or increase profitability in the long term. That might give us some ideas for our client.",
+			"direction": "middle",
+			"isCorrect": 1,
+			"score": {
+				"rigor": 2,
+				"structuring": 2,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_16"
+		}, {
+			"answer": "I'd like to know how the client has tackled such a situation in the past.",
+			"direction": "right",
+			"isCorrect": 1,
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_17"
+		}]
+	},
+	"SlideAirlineQ6_9": {
+		"question": "Well, the situation over a longer period of time could be different if the client could take some measures to reduce costs\u2014measures that we've already discussed. I'd suggest you investigate how the situation could turn out in the long term. What information would you need for that?",
+		"messageDescription": "In fact, we do have data on this. Take a look.",
+		"choices": [{
+			"answer": "Well, the client's ability to withstand losses in the short term would really depend on its margins, compared with those of its competitors. Do we have any data on this?",
+			"direction": "next",
+			"isCorrect": 0,
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ_Rigor2"
+		}, {
+			"answer": "I'd like to know what the competition is doing to maintain or increase profitability in the long term. That might give us some ideas for our client.",
+			"direction": "middle",
+			"isCorrect": 1,
+			"score": {
+				"rigor": 2,
+				"structuring": 2,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_16"
+		}, {
+			"answer": "I'd like to know how the client has tackled such a situation in the past.",
+			"direction": "right",
+			"isCorrect": 1,
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_17"
+		}]
+	},
+	"SlideAirlineQ6_16": {
+		"question": "I'm afraid that at this point we don't have data on the competition's strategies.",
+		"choices": [{
+			"answer": "In that case, what about the client's current position in the market? Do we have data on the client's profits?",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_16a"
+		}, {
+			"answer": "In that case, I'd like to see some data on the client's sales over the years.",
+			"direction": "next",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_16a"
+		}]
+	},
+	"SlideAirlineQ6_16a": {
+		"question": "It would be more relevant for you to understand the current market situation where the client stands as compared to its competitors. Here's some data on this.",
+		"links_to": "SlideAirlineQ_Rigor2"
+	},
+	"SlideAirlineQ6_17": {
+		"question": "Past strategies may not be very helpful in formulating recommendations for the current situation because many factors, external and internal, have changed since then.",
+		"messageHeding": "",
+		"messageDescription": "It would be more relevant for you to understand the current market situation where the client stands as compared to its competitors. Here's some data on this.",
+		"choices": [{
+			"answer": "In that case, what about the client's current position in the market? Do we have data on the client's profits?",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ_Rigor2"
+		}, {
+			"answer": "In that case, I'd like to see some data on the client's sales over the years.",
+			"direction": "next",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ_Rigor2"
+		}]
+	},
+	"SlideAirlineQ_Rigor2": {
+		"question": "What does the graph show about the client's costs and margins, as compared to that of its competitors?",
+		"image": "graph-2",
+		"choices": [{
+			"answer": "The client has a low cost base, and is thus best suited to keep prices down. Its size suggests that it can sustain losses for some time.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 2,
+				"judgment": 2,
+				"synthesis": 2
+			},
+			"messageHeading": "That's right!",
+			"messageDescription": "The client's cost base is low compared to that of its competitors. Therefore, it has the largest potential to keep prices down. Moreover, its size suggests financial stability, which means it can sustain losses for some time, too.",
+			"isCorrect": 1,
+			"links_to": "SlideAirlineQ6_21"
+		}, {
+			"answer": "The client's size suggests that it can sustain losses; but its costs are high and, therefore, margins are low.",
+			"direction": "right",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"messageHeading": "You are close!",
+			"messageDescription": "The client's size suggests financial stability, which means it can sustain losses for some time too. Moreover, its cost base is low compared to that of its competitors. Therefore, it has the largest potential to keep prices down.",
+			"links_to": "SlideAirlineQ6_21"
+		}, {
+			"answer": "The client's costs are high and margins are low. Its size also suggests that it may not be able to sustain losses for very long.",
+			"direction": "right",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"messageHeading": "That's not quite right.",
+			"messageDescription": "The client's cost base is low compared to that of its competitors. Therefore, it has the largest potential to keep prices down. Moreover, its size suggests financial stability, which means it can sustain losses for some time, too.",
+			"links_to": "SlideAirlineQ6_21"
+		}, {
+			"answer": "The client's total revenues are way below those of most of its competitors, therefore margins are low.",
+			"direction": "right",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"messageHeading": "That's not quite right.",
+			"messageDescription": "The client's cost base is low compared to that of its competitors. Therefore, it has the largest potential to keep prices down. Moreover, its size suggests financial stability, which means it can sustain losses for some time, too.",
+			"links_to": "SlideAirlineQ6_21"
+		}, {
+			"answer": "On a relative basis, the client's margins are high, but on an absolute basis, they are lower than those of its competitors.",
+			"direction": "right",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"messageHeading": "That's not quite right.",
+			"messageDescription": "The client's cost base is low compared to that of its competitors. Therefore, it has the largest potential to keep prices down. Moreover, its size suggests financial stability, which means it can sustain losses for some time, too.",
+			"links_to": "SlideAirlineQ6_21"
+		}]
+	},
+	"SlideAirlineQ6_21": {
+		"question": "What do your findings imply about the client's ability to assume price leadership?",
+		"choices": [{
+			"answer": "The client is in a good position to establish price leadership.",
+			"isCorrect": 0,
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_21a"
+		}, {
+			"answer": "The client needs to increase prices to establish price leadership.",
+			"direction": "middle",
+			"isCorrect": 0,
+			"score": {
+				"rigor": -5,
+				"structuring": 0,
+				"judgment": -5,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_21a"
+		}, {
+			"answer": "The client needs to reduce prices to establish price leadership.",
+			"direction": "middle",
+			"isCorrect": 0,
+			"score": {
+				"rigor": -15,
+				"structuring": 0,
+				"judgment": -15,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_21a"
+		}]
+	},
+	"SlideAirlineQ6_21a": {
+		"question": "Given its low costs and high margins compared to the competition, the client is in a good position to keep prices low and maintain price leadership. Let's look at the graph again.",
+		"links_to": "SlideAirlineQ_Rigor4"
+	},
+	"SlideAirlineQ_Rigor4": {
+		"question": "Looking at the graph, how would you assess the long-term development of the industry, given the price increase?",
+		"image": "<graph-3>",
+		"choices": [{
+			"answer": "Many companies have low margins. Given that demand is inelastic, prices across the board will increase, so that profits for all players would increase in the long run.",
+			"direction": "right",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ_Rigor4_Message1"
+		}, {
+			"answer": "Many companies have high margins. Given that demand is inelastic, prices across the board would increase, leading to high profits for all the players.",
+			"direction": "right",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ_Rigor4_Message1"
+		}, {
+			"answer": "Given that price increases are not possible, the players with largest revenues will fare better, as they control the largest market share.",
+			"direction": "right",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ_Rigor4_Message2"
+		}, {
+			"answer": "The total revenues for the industry have grown with an increase in ticket prices. Increasing ticket prices seems to be a viable way of remaining profitable.",
+			"direction": "right",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ_Rigor4_Message1"
+		}, {
+			"answer": "Many companies have low margins. Given that demand is elastic and price increases are not possible, many companies will not be able to maintain their profitability in the long run.",
+			"direction": "next",
+			"score": {
+				"rigor": 2,
+				"structuring": 2,
+				"judgment": 2,
+				"synthesis": 2
+			},
+			"links_to": "SlideAirlineQ_Rigor4_Message3"
+		}]
+	},
+	"SlideAirlineQ_Rigor4_Message1": {
+		"question": "That's not quite right. Many players have low margins, and the high elasticity of demand means that price increases would lead to reduced sales and profits for all players. Thus, in the absence of increase in prices, many players will find it difficult to maintain their profitability.",
+		"links_to": "SlideAirlineQ6_32"
+	},
+	"SlideAirlineQ_Rigor4_Message2": {
+		"question": "You are close!. Many players have low margins. Moreover, the high elasticity of demand means that price increases would lead to reduced sales and profits for all players. Thus, in the absence of increase in prices, many players will find it difficult to maintain their profitability.",
+		"links_to": "SlideAirlineQ6_32"
+	},
+	"SlideAirlineQ_Rigor4_Message3": {
+		"question": "Great!. You've analyzed the situation correctly.",
+		"links_to": "SlideAirlineQ6_32"
+	},
+	"SlideAirlineQ6_32": {
+		"question": "What does this imply for the industry in the long run?",
+		"choices": [{
+			"answer": "Many loss-making players would think about leaving the industry. There may be opportunities in the longer term for the stronger players, including our client, to take over routes as other players are leaving.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineQ6_36"
+		}, {
+			"answer": "There would be no need for action. The current players would continue as they do now.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": -5,
+				"synthesis": -5
+			},
+			"links_to": "SlideAirlineQ6_37"
+		}, {
+			"answer": "The industry would be more attractive and more players could enter the market.",
+			"direction": "middle",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": -10,
+				"synthesis": -10
+			},
+			"links_to": "SlideAirlineQ6_37"
+		}]
+	},
+	"SlideAirlineQ6_36": {
+		"question": "What would you like to recommend to the client?",
+		"choices": [{
+			"answer": "The client's low costs and financially stable position imply that it can keep prices down and sustain losses for some time. Thus, it should not increase prices and thereby try to establish price leadership in the market.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_41"
+		}, {
+			"answer": "Since the client is a stronger player, it can take over other, weaker players.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 1,
+				"judgment": 1,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_42"
+		}]
+	},
+	"SlideAirlineQ6_37": {
+		"question": "That's not completely correct. Many of the existing players would make losses due to the steep hike in fuel prices. What does this imply?",
+		"choices": [{
+			"answer": "The client's low costs and financially stable position imply that it can keep prices down and sustain losses for some time. Thus, it should not increase prices and thereby try to establish price leadership in the market.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 3,
+				"judgment": 3,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_41"
+		}, {
+			"answer": "Because the client is a stronger player, it can take over other, weaker players.",
+			"direction": "middle",
+			"score": {
+				"rigor": -5,
+				"structuring": -5,
+				"judgment": -5,
+				"synthesis": 0
+			},
+			"links_to": "SlideAirlineQ6_42"
+		}]
+	},
+	"SlideAirlineQ6_41": {
+		"question": "Is there anything else?",
+		"choices": [{
+			"answer": "Yes. Ultimately, the client's low cost base is the source of its competitive advantage. It should keep costs low through measures such as buying cooperatives or optimization of its flight network. With a low cost base and its price leadership position in the market, the client would be able to increase profitability in the long run.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineCompleted"
+		}, {
+			"answer": "Though the client has low costs, its small size puts a question mark on its financial stability. Given the cost advantage, it can keep prices low. But it would not be able to sustain losses for too long and would have to find ways to increase revenue.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineQ6_48"
+		}, {
+			"answer": "The client's high costs and small size mean that it would not be able to keep prices low. Therefore, the client should increase prices so that it can minimize its losses.",
+			"direction": "right",
+			"score": {
+				"rigor": -5,
+				"structuring": 0,
+				"judgment": -5,
+				"synthesis": -5
+			},
+			"links_to": "SlideAirlineQ6_49"
+		}]
+	},
+	"SlideAirlineQ6_42": {
+		"question": "Well, the aim of a purchase or takeover should be to maintain or increase profitability in the long run. The client should analyze all takeover opportunities accordingly. Is there any other recommendation you'd make to the client?",
+		"choices": [{
+			"answer": "Yes. Ultimately, the client's low cost base is the source of its competitive advantage. It should keep costs low through measures such as buying  cooperatives or optimization of its flight network. With a low cost base and its price leadership position in the market, the client would be able to increase profitability in the long run.",
+			"direction": "next",
+			"score": {
+				"rigor": 3,
+				"structuring": 0,
+				"judgment": 3,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineCompleted"
+		}, {
+			"answer": "Though the client has low costs, its small size puts a question mark on its financial stability. Given the cost advantage, it can keep prices low. But it would not be able to sustain losses for too long and would have to find ways to increase revenue.",
+			"direction": "middle",
+			"score": {
+				"rigor": 1,
+				"structuring": 0,
+				"judgment": 1,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineQ6_48"
+		}, {
+			"answer": "The client's high costs and small size mean that it would not be able to keep prices low. Therefore, the client should increase prices so that it can minimize its losses.",
+			"direction": "right",
+			"score": {
+				"rigor": -5,
+				"structuring": 0,
+				"judgment": -5,
+				"synthesis": -5
+			},
+			"links_to": "SlideAirlineQ6_49"
+		}]
+	},
+	"SlideAirlineQ6_48": {
+		"question": "You need to think about this a bit more carefully. The client can withstand losses for some time and also has high margins, which means that it can afford to keep prices low. Would you like to recommend anything else to the client?",
+		"choices": [{
+			"answer": "Yes. Ultimately, the client needs to maintain its costs at current levels to establish a price leadership position in the market.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineCompleted"
+		}, {
+			"answer": "Yes. Ultimately, the client's costs are too high. It needs to lower costs through the measures we have discussed earlier, such as optimizing the flight network or forming buying cooperatives to negotiate fuel purchase prices.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineCompleted"
+		}]
+	},
+	"SlideAirlineQ6_49": {
+		"question": "You need to think about this a bit more carefully. The client can withstand losses for some time and also has high margins, which means that it can afford to keep prices low. Would you like to recommend anything else to the client?",
+		"choices": [{
+			"answer": "Yes. Ultimately, the client needs to maintain its costs at current levels to establish a price leadership position in the market.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 3
+			},
+			"links_to": "SlideAirlineCompleted"
+		}, {
+			"answer": "Yes. Ultimately, the client's costs are too high. It needs to lower costs through the measures we have discussed earlier, such as optimizing the flight network or forming buying cooperatives to negotiate fuel purchase prices.",
+			"direction": "next",
+			"score": {
+				"rigor": 0,
+				"structuring": 0,
+				"judgment": 0,
+				"synthesis": 1
+			},
+			"links_to": "SlideAirlineCompleted"
+		}]
+	}
+}
+
