@@ -90,7 +90,7 @@ export default function HomePage() {
                 const initialQuestion =
                     id === '1'
                         ? 'SlideDrugProblemStatement'
-                        : 'SlideAirlineQ_Rigor1_1' //'SlideAirlineQ1_0'
+                        : 'SlideAirlineProblemStatement' //'SlideAirlineQ1_0'
                 const currentQ = json[initialQuestion]
                 setCurrentQuestion(currentQ)
 
@@ -228,9 +228,7 @@ export default function HomePage() {
         }
     }
     const item = staticData.find((e) => e.id.toString() === id)
-    if (currentQuestion == null) {
-        return null
-    }
+ 
 
     function handleChange(ev) {
         const value = ev.target.value
@@ -282,7 +280,10 @@ export default function HomePage() {
         },
         { judgment: 0, rigor: 0, structuring: 0, synthesis: 0 }
     )
-
+    
+    if (currentQuestion == null) {
+        return null
+    }
     return (
         <Wrapper>
             <Header>
