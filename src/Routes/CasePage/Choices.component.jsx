@@ -77,7 +77,7 @@ export default function Choices({
             defaultValue="a"
             value={currentSelectedIndex}
         >
-            {shuffledChoices.map((item, index) => (
+            {choices.map((item, index) => (
                 <RadioBtn key={index} value={index}>
                     <OptionText>{item.answer}</OptionText>
                 </RadioBtn>
