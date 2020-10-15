@@ -75,7 +75,12 @@ export default function HomePage() {
     const [addonTable, setAddonTable] = React.useState({})
     const inputRef = React.useRef()
     const [inputAnswer, setInputAnswer] = React.useState('')
-    const globalFlags = React.useRef({})
+    const globalFlags = React.useRef({
+        revenue_path_flag:false,
+        cost_path_flag:false,
+        non_ticket_revenue_path_flag:false,
+        ticket_revenue_path_flag:false,
+    })
     const currentQuestionId = React.useRef('')
 
     React.useEffect(() => {
