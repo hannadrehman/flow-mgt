@@ -1693,6 +1693,9 @@
 		"question": "If prices were increased by 13.3%, what would be the impact on demand?",
 		"image": "https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/images/graph-1.png",
 		"footnote": "Read each option carefully. Click to select one option as your answer and then click Next. Click Next to proceed with the case.",
+		"show_feedback": true,
+		"feedback_success": "That's absolutely right! An increase in prices by 13.3% would lead to a drop in demand by 26.6%.",
+		"feedback_failure": "That's not quite right! An increase in prices by 13.3% would lead to a drop in demand by 26.6%.",
 		"choices": [{
 			"answer": "Demand would drop by 13.3%.",
 			"score": {
@@ -1702,7 +1705,7 @@
 				"synthesis": 0
 			},
 			"direction": "right",
-			"links_to": "SlideAirlineQ_Rigor1_2a"
+			"links_to": "SlideAirlineQ4_28"
 		}, {
 			"answer": "Demand would increase by 26.6%.",
 			"score": {
@@ -1712,7 +1715,7 @@
 				"synthesis": 0
 			},
 			"direction": "right",
-			"links_to": "SlideAirlineQ_Rigor1_2a"
+			"links_to": "SlideAirlineQ4_28"
 		}, {
 			"answer": "Demand would drop by 26.6%.",
 			"isCorrect": 1,
@@ -1723,7 +1726,7 @@
 				"synthesis": 2
 			},
 			"direction": "right",
-			"links_to": "SlideAirlineQ_Rigor1_2b"
+			"links_to": "SlideAirlineQ4_28"
 		}, {
 			"answer": "Demand would increase by 13.3%.",
 			"score": {
@@ -1733,7 +1736,7 @@
 				"synthesis": 0
 			},
 			"direction": "right",
-			"links_to": "SlideAirlineQ_Rigor1_2a"
+			"links_to": "SlideAirlineQ4_28"
 		}, {
 			"answer": "Demand would not change.",
 			"score": {
@@ -1743,19 +1746,11 @@
 				"synthesis": 0
 			},
 			"direction": "right",
-			"links_to": "SlideAirlineQ_Rigor1_2a"
+			"links_to": "SlideAirlineQ4_28"
 		}]
 	},
-	"SlideAirlineQ_Rigor1_2a": {
-		"questions": "That's not quite right! An increase in prices by 13.3% would lead to a drop in demand by 26.6%.",
-		"links_to": "SlideAirlineQ4_28"
-	},
-	"SlideAirlineQ_Rigor1_2b": {
-		"questions": "That's absolutely right! An increase in prices by 13.3% would lead to a drop in demand by 26.6%.",
-		"links_to": "SlideAirlineQ4_28"
-	},
 	"SlideAirlineQ4_15": {
-		"question": "Is that your recommendation to the client? I'm afraid you've come to a rather hasty conclusion, without fully considering the various aspects of the client's problem. I'd suggest that you try to assess the impact of an increase in prices on the client's sales revenues. You could look at the current sales and price data.",
+		"question": "Is that your recommendation to the client?",
 		"choices": [{
 			"answer": "Well, let me reconsider this. Actually, I would like to determine, if possible, the impact of an increase in ticket prices on the client's sales revenues.",
 			"isCorrect": 1,
