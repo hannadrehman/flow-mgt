@@ -21,7 +21,7 @@ export default function Router() {
                 <Route exact path="/details/:id">
                     <DetailsPage />
                 </Route>
-                <Route exact path="/case/:id">
+                <Route exact path="/case/:id/:qID?">
                     <CasePage />
                 </Route>
                 <Route exact path="/create-structure/:id">

@@ -65,7 +65,7 @@ const Body = styled.div`
 `
 export default function HomePage() {
     const { push } = useHistory()
-    const { id } = useParams()
+    const { id, qID = null } = useParams()
     const [currentQuestion, setCurrentQuestion] = React.useState(null)
     const [isNextDisabled, setIsNextDisabled] = React.useState(true)
     const allSelectedOptions = React.useRef([])
@@ -76,10 +76,10 @@ export default function HomePage() {
     const inputRef = React.useRef()
     const [inputAnswer, setInputAnswer] = React.useState('')
     const globalFlags = React.useRef({
-        revenue_path_flag:false,
-        cost_path_flag:false,
-        non_ticket_revenue_path_flag:false,
-        ticket_revenue_path_flag:false,
+        revenue_path_flag: false,
+        cost_path_flag: false,
+        non_ticket_revenue_path_flag: false,
+        ticket_revenue_path_flag: false,
     })
     const currentQuestionId = React.useRef('')
 
@@ -92,10 +92,10 @@ export default function HomePage() {
                 )
                 const json = await res.json()
                 allQuestionsRef.current = json
-                const initialQuestion =
-                    id === '1'
-                        ? 'SlideDrugProblemStatement'
-                        : 'SlideAirlineProblemStatement' //'SlideAirlineQ1_0'
+                let initialQuestion = qID;
+                if(!initialQuestion){
+                    initialQuestion = id === '1' ? 'SlideDrugProblemStatement': 'SlideAirlineProblemStatement' //'SlideAirlineQ1_0'
+                }
                 const currentQ = json[initialQuestion]
                 setCurrentQuestion(currentQ)
 
@@ -115,7 +115,7 @@ export default function HomePage() {
             }
         }
         getData()
-    }, [id])
+    }, [id, qID])
 
     function handleBack(id) {
         push(`/list`)
@@ -233,14 +233,13 @@ export default function HomePage() {
         }
     }
     const item = staticData.find((e) => e.id.toString() === id)
- 
 
     function handleChange(ev) {
         const value = ev.target.value
         inputRef.current = value
     }
     function submitInput() {
-        const value = parseInt(inputRef.current, 10)
+        const value = Number(inputRef.current)
         const hasTable = Object.keys(addonTable || {}).length > 0
         console.log(currentQuestion, addonTable)
         if (hasTable) {
@@ -285,7 +284,7 @@ export default function HomePage() {
         },
         { judgment: 0, rigor: 0, structuring: 0, synthesis: 0 }
     )
-    
+
     if (currentQuestion == null) {
         return null
     }
