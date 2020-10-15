@@ -2146,7 +2146,7 @@
 			},
 			"links_to": "SlideAirlineQ5_13b"
 		}, {
-			"answer": "The client could provide value-added services to passengers and charge extra for these.",
+			"answer": "The client could provide value-added services to passengers and charge extra for these!",
 			"direction": "middle",
 			"score": {
 				"rigor": 0,
@@ -2154,7 +2154,7 @@
 				"judgment": 3,
 				"synthesis": 0
 			},
-			"links_to": "SlideAirlineQ5_15"
+			"links_to": "SlideAirlineQ5_13b"
 		}]
 	},
 	"SlideAirlineQ4_59_5_0c": {
@@ -2178,7 +2178,7 @@
 				"judgment": 3,
 				"synthesis": 0
 			},
-			"links_to": "SlideAirlineQ5_15"
+			"links_to": "SlideAirlineQ5_13c"
 		}]
 	},
 	"SlideAirlineQ4_59_3_0": {
