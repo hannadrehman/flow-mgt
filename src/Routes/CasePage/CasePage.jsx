@@ -142,11 +142,11 @@ export default function HomePage() {
         setCurrentSelectedIndex(e.target.value)
         selectedOption.current = option
         setIsNextDisabled(false)
-        if (option.show_feedback) {
+        if (currentQuestion.show_feedback) {
             if (option.isCorrect) {
-                setOptionFeedback(option.feedback_success)
+                setOptionFeedback(currentQuestion.feedback_success)
             } else {
-                setOptionFeedback(option.feedback_failure)
+                setOptionFeedback(currentQuestion.feedback_failure)
             }
         }
     }

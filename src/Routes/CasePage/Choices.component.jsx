@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Radio,Typography } from 'antd'
+import { Radio, Typography } from 'antd'
 
 const RadioButton = Radio.Button
 const RadioGroup = Radio.Group
@@ -20,24 +20,23 @@ export const RadioBtn = styled(RadioButton)`
     padding: 8px;
 `
 const OptionText = styled(Text)`
-  font-size: 16px;
+    font-size: 16px;
 `
 const Wrapper = styled.div`
-.slide-enter {
-    transform: translateX(100%);
-  }
-  .slide-enter-active {
-    transform: translateX(0%);
-    transition: transform 300ms ease-in-out;
-  }
-  .slide-exit {
-    transform: translateX(0%);
-  }
-  .slide-exit-active {
-    transform: translateX(-100%);
-    transition: transform 300ms ease-in-out;
-  }
-  
+    .slide-enter {
+        transform: translateX(100%);
+    }
+    .slide-enter-active {
+        transform: translateX(0%);
+        transition: transform 300ms ease-in-out;
+    }
+    .slide-exit {
+        transform: translateX(0%);
+    }
+    .slide-exit-active {
+        transform: translateX(-100%);
+        transition: transform 300ms ease-in-out;
+    }
 `
 function shuffle(array) {
     var currentIndex = array.length,
@@ -61,7 +60,7 @@ export default function Choices({
     onOptionChange,
     currentSelectedIndex,
     choices,
-    optionFeedback
+    optionFeedback,
 }) {
     const shuffledChoices = React.useMemo(() => {
         const copyList = [...(choices || [])]
@@ -73,17 +72,19 @@ export default function Choices({
         return null
     }
     return (
-        <RadioContainer
-            onChange={onOptionChange}
-            defaultValue="a"
-            value={currentSelectedIndex}
-        >
-            {choices.map((item, index) => (
-                <RadioBtn key={index} value={index}>
-                    <OptionText>{item.answer}</OptionText>
-                </RadioBtn>
-            ))}
+        <>
+            <RadioContainer
+                onChange={onOptionChange}
+                defaultValue="a"
+                value={currentSelectedIndex}
+            >
+                {choices.map((item, index) => (
+                    <RadioBtn key={index} value={index}>
+                        <OptionText>{item.answer}</OptionText>
+                    </RadioBtn>
+                ))}
+            </RadioContainer>
             <Text>{optionFeedback}</Text>
-        </RadioContainer>
+        </>
     )
 }
