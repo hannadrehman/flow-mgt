@@ -1718,7 +1718,7 @@
 			"links_to": "SlideAirlineQ4_28"
 		}, {
 			"answer": "Demand would drop by 26.6%.",
-			"isCorrect": 1,
+			"isCorrect": true,
 			"score": {
 				"rigor": 2,
 				"structuring": 2,
@@ -1753,7 +1753,7 @@
 		"question": "Is that your recommendation to the client?",
 		"choices": [{
 			"answer": "Well, let me reconsider this. Actually, I would like to determine, if possible, the impact of an increase in ticket prices on the client's sales revenues.",
-			"isCorrect": 1,
+			"isCorrect": true,
 			"direction": "next",
 			"score": {
 				"rigor": 0,
@@ -2493,7 +2493,7 @@
 		}, {
 			"answer": "I'd like to know what the competition is doing to maintain or increase profitability in the long term. That might give us some ideas for our client.",
 			"direction": "middle",
-			"isCorrect": 1,
+			"isCorrect": true,
 			"score": {
 				"rigor": 2,
 				"structuring": 2,
@@ -2504,7 +2504,7 @@
 		}, {
 			"answer": "I'd like to know how the client has tackled such a situation in the past.",
 			"direction": "right",
-			"isCorrect": 1,
+			"isCorrect": true,
 			"score": {
 				"rigor": 1,
 				"structuring": 1,
@@ -2530,7 +2530,7 @@
 		}, {
 			"answer": "I'd like to know what the competition is doing to maintain or increase profitability in the long term. That might give us some ideas for our client.",
 			"direction": "middle",
-			"isCorrect": 1,
+			"isCorrect": true,
 			"score": {
 				"rigor": 2,
 				"structuring": 2,
@@ -2541,7 +2541,7 @@
 		}, {
 			"answer": "I'd like to know how the client has tackled such a situation in the past.",
 			"direction": "right",
-			"isCorrect": 1,
+			"isCorrect": true,
 			"score": {
 				"rigor": 1,
 				"structuring": 1,
@@ -2619,7 +2619,7 @@
 				"judgment": 2,
 				"synthesis": 2
 			},
-			"isCorrect": 1,
+			"isCorrect": true,
 			"links_to": "SlideAirlineQ_Rigor2c"
 		}, {
 			"answer": "The client's size suggests that it can sustain losses; but its costs are high and, therefore, margins are low.",

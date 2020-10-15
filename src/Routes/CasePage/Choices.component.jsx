@@ -61,6 +61,7 @@ export default function Choices({
     onOptionChange,
     currentSelectedIndex,
     choices,
+    optionFeedback
 }) {
     const shuffledChoices = React.useMemo(() => {
         const copyList = [...(choices || [])]
@@ -82,6 +83,7 @@ export default function Choices({
                     <OptionText>{item.answer}</OptionText>
                 </RadioBtn>
             ))}
+            <Text>{optionFeedback}</Text>
         </RadioContainer>
     )
 }

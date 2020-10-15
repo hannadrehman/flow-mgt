@@ -36,6 +36,20 @@ export const Question = styled.div`
     align-content: center;
     align-items: center;
 `
+
+export const QuestionB = styled.div`
+    padding: 16px;
+    width: 50%;
+    min-width: 50%;
+    height: 100%;
+    border-right: 1px solid #e1dddd;
+    background: #f9f9f9;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+`
 export const Options = styled.div`
     padding: 16px;
     width: 50%;
@@ -82,7 +96,7 @@ export default function HomePage() {
         ticket_revenue_path_flag: false,
     })
     const currentQuestionId = React.useRef('')
-
+    const [optionFeedback, setOptionFeedback] = React.useState(null)
     React.useEffect(() => {
         async function getData() {
             try {
@@ -92,9 +106,12 @@ export default function HomePage() {
                 )
                 const json = await res.json()
                 allQuestionsRef.current = json
-                let initialQuestion = qID;
-                if(!initialQuestion){
-                    initialQuestion = id === '1' ? 'SlideDrugProblemStatement': 'SlideAirlineProblemStatement' //'SlideAirlineQ1_0'
+                let initialQuestion = qID
+                if (!initialQuestion) {
+                    initialQuestion =
+                        id === '1'
+                            ? 'SlideDrugProblemStatement'
+                            : 'SlideAirlineProblemStatement' //'SlideAirlineQ1_0'
                 }
                 const currentQ = json[initialQuestion]
                 setCurrentQuestion(currentQ)
@@ -125,6 +142,13 @@ export default function HomePage() {
         setCurrentSelectedIndex(e.target.value)
         selectedOption.current = option
         setIsNextDisabled(false)
+        if (option.show_feedback) {
+            if (option.isCorrect) {
+                setOptionFeedback(option.feedback_success)
+            } else {
+                setOptionFeedback(option.feedback_failure)
+            }
+        }
     }
     function setFlags(question) {
         if (
@@ -231,6 +255,7 @@ export default function HomePage() {
         if (tbl) {
             selectedOption.current = tbl
         }
+        setOptionFeedback(null)
     }
     const item = staticData.find((e) => e.id.toString() === id)
 
@@ -328,12 +353,25 @@ export default function HomePage() {
                             timeout={{ enter: 300, exit: 300 }}
                         >
                             <Main>
-                                <Question>
-                                    <QuestionText>
-                                        {currentQuestion.question}
-                                    </QuestionText>
-                                </Question>
-
+                                {!currentQuestion.image && (
+                                    <Question>
+                                        <QuestionText>
+                                            {currentQuestion.question}
+                                        </QuestionText>
+                                    </Question>
+                                )}
+                                {currentQuestion.image && (
+                                    <QuestionB>
+                                        <QuestionText>
+                                            {currentQuestion.question}
+                                        </QuestionText>
+                                        <div>
+                                            <Image
+                                                src={currentQuestion.image}
+                                            />
+                                        </div>
+                                    </QuestionB>
+                                )}
                                 <Options>
                                     {currentQuestion.addOnTable && (
                                         <div>
@@ -355,13 +393,6 @@ export default function HomePage() {
                                             />
                                         </div>
                                     )}
-                                    {currentQuestion.image && (
-                                        <div>
-                                            <Image
-                                                src={currentQuestion.image}
-                                            />
-                                        </div>
-                                    )}
                                     <Choices
                                         questionId={currentQuestion.question}
                                         onOptionChange={onOptionChange}
@@ -369,6 +400,7 @@ export default function HomePage() {
                                             currentSelectedIndex
                                         }
                                         choices={currentQuestion.choices}
+                                        optionFeedback={optionFeedback}
                                     />
                                 </Options>
                             </Main>
