@@ -8,6 +8,7 @@ import Choices from './Choices.component'
 import Success from './Success.component'
 import AddonTable from './AddonTable.component'
 import Bullets from './Bullets.component'
+import * as utils from './utilities'
 
 const { Text, Title } = Typography
 
@@ -77,6 +78,7 @@ const Body = styled.div`
     border: 1px solid lightgray;
     padding: 16px;
 `
+
 export default function HomePage() {
     const { push } = useHistory()
     const { id, qID = null } = useParams()
@@ -95,7 +97,6 @@ export default function HomePage() {
         non_ticket_revenue_path_flag: false,
         ticket_revenue_path_flag: false,
     })
-    const currentQuestionId = React.useRef('')
     const [optionFeedback, setOptionFeedback] = React.useState(null)
     React.useEffect(() => {
         async function getData() {
@@ -104,7 +105,9 @@ export default function HomePage() {
                     `https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/questions-${id}.json`,
                     {}
                 )
-                const json = await res.json()
+                const resp = await res.json();
+                const json = utils.transformRes(resp);
+                const maxScores = utils.getMaxScores(json,id);
                 allQuestionsRef.current = json
                 let initialQuestion = qID
                 if (!initialQuestion) {
@@ -126,7 +129,6 @@ export default function HomePage() {
                 ) {
                     setIsNextDisabled(false)
                 }
-                currentQuestionId.current = initialQuestion
             } catch (e) {
                 console.log(e)
             }
@@ -175,58 +177,19 @@ export default function HomePage() {
                 question.ticket_revenue_path_flag
         }
     }
-    function getNextLink(item) {
-        if (item.is_link_direct === false) {
-            const qid = item.conditionId
-            switch (qid) {
-                case 1:
-                    if (globalFlags.current.revenue_path_flag) {
-                        return 'SlideAirlineQ3_121_6_0'
-                    } else {
-                        return 'SlideAirlineQ3_121_2_0'
-                    }
-                case 2:
-                    if (globalFlags.current.cost_path_flag === false) {
-                        return 'SlideAirlineQ4_59_3_0'
-                    } else {
-                        return 'SlideAirlineQ4_59_6_0'
-                    }
-
-                case 3:
-                    if (globalFlags.current.non_ticket_revenue_path_flag) {
-                        if (globalFlags.current.cost_path_flag === false) {
-                            return 'SlideAirlineQ4_59_3_0'
-                        } else {
-                            return 'SlideAirlineQ4_59_6_0'
-                        }
-                    } else {
-                        if (globalFlags.current.cost_path_flag === false) {
-                            return 'SlideAirlineQ4_59_5_0b'
-                        } else {
-                            return 'SlideAirlineQ4_59_5_0c'
-                        }
-                    }
-                default:
-                    alert('mismatch')
-                    return
-            }
-        }
-        currentQuestionId.current = item.links_to
-        return item.links_to
-    }
     function goNext() {
         let nextQuestion = {}
         if (!currentQuestion.choices || currentQuestion.choices.length === 0) {
-            nextQuestion = allQuestionsRef.current[getNextLink(currentQuestion)]
+            nextQuestion = allQuestionsRef.current[utils.getNextLink(currentQuestion,globalFlags)]
         } else {
             nextQuestion =
-                allQuestionsRef.current[getNextLink(selectedOption.current)]
+                allQuestionsRef.current[utils.getNextLink(selectedOption.current,globalFlags)]
         }
 
         if (nextQuestion === undefined) {
             console.log('--------------------------------------------------')
             console.log(currentQuestion)
-            console.log(allQuestionsRef.current[getNextLink(currentQuestion)])
+            console.log(allQuestionsRef.current[utils.getNextLink(currentQuestion,globalFlags)])
             console.log(selectedOption.current)
             console.log('--------------------------------------------------')
             return
@@ -295,20 +258,7 @@ export default function HomePage() {
         }
     }
 
-    const filteredScoresList = allSelectedOptions.current
-        .filter((x) => x.score)
-        .map((x) => x.score)
-
-    const groupedScore = filteredScoresList.reduce(
-        (accum, item) => {
-            accum.judgment = accum.judgment + item.judgment
-            accum.rigor = accum.rigor + item.rigor
-            accum.structuring = accum.structuring + item.structuring
-            accum.synthesis = accum.synthesis + item.synthesis
-            return accum
-        },
-        { judgment: 0, rigor: 0, structuring: 0, synthesis: 0 }
-    )
+    const groupedScore = utils.getGroupedScore(allSelectedOptions.current)
 
     if (currentQuestion == null) {
         return null
