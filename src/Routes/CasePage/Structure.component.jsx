@@ -42,9 +42,36 @@ const StructureMain = styled.div`
     max-width: 50%;
     width: 50%;
 `
-const StructureChild = styled.div``
+const StructureChild = styled.div`
+    min-height: 48px;
+`
+const RecommendedHeading = styled.div`
+    min-height: 48px;
+    display:flex;
+    align-items:center;
+`
 
 export default function Structure({ caseDetails }) {
+    const [recommended, setRecommended] = React.useState({
+        answers: [],
+        extraInfo: [],
+    })
+    React.useEffect(() => {
+        async function getData() {
+            try {
+                const res = await fetch(
+                    `https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/success-structure.json`,
+                    {}
+                )
+                const resp = await res.json()
+                setRecommended(resp)
+            } catch (e) {
+                console.log(e)
+            }
+        }
+        getData()
+    }, [])
+
     const structureData = JSON.parse(localStorage.getItem('structure'))
     console.log(structureData)
     return (
@@ -94,7 +121,7 @@ export default function Structure({ caseDetails }) {
                             Problem statement: {caseDetails.description}
                         </Text>
                         <Space />
-                        {structureData.map((item) => (
+                        {recommended.answers.map((item) => (
                             <StructureInfo key={item.id}>
                                 <StructureMain>
                                     <Text>{item.value}</Text>
@@ -109,6 +136,24 @@ export default function Structure({ caseDetails }) {
                                     </ul>
                                 </StructureChild>
                             </StructureInfo>
+                        ))}
+                        {recommended.extraInfo.map((info) => (
+                            <div key={info.id}>
+                                <RecommendedHeading>
+                                    <Text>
+                                        <b>{info.title}</b>
+                                    </Text>
+                                </RecommendedHeading>
+                                <div>
+                                    <ul>
+                                        {info.children.map((child) => (
+                                            <li key={child.id}>
+                                                {child.value}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
                         ))}
                     </ResponseBody>
                 </Response>

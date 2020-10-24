@@ -13,7 +13,7 @@ export const Mains = styled.div`
 `
 
 export default function Success({ currentQuestion, usersScore, maxScore, caseDetails }) {
-    const [selected, setSelected] = React.useState('2')
+    const [selected, setSelected] = React.useState('1')
    
     return (
         <Wrapper>
