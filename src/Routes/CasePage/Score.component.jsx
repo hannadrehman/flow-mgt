@@ -66,10 +66,8 @@ const ChartWrapper = styled.div`
     align-content: center;
 `
 const Charter = styled.div``
-// { judgment: 11, rigor: 8, structuring: 26, synthesis: 12 }
 
 export default function Score({ usersScore, maxScore, caseDetails }) {
-    console.log(usersScore, maxScore)
     const graph = React.useMemo(() => {
         let max = -100
         Object.entries(maxScore).forEach(([, v]) => {
@@ -164,15 +162,15 @@ export default function Score({ usersScore, maxScore, caseDetails }) {
                         <Radar
                             name="You"
                             dataKey="user"
-                            stroke="#82ca9d"
-                            fill="#82ca9d"
+                            stroke="#8884d8"
+                            fill="#8884d8"
                             fillOpacity={0.6}
                         />
                         <Radar
                             name="Average"
                             dataKey="average"
-                            stroke="#8884d8"
-                            fill="#8884d8"
+                            stroke="#82ca9d"
+                            fill="#82ca9d"
                             fillOpacity={0.6}
                         />
                         <Legend />
