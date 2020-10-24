@@ -1,7 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import * as utils from './utilities'
-import { Typography, Progress, Card,Tooltip } from 'antd'
+import { Typography, Progress, Card, Tooltip } from 'antd'
+import {
+    Radar,
+    RadarChart,
+    PolarGrid,
+    Legend,
+    PolarAngleAxis,
+    PolarRadiusAxis,
+} from 'recharts'
+
 const { Text, Title } = Typography
 
 const Wrapper = styled.div``
@@ -38,22 +47,64 @@ const AvgCard = styled(Card)`
     height: 100%;
     margin-right: 16px;
     .ant-card-body {
-      display: flex;
-      align-content: center;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      padding: 0;
-      height: 200px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0;
+        height: 200px;
     }
-` 
+`
 const LargeText = styled.div`
     font-size: 48px;
-    font-weight:bold;
+    font-weight: bold;
 `
+const ChartWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-content: center;
+`
+const Charter = styled.div``
+// { judgment: 11, rigor: 8, structuring: 26, synthesis: 12 }
 
 export default function Score({ usersScore, maxScore, caseDetails }) {
     console.log(usersScore, maxScore)
+    const graph = React.useMemo(() => {
+        let max = -100
+        Object.entries(maxScore).forEach(([, v]) => {
+            if (v > max) {
+                max = v
+            }
+        })
+        const data = [
+            {
+                subject: 'Judgment',
+                average: maxScore.synthesis - 4,
+                user: usersScore.judgment,
+                fullMark: maxScore.judgment,
+            },
+            {
+                subject: 'Rigor',
+                average: maxScore.synthesis - 3,
+                user: usersScore.rigor,
+                fullMark: maxScore.rigor,
+            },
+            {
+                subject: 'Structuring',
+                average: maxScore.synthesis - 2,
+                user: usersScore.structuring,
+                fullMark: maxScore.structuring,
+            },
+            {
+                subject: 'Synthesis',
+                average: maxScore.synthesis - 5,
+                user: usersScore.synthesis,
+                fullMark: maxScore.synthesis,
+            },
+        ]
+        return { data, max }
+    }, [maxScore, usersScore])
     return (
         <Wrapper>
             <Heading>
@@ -62,13 +113,13 @@ export default function Score({ usersScore, maxScore, caseDetails }) {
                 </Title>
             </Heading>
             <Mains>
-            <Average>
-                <AvgCard
-                    title="Weighted average"
-                >
-                    <LargeText  >{utils.getWeightedScore(usersScore, maxScore)}</LargeText  >
-                </AvgCard>
-              </Average>
+                <Average>
+                    <AvgCard title="Weighted average">
+                        <LargeText>
+                            {utils.getWeightedScore(usersScore, maxScore)}
+                        </LargeText>
+                    </AvgCard>
+                </Average>
                 <Bars>
                     {Object.keys(maxScore).map((item) => (
                         <Bar>
@@ -76,25 +127,58 @@ export default function Score({ usersScore, maxScore, caseDetails }) {
                                 <b>{`${item.toUpperCase()} : `}</b>{' '}
                                 {utils.getTypeText(item)}
                             </Text>
-                            <Tooltip title={`${usersScore[item]} out of ${maxScore[item]}`}>
-                            <Progress
-                                percent={utils.getPercent(
-                                    maxScore[item],
-                                    usersScore[item]
-                                )}
-                                strokeColor={utils.getColor(
-                                    utils.getPercent(
+                            <Tooltip
+                                title={`${usersScore[item]} out of ${maxScore[item]}`}
+                            >
+                                <Progress
+                                    percent={utils.getPercent(
                                         maxScore[item],
                                         usersScore[item]
-                                    )
-                                )}
-                                status="active"
-                            />
+                                    )}
+                                    strokeColor={utils.getColor(
+                                        utils.getPercent(
+                                            maxScore[item],
+                                            usersScore[item]
+                                        )
+                                    )}
+                                    status="active"
+                                />
                             </Tooltip>
                         </Bar>
                     ))}
                 </Bars>
             </Mains>
+            <ChartWrapper>
+                <Charter>
+                    <RadarChart
+                        cx={300}
+                        cy={250}
+                        outerRadius={150}
+                        width={500}
+                        height={500}
+                        data={graph.data}
+                    >
+                        <PolarGrid />
+                        <PolarAngleAxis dataKey="subject" />
+                        <PolarRadiusAxis />
+                        <Radar
+                            name="You"
+                            dataKey="user"
+                            stroke="#82ca9d"
+                            fill="#82ca9d"
+                            fillOpacity={0.6}
+                        />
+                        <Radar
+                            name="Average"
+                            dataKey="average"
+                            stroke="#8884d8"
+                            fill="#8884d8"
+                            fillOpacity={0.6}
+                        />
+                        <Legend />
+                    </RadarChart>
+                </Charter>
+            </ChartWrapper>
         </Wrapper>
     )
 }

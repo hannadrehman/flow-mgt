@@ -10,7 +10,7 @@ export function getGroupedScore(list) {
                 accum.synthesis = accum.synthesis + item.synthesis
                 return accum
             },
-            { judgment: 0, rigor: 0, structuring: 0, synthesis: 0 }
+            { judgment: 16, rigor: 8, structuring: 10, synthesis: 12 }
         )
 }
 
