@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import Score from './Score.component'
 import Structure from './Structure.component'
+import Review from './Review.component'
+import Relevance from './Relevance.component'
+
 import {  Menu } from 'antd'
 
 const Wrapper = styled.div`
@@ -36,6 +39,12 @@ export default function Success({ currentQuestion, usersScore, maxScore, caseDet
                 )}
                 {selected === '2' && (
                     <Structure caseDetails={caseDetails} />
+                )}
+                {selected === '3' && (
+                    <Review caseDetails={caseDetails} />
+                )}
+                {selected === '4' && (
+                    <Relevance caseDetails={caseDetails} />
                 )}
             </Mains>
         </Wrapper>
