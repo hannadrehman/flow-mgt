@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Typography, List, Card, Menu } from 'antd'
-const { Title } = Typography
+import Score from './Score.component'
+import {  Menu } from 'antd'
 
 const Wrapper = styled.div`
     display: flex;
@@ -11,15 +11,14 @@ export const Mains = styled.div`
     padding-top: 16px;
 `
 
-export default function Success({ currentQuestion, groupedScore }) {
-    function handleClick(e) {
-        console.log(e)
-    }
+export default function Success({ currentQuestion, usersScore, maxScore, caseDetails }) {
+    const [selected, setSelected] = React.useState('1')
+   
     return (
         <Wrapper>
             <div>
                 <Menu
-                    onClick={handleClick}
+                    onClick={(ev)=>setSelected(ev.key)}
                     style={{ width: 256 }}
                     defaultSelectedKeys={['1']}
                     mode="inline"
@@ -31,20 +30,9 @@ export default function Success({ currentQuestion, groupedScore }) {
                 </Menu>
             </div>
             <Mains>
-                <Title level={5}>{currentQuestion.successMessage}</Title>
-                <br />
-                <Title level={5}>Result</Title>
-                <List
-                    grid={{ gutter: 16, column: 4 }}
-                    dataSource={Object.entries(
-                        groupedScore || {}
-                    ).map(([x, y]) => ({ title: x, value: y }))}
-                    renderItem={(item) => (
-                        <List.Item>
-                            <Card title={item.title}>{item.value}</Card>
-                        </List.Item>
-                    )}
-                />
+                {selected === '1' && (
+                    <Score usersScore={usersScore} maxScore={maxScore} caseDetails={caseDetails} />
+                )}
             </Mains>
         </Wrapper>
     )

@@ -57,7 +57,6 @@ export function transformRes(resp) {
     const json = { ...resp }
     Object.entries(json).forEach(([key, value]) => {
         if (value.choices && value.choices.length) {
-            // console.log(key, value.choices)
             const scoreMap = {}
             value.choices.forEach((choice, index) => {
                 const sum = Object.entries(choice.score)
@@ -90,25 +89,25 @@ const defaultFlags = {
 
 let globalFlags = defaultFlags
 
-function setFlags(question) {
+export function setFlags(question, flags) {
     if (question.revenue_path_flag || question.revenue_path_flag === false) {
-        globalFlags.current.revenue_path_flag = question.revenue_path_flag
+        flags.current.revenue_path_flag = question.revenue_path_flag
     }
     if (question.cost_path_flag || question.cost_path_flag === false) {
-        globalFlags.current.cost_path_flag = question.cost_path_flag
+        flags.current.cost_path_flag = question.cost_path_flag
     }
     if (
         question.non_ticket_revenue_path_flag ||
         question.non_ticket_revenue_path_flag === false
     ) {
-        globalFlags.current.non_ticket_revenue_path_flag =
+        flags.current.non_ticket_revenue_path_flag =
             question.non_ticket_revenue_path_flag
     }
     if (
         question.ticket_revenue_path_flag ||
         question.ticket_revenue_path_flag === false
     ) {
-        globalFlags.current.ticket_revenue_path_flag =
+        flags.current.ticket_revenue_path_flag =
             question.ticket_revenue_path_flag
     }
 }
@@ -135,7 +134,10 @@ function tracePath(question, allQuestions, scores, type) {
         nextQuestion = allQuestions[getNextLink(selectedOption, globalFlags)]
         scores[type] += selectedOption.score[type]
     }
-    tracePath(nextQuestion, allQuestions, scores, type)
+    setFlags(nextQuestion, globalFlags)
+    if (!nextQuestion.successMessage) {
+        tracePath(nextQuestion, allQuestions, scores, type)
+    }
 }
 
 export function getMaxScores(questions, id) {
@@ -146,6 +148,48 @@ export function getMaxScores(questions, id) {
             : 'SlideAirlineProblemStatement' //'SlideAirlineQ1_0'
 
     globalFlags = defaultFlags
-    const scopes = { rigor: 0 }
-    tracePath(questions[initialQuestion], questions, scopes, 'rigor')
+    const scores = { rigor: 0, judgment: 0, structuring: 0, synthesis: 0 }
+    tracePath(questions[initialQuestion], questions, scores, 'rigor')
+    globalFlags = defaultFlags
+    tracePath(questions[initialQuestion], questions, scores, 'judgment')
+    globalFlags = defaultFlags
+    tracePath(questions[initialQuestion], questions, scores, 'structuring')
+    globalFlags = defaultFlags
+    tracePath(questions[initialQuestion], questions, scores, 'synthesis')
+    return scores
+}
+
+export function getPercent(total, achieved) {
+    return Math.ceil((achieved / total) * 100)
+}
+
+export function getColor(percentage) {
+    if (percentage > 70) {
+        return '#4caf50'
+    }
+    if (percentage > 30) {
+        return '#ffc107'
+    }
+    return '#f44336'
+}
+
+const typesText = {
+    judgment: 'indicating your intuition in making choices',
+    rigor: 'indicating your quantitative decision making',
+    structuring: 'indicating your organization of thoughts/idea',
+    synthesis: 'ability to convey more in less',
+}
+export function getTypeText(type) {
+    return typesText[type]
+}
+
+export function getWeightedScore(userScore, totalScore) {
+    // ((100*user_rigor_score)/max_rigor_calculated_value) *assigned_weight
+    const judgment = ((100 * userScore.judgment) / totalScore.judgment) * 0.25
+    const rigor = ((100 * userScore.rigor) / totalScore.rigor) * 0.25
+    const structuring =
+        ((100 * userScore.structuring) / totalScore.structuring) * 0.25
+    const synthesis =
+        ((100 * userScore.synthesis) / totalScore.synthesis) * 0.25
+    return Math.ceil(judgment + rigor + structuring + synthesis);    
 }

@@ -98,6 +98,8 @@ export default function HomePage() {
         ticket_revenue_path_flag: false,
     })
     const [optionFeedback, setOptionFeedback] = React.useState(null)
+    const [maxScores,setMaxScore] = React.useState({})
+
     React.useEffect(() => {
         async function getData() {
             try {
@@ -105,9 +107,9 @@ export default function HomePage() {
                     `https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/questions-${id}.json`,
                     {}
                 )
-                const resp = await res.json();
-                const json = utils.transformRes(resp);
-                const maxScores = utils.getMaxScores(json,id);
+                const resp = await res.json()
+                const json = utils.transformRes(resp)
+                setMaxScore(utils.getMaxScores(json, id))
                 allQuestionsRef.current = json
                 let initialQuestion = qID
                 if (!initialQuestion) {
@@ -152,44 +154,28 @@ export default function HomePage() {
             }
         }
     }
-    function setFlags(question) {
-        if (
-            question.revenue_path_flag ||
-            question.revenue_path_flag === false
-        ) {
-            globalFlags.current.revenue_path_flag = question.revenue_path_flag
-        }
-        if (question.cost_path_flag || question.cost_path_flag === false) {
-            globalFlags.current.cost_path_flag = question.cost_path_flag
-        }
-        if (
-            question.non_ticket_revenue_path_flag ||
-            question.non_ticket_revenue_path_flag === false
-        ) {
-            globalFlags.current.non_ticket_revenue_path_flag =
-                question.non_ticket_revenue_path_flag
-        }
-        if (
-            question.ticket_revenue_path_flag ||
-            question.ticket_revenue_path_flag === false
-        ) {
-            globalFlags.current.ticket_revenue_path_flag =
-                question.ticket_revenue_path_flag
-        }
-    }
     function goNext() {
         let nextQuestion = {}
         if (!currentQuestion.choices || currentQuestion.choices.length === 0) {
-            nextQuestion = allQuestionsRef.current[utils.getNextLink(currentQuestion,globalFlags)]
+            nextQuestion =
+                allQuestionsRef.current[
+                    utils.getNextLink(currentQuestion, globalFlags)
+                ]
         } else {
             nextQuestion =
-                allQuestionsRef.current[utils.getNextLink(selectedOption.current,globalFlags)]
+                allQuestionsRef.current[
+                    utils.getNextLink(selectedOption.current, globalFlags)
+                ]
         }
 
         if (nextQuestion === undefined) {
             console.log('--------------------------------------------------')
             console.log(currentQuestion)
-            console.log(allQuestionsRef.current[utils.getNextLink(currentQuestion,globalFlags)])
+            console.log(
+                allQuestionsRef.current[
+                    utils.getNextLink(currentQuestion, globalFlags)
+                ]
+            )
             console.log(selectedOption.current)
             console.log('--------------------------------------------------')
             return
@@ -211,7 +197,7 @@ export default function HomePage() {
         if (nextQuestion.expectInput) {
             setIsNextDisabled(true)
         }
-        setFlags(nextQuestion)
+        utils.setFlags(nextQuestion, globalFlags)
         setCurrentSelectedIndex(null)
         setInputAnswer(null)
         selectedOption.current = null
@@ -271,7 +257,9 @@ export default function HomePage() {
             {currentQuestion.successMessage && (
                 <Success
                     currentQuestion={currentQuestion}
-                    groupedScore={groupedScore}
+                    usersScore={groupedScore}
+                    maxScore={maxScores}
+                    caseDetails={item}
                 />
             )}
             {!currentQuestion.successMessage && currentQuestion.intro && (
