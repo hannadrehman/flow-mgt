@@ -1,13 +1,11 @@
 import React from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
-import { Typography, Button, PageHeader, Input } from 'antd'
+import { Typography, Button, PageHeader  } from 'antd'
 import { staticData } from '../../Cases.fixtures'
 
-const { Title, Text } = Typography
-const Wrapper = styled.div`
-    margin: 0 auto;
-`
+const { Text } = Typography
+
 const Header = styled.div`
     border-bottom: 1px solid #eadddd;
 `

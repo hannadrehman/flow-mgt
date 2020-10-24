@@ -1,0 +1,96 @@
+{
+    "answers": [
+        {
+            "id": 0,
+            "value": "oday, we are going to discuss the case of a pharmaceutical c",
+            "children": [
+                {
+                    "id": 0,
+                    "value": "duction c"
+                },
+                {
+                    "id": 1,
+                    "value": "duction c"
+                },
+                {
+                    "id": 2,
+                    "value": "duction c"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "value": "oday, we are going to discuss the case of a pharmaceutical c",
+            "children": [
+                {
+                    "id": 0,
+                    "value": "duction c"
+                },
+                {
+                    "id": 1,
+                    "value": "duction c"
+                },
+                {
+                    "id": 2,
+                    "value": "duction c"
+                }
+            ]
+        }
+    ],
+    "extraInfo": [
+        {
+            "id": 1,
+            "title": "Key considirations",
+            "children": [
+                {
+                    "id": 0,
+                    "value": "duction c"
+                },
+                {
+                    "id": 1,
+                    "value": "duction c"
+                },
+                {
+                    "id": 2,
+                    "value": "duction c"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Framework strengths",
+            "children": [
+                {
+                    "id": 0,
+                    "value": "duction c"
+                },
+                {
+                    "id": 1,
+                    "value": "duction c"
+                },
+                {
+                    "id": 2,
+                    "value": "duction c"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Framework improvements",
+            "children": [
+                {
+                    "id": 0,
+                    "value": "duction c"
+                },
+                {
+                    "id": 1,
+                    "value": "duction c"
+                },
+                {
+                    "id": 2,
+                    "value": "duction c"
+                }
+            ]
+        }
+    ]
+}

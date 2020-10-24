@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Typography, Button, PageHeader } from 'antd'
 import { staticData } from '../../Cases.fixtures'
 
-const { Title, Text } = Typography
+const { Title } = Typography
 
 const Wrapper = styled.div`
     margin: 0 auto;

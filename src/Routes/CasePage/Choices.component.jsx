@@ -22,39 +22,6 @@ export const RadioBtn = styled(RadioButton)`
 const OptionText = styled(Text)`
     font-size: 16px;
 `
-const Wrapper = styled.div`
-    .slide-enter {
-        transform: translateX(100%);
-    }
-    .slide-enter-active {
-        transform: translateX(0%);
-        transition: transform 300ms ease-in-out;
-    }
-    .slide-exit {
-        transform: translateX(0%);
-    }
-    .slide-exit-active {
-        transform: translateX(-100%);
-        transition: transform 300ms ease-in-out;
-    }
-`
-function shuffle(array) {
-    var currentIndex = array.length,
-        temporaryValue,
-        randomIndex
-
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex)
-        currentIndex -= 1
-
-        // And swap it with the current element.
-        temporaryValue = array[currentIndex]
-        array[currentIndex] = array[randomIndex]
-        array[randomIndex] = temporaryValue
-    }
-}
 
 export default function Choices({
     onOptionChange,
@@ -62,12 +29,6 @@ export default function Choices({
     choices,
     optionFeedback,
 }) {
-    const shuffledChoices = React.useMemo(() => {
-        const copyList = [...(choices || [])]
-        shuffle(copyList)
-        return copyList
-    }, [choices])
-
     if (!choices || choices.length === 0) {
         return null
     }

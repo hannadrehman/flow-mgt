@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Typography, Input } from 'antd'
 const { Text } = Typography
 

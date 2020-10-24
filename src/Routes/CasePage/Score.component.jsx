@@ -41,7 +41,6 @@ const Bar = styled.div`
 const Heading = styled.div`
     padding-bottom: 16px;
 `
-
 const AvgCard = styled(Card)`
     width: 200px;
     height: 100%;

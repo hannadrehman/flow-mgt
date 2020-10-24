@@ -5,7 +5,7 @@ import { Typography, Button, PageHeader, Input } from 'antd'
 import { PlusCircleOutlined } from '@ant-design/icons'
 import { staticData } from '../../Cases.fixtures'
 
-const { Title, Text } = Typography
+const { Text } = Typography
 
 const Wrapper = styled.div`
     margin: 0 auto;
