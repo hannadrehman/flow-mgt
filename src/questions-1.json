@@ -2360,7 +2360,7 @@
 		}
 	},
 	"table-d": {
-		"question": "Look at the information below carefully.",
+		"question": "Look at the information below carefully. \n\n Clearvenax and PrevenT Comparison Data",
 		"expectInput": false,
 		"tableData": {
 			"tables": [{
