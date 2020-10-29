@@ -167,14 +167,7 @@ export default function HomePage() {
                     utils.getNextLink(selectedOption.current, globalFlags)
                 ]
         }
-        if (nextQuestion.choices) {
-            console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-            console.log(
-                'correct answer index: ',
-                nextQuestion.choices.findIndex((x) => x.correctAnswer===true)
-            )
-            console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-        }
+
         if (nextQuestion === undefined) {
             console.log('--------------------------------------------------')
             console.log(currentQuestion)
@@ -188,9 +181,9 @@ export default function HomePage() {
             return
         }
         setCurrentQuestion(nextQuestion)
-        allSelectedOptions.current.push(
-            selectedOption.current || currentQuestion
-        )
+        if (selectedOption.current) {
+            allSelectedOptions.current.push(selectedOption.current)
+        }
         if (nextQuestion.choices && nextQuestion.choices.length) {
             setIsNextDisabled(true)
         }
@@ -208,9 +201,9 @@ export default function HomePage() {
         setCurrentSelectedIndex(null)
         setInputAnswer(null)
         selectedOption.current = null
-        if (tbl) {
-            selectedOption.current = tbl
-        }
+        // if (tbl) {
+        //     selectedOption.current = tbl
+        // }
         setOptionFeedback(null)
     }
     const item = staticData.find((e) => e.id.toString() === id)
@@ -251,7 +244,6 @@ export default function HomePage() {
     }
 
     const groupedScore = utils.getGroupedScore(allSelectedOptions.current)
-
     if (currentQuestion == null) {
         return null
     }

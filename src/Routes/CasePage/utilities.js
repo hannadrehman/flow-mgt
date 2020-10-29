@@ -10,7 +10,7 @@ export function getGroupedScore(list) {
                 accum.synthesis = accum.synthesis + item.synthesis
                 return accum
             },
-            { judgment: 20, rigor: 10, structuring: 18, synthesis: 2 }
+            { judgment: 0, rigor: 0, structuring: 0, synthesis: 0 }
         )
 }
 
@@ -72,6 +72,7 @@ export function transformRes(resp) {
                     maxIndex = k
                 }
             })
+            // console.log('q: ',key,'correct index : ',maxIndex, 'correct score: ', value.choices[maxIndex].score)
             value.choices[maxIndex].correctAnswer = true
         }
     })
@@ -145,7 +146,7 @@ export function getMaxScores(questions, id) {
     initialQuestion =
         id === '1'
             ? 'SlideDrugProblemStatement'
-            : 'SlideAirlineProblemStatement' //'SlideAirlineQ1_0'
+            : 'SlideAirlineProblemStatement'
 
     globalFlags = defaultFlags
     const scores = { rigor: 0, judgment: 0, structuring: 0, synthesis: 0 }
