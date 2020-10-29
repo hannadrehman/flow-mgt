@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Typography } from 'antd'
+import * as utils from './utilities'
 
 const { Title, Text } = Typography
 
@@ -21,6 +22,7 @@ const Header = styled.div`
     background-color: ${(props) => props.color || '#1890ff'};
     padding: 16px;
     display: flex;
+    justify-content: space-between;
 `
 const HeaderText = styled(Text)`
     color: white;
@@ -47,8 +49,8 @@ const StructureChild = styled.div`
 `
 const RecommendedHeading = styled.div`
     min-height: 48px;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
 `
 
 export default function Structure({ caseDetails }) {
@@ -73,7 +75,8 @@ export default function Structure({ caseDetails }) {
     }, [])
 
     const structureData = JSON.parse(localStorage.getItem('structure'))
-    console.log(structureData)
+    const timeTaken = parseInt(localStorage.getItem('structureTime'), 10)
+
     return (
         <Wrapper>
             <Heading>
@@ -85,6 +88,9 @@ export default function Structure({ caseDetails }) {
                 <Response>
                     <Header>
                         <HeaderText>Your response</HeaderText>
+                        <HeaderText>
+                            {`Time Taken:  ${utils.millisToMinutesAndSeconds(timeTaken)}. Avg time : ${utils.millisToMinutesAndSeconds(2000000)}`}
+                        </HeaderText>
                     </Header>
                     <ResponseBody>
                         <Text>

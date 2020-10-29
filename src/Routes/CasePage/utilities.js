@@ -10,7 +10,7 @@ export function getGroupedScore(list) {
                 accum.synthesis = accum.synthesis + item.synthesis
                 return accum
             },
-            { judgment: 0, rigor: 0, structuring: 0, synthesis: 0 }
+            { judgment: 20, rigor: 10, structuring: 18, synthesis: 2 }
         )
 }
 
@@ -193,3 +193,12 @@ export function getWeightedScore(userScore, totalScore) {
         ((100 * userScore.synthesis) / totalScore.synthesis) * 0.25
     return Math.ceil(judgment + rigor + structuring + synthesis);    
 }
+
+
+export function millisToMinutesAndSeconds(millis) {
+    var minutes = Math.floor(millis / 60000);
+    var seconds = ((millis % 60000) / 1000).toFixed(0);
+    const ms = minutes>1 ?'minutes': 'minute';
+    const ss = seconds > 1 ? 'seconds': 'second'
+    return `${minutes} ${ms}, ${seconds} ${ss}`;
+  }

@@ -98,7 +98,7 @@ export default function HomePage() {
         ticket_revenue_path_flag: false,
     })
     const [optionFeedback, setOptionFeedback] = React.useState(null)
-    const [maxScores,setMaxScore] = React.useState({})
+    const [maxScores, setMaxScore] = React.useState({})
 
     React.useEffect(() => {
         async function getData() {
@@ -167,7 +167,14 @@ export default function HomePage() {
                     utils.getNextLink(selectedOption.current, globalFlags)
                 ]
         }
-
+        if (nextQuestion.choices) {
+            console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+            console.log(
+                'correct answer index: ',
+                nextQuestion.choices.findIndex((x) => x.correctAnswer===true)
+            )
+            console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+        }
         if (nextQuestion === undefined) {
             console.log('--------------------------------------------------')
             console.log(currentQuestion)
@@ -215,7 +222,6 @@ export default function HomePage() {
     function submitInput() {
         const value = Number(inputRef.current)
         const hasTable = Object.keys(addonTable || {}).length > 0
-        console.log(currentQuestion, addonTable)
         if (hasTable) {
             if (value === addonTable.correctAnswer) {
                 setInputAnswer(addonTable.messageDescription)
