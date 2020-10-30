@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Typography, Button, PageHeader, Input } from 'antd'
 import { PlusCircleOutlined } from '@ant-design/icons'
 import { staticData } from '../../Cases.fixtures'
-import {useInterval} from '../../hooks/timers'
+import { useInterval } from '../../hooks/timers'
 const { Text } = Typography
 
 const Wrapper = styled.div`
@@ -120,17 +120,17 @@ export default function CreateStructure() {
     const { id } = useParams()
     const [treeData, setTreeData] = React.useState(defaultTree)
     const inputRefs = React.useRef(defaultInput)
-    const timeElapsed = React.useRef(0);
-    useInterval(()=>{
-        timeElapsed.current += 500;
-    },500)
+    const timeElapsed = React.useRef(0)
+    useInterval(() => {
+        timeElapsed.current += 500
+    }, 500)
 
     function handleClick(id) {
         localStorage.setItem(
             'structure',
             JSON.stringify(inputRefs.current || {})
         )
-        localStorage.setItem('structureTime',timeElapsed.current);
+        localStorage.setItem('structureTime', timeElapsed.current)
         push(`/case/${item.id}`)
     }
     function handleNodeEnterPress(ev) {
