@@ -1,6 +1,8 @@
 [
     {
         "id": 1,
+         "relevant": false,
+         "explanation": "lorem ipsum", 
         "question": "Are there any particular margins the client is looking for?",
         "type": "text",
         "imageUrl": "url",
@@ -8,6 +10,8 @@
     },
     {
         "id": 2,
+         "relevant": true,
+         "explanation": "lorem ipsum",
         "question": "Who is the primary customer of the drug?",
         "type": "text",
         "imageUrl": "url",
@@ -15,6 +19,8 @@
     },
     {
         "id": 3,
+         "relevant": false,
+         "explanation": "lorem ipsum",
         "question": "Can I have more information about our competitor drug Clearvenax?",
         "type": "text",
         "imageUrl": "url",
@@ -23,6 +29,8 @@
     {
         "id": 4,
         "question": "Is our client global or primarily based out of the US?",
+         "relevant": true,
+         "explanation": "lorem ipsum",
         "type": "text",
         "imageUrl": "url",
         "text": "The client is primarily based out of the US. Is that information relevant to the case? Think about it. "
@@ -30,6 +38,8 @@
     {
         "id": 5,
         "question": "What are the kind of drugs our client manufactures?",
+         "relevant": true,
+         "explanation": "lorem ipsum",
         "type": "text",
         "imageUrl": "url",
         "text": "There is no data available at this stage on that. I can tell you that the client does indeed manufacture other drugs"
@@ -37,6 +47,8 @@
     {
         "id": 6,
         "question": "What is our variable production cost per dose?",
+         "relevant": false,
+         "explanation": "lorem ipsum",
         "type": "text",
         "imageUrl": "url",
         "text": "We will get that in due course. I don’t think its relevant at this stage."
