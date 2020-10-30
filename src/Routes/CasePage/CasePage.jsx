@@ -143,6 +143,8 @@ export default function HomePage() {
     }
     function onOptionChange(e) {
         const option = currentQuestion.choices[e.target.value]
+        option.questionId = currentQuestion.questionId
+        option.optionIndex = e.target.value;
         setCurrentSelectedIndex(e.target.value)
         selectedOption.current = option
         setIsNextDisabled(false)
@@ -248,6 +250,7 @@ export default function HomePage() {
     if (currentQuestion == null) {
         return null
     }
+    // console.log(JSON.stringify(allSelectedOptions.current))
     return (
         <Wrapper>
             <Header>
@@ -259,6 +262,8 @@ export default function HomePage() {
                     usersScore={groupedScore}
                     maxScore={maxScores}
                     caseDetails={item}
+                    selectedOptions={allSelectedOptions.current||{}}
+                    allQuestions = {allQuestionsRef.current}
                 />
             )}
             {!currentQuestion.successMessage && currentQuestion.intro && (

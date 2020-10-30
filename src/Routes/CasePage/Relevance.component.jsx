@@ -54,7 +54,6 @@ export default function Relevance({ usersScore, maxScore, caseDetails }) {
             irrelevent: [],
         }
         items.forEach((item) => {
-            console.log(item)
             if (item.relevant === true) {
                 map.relevent.push(item)
                 return
@@ -106,7 +105,6 @@ export default function Relevance({ usersScore, maxScore, caseDetails }) {
                     <Accordion
                         expandIconPosition="right"
                         expandIcon={({ isActive }) => {
-                            console.log({ isActive })
                             return <Text strong>{isActive ? 'Hide Solution': 'View Solution'}</Text>
                         }}
                     >

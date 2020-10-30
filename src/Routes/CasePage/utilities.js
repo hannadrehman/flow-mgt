@@ -56,6 +56,7 @@ export function getNextLink(item, globalFlags) {
 export function transformRes(resp) {
     const json = { ...resp }
     Object.entries(json).forEach(([key, value]) => {
+        value.questionId = key;
         if (value.choices && value.choices.length) {
             const scoreMap = {}
             value.choices.forEach((choice, index) => {

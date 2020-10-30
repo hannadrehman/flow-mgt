@@ -15,7 +15,7 @@ export const Mains = styled.div`
     padding-top: 16px;
 `
 
-export default function Success({ currentQuestion, usersScore, maxScore, caseDetails }) {
+export default function Success({ usersScore, maxScore, caseDetails, selectedOptions, allQuestions }) {
     const [selected, setSelected] = React.useState('1')
    
     return (
@@ -41,7 +41,7 @@ export default function Success({ currentQuestion, usersScore, maxScore, caseDet
                     <Structure caseDetails={caseDetails} />
                 )}
                 {selected === '3' && (
-                    <Review caseDetails={caseDetails} />
+                    <Review caseDetails={caseDetails} selectedOptions={selectedOptions} allQuestions={allQuestions} />
                 )}
                 {selected === '4' && (
                     <Relevance caseDetails={caseDetails} />
