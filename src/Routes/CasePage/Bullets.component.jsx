@@ -15,7 +15,7 @@ export default function Bullets({
                     <Text>{question.bulletData.title}</Text>
                     <ul>
                         {question.bulletData.bullets.map((e, i) => (
-                            <li>{e}</li>
+                            <li key={i}>{e}</li>
                         ))}
                     </ul>
                     {question.expectInput && (

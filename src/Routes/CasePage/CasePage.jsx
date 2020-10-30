@@ -166,8 +166,9 @@ export default function HomePage() {
                 allQuestionsRef.current[
                     utils.getNextLink(selectedOption.current, globalFlags)
                 ]
-        }
 
+        }
+      
         if (nextQuestion === undefined) {
             console.log('--------------------------------------------------')
             console.log(currentQuestion)
