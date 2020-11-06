@@ -2,7 +2,8 @@ import React from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
-import { Typography, Button, PageHeader } from 'antd'
+import { ArrowLeftOutlined } from '@ant-design/icons'
+import { Typography, Button, PageHeader, Popconfirm } from 'antd'
 import { staticData } from '../../Cases.fixtures'
 import Choices from './Choices.component'
 import Success from './Success.component'
@@ -56,6 +57,11 @@ export const Options = styled.div`
     width: 50%;
     min-width: 50%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `
 export const NextButton = styled(Button)`
     &&& {
@@ -69,7 +75,6 @@ export const Image = styled.img`
     width: 100%;
     padding-bottom: 16px;
 `
-
 const Body = styled.div`
     margin-top: 16px;
     display: flex;
@@ -77,6 +82,12 @@ const Body = styled.div`
     flex-direction: column;
     border: 1px solid lightgray;
     padding: 16px;
+`
+const Intro = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
 `
 
 export default function HomePage() {
@@ -115,8 +126,8 @@ export default function HomePage() {
                 if (!initialQuestion) {
                     initialQuestion =
                         id === '1'
-                            ? 'SlideDrugProblemStatement'
-                            : 'SlideAirlineProblemStatement' //'SlideAirlineQ1_0'
+                            ? 'SlideDrugInterviewer'
+                            : 'SlideAirlineInterviewer' //'SlideAirlineQ1_0'
                 }
                 const currentQ = json[initialQuestion]
                 setCurrentQuestion(currentQ)
@@ -144,7 +155,7 @@ export default function HomePage() {
     function onOptionChange(e) {
         const option = currentQuestion.choices[e.target.value]
         option.questionId = currentQuestion.questionId
-        option.optionIndex = e.target.value;
+        option.optionIndex = e.target.value
         setCurrentSelectedIndex(e.target.value)
         selectedOption.current = option
         setIsNextDisabled(false)
@@ -168,9 +179,8 @@ export default function HomePage() {
                 allQuestionsRef.current[
                     utils.getNextLink(selectedOption.current, globalFlags)
                 ]
-
         }
-      
+
         if (nextQuestion === undefined) {
             console.log('--------------------------------------------------')
             console.log(currentQuestion)
@@ -250,11 +260,24 @@ export default function HomePage() {
     if (currentQuestion == null) {
         return null
     }
-    // console.log(JSON.stringify(allSelectedOptions.current))
+
     return (
         <Wrapper>
             <Header>
-                <PageHeader subTitle={item.title} onBack={handleBack} />
+                <PageHeader
+                    backIcon={
+                        <Popconfirm
+                            title="Are you sure you want to exit this case ?"
+                            onConfirm={handleBack}
+                            okText="Yes"
+                            cancelText="No"
+                        >
+                            <ArrowLeftOutlined />
+                        </Popconfirm>
+                    }
+                    subTitle="Exit Case"
+                    onBack={()=>{}}
+                />
             </Header>
             {currentQuestion.successMessage && (
                 <Success
@@ -262,12 +285,12 @@ export default function HomePage() {
                     usersScore={groupedScore}
                     maxScore={maxScores}
                     caseDetails={item}
-                    selectedOptions={allSelectedOptions.current||{}}
-                    allQuestions = {allQuestionsRef.current}
+                    selectedOptions={allSelectedOptions.current || {}}
+                    allQuestions={allQuestionsRef.current}
                 />
             )}
             {!currentQuestion.successMessage && currentQuestion.intro && (
-                <div>
+                <Intro>
                     <Body>
                         <Title level={5}>
                             {currentQuestion.question.headerText}
@@ -283,7 +306,7 @@ export default function HomePage() {
                     >
                         Next
                     </NextButton>
-                </div>
+                </Intro>
             )}
 
             {!currentQuestion.successMessage && !currentQuestion.intro && (
@@ -323,6 +346,7 @@ export default function HomePage() {
                                                 handleChange={handleChange}
                                                 submitInput={submitInput}
                                             />
+                                            <br />
                                         </div>
                                     )}
                                     {currentQuestion.bulletData && (

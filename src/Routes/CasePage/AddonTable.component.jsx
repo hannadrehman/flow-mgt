@@ -16,6 +16,11 @@ export const Table = styled.table`
         border-bottom: 1px solid #d7cdcd;
     }
 `
+const SubmitBtn = styled.div`
+    &:hover {
+        cursor: pointer;
+    }
+`
 
 export default function AddonTable({
     addonTable,
@@ -23,6 +28,21 @@ export default function AddonTable({
     handleChange,
     submitInput,
 }) {
+    const [text, setText] = React.useState('')
+    function handleTextChanges(e) {
+        const { value } = e.target
+        const reg = /^-?\d*(\.\d*)?$/
+        if (
+            (!isNaN(value) && reg.test(value)) ||
+            value === '' ||
+            value === '-'
+        ) {
+            setText(value)
+            handleChange({ target: { value } })
+            return
+        }
+        setText('')
+    }
     return (
         <div>
             {Object.keys(addonTable).length > 0 && (
@@ -52,10 +72,13 @@ export default function AddonTable({
                         <div>
                             <br />
                             <Input
-                                onChange={handleChange}
+                                onChange={handleTextChanges}
                                 placeholder="Enter value"
+                                value={text}
                                 addonAfter={
-                                    <span onClick={submitInput}>Submit</span>
+                                    <SubmitBtn onClick={submitInput}>
+                                        Submit
+                                    </SubmitBtn>
                                 }
                             />
                             <div>

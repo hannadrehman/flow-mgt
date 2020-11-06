@@ -59,11 +59,11 @@ export default function HomePage() {
             <br />
             <Container>
                 <Button type="primary" block onClick={handleClearifyingQuestionsClick}>
-                    Ask clarifying questions
+                    Ask Clarifying questions
                 </Button>
                 &nbsp;&nbsp;
                 <Button type="primary" block onClick={handleStructureClick}>
-                    Create Strcuture
+                    Create Structure
                 </Button>
             </Container>
         </Wrapper>

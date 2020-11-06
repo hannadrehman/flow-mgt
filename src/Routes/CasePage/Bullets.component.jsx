@@ -1,6 +1,13 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Typography, Input } from 'antd'
 const { Text } = Typography
+
+const SubmitBtn = styled.div`
+    &:hover {
+        cursor: pointer;
+    }
+`
 
 export default function Bullets({
     question,
@@ -8,6 +15,21 @@ export default function Bullets({
     handleChange,
     submitInput,
 }) {
+    const [text, setText] = React.useState('')
+    function handleTextChanges(e) {
+        const { value } = e.target
+        const reg = /^-?\d*(\.\d*)?$/
+        if (
+            (!isNaN(value) && reg.test(value)) ||
+            value === '' ||
+            value === '-'
+        ) {
+            setText(value)
+            handleChange({ target: { value } })
+            return
+        }
+        setText('')
+    }
     return (
         <div>
             {Object.keys(question).length && (
@@ -22,10 +44,13 @@ export default function Bullets({
                         <div>
                             <br />
                             <Input
-                                onChange={handleChange}
+                                onChange={handleTextChanges}
                                 placeholder="Enter value"
+                                value={text}
                                 addonAfter={
-                                    <span onClick={submitInput}>Submit</span>
+                                    <SubmitBtn onClick={submitInput}>
+                                        Submit
+                                    </SubmitBtn>
                                 }
                             />
                             <div>

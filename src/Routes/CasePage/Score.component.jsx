@@ -67,16 +67,16 @@ const ChartWrapper = styled.div`
 const Charter = styled.div``
 
 export default function Score({ usersScore, maxScore, caseDetails }) {
-    console.log('User score: ',usersScore)
-    console.log('Max score: ',maxScore)
-    const scores = React.useMemo(()=>{
-        const temp = {};
-        Object.entries(usersScore).forEach(([k,v])=>{
+    console.log('User score: ', usersScore)
+    console.log('Max score: ', maxScore)
+    const scores = React.useMemo(() => {
+        const temp = {}
+        Object.entries(usersScore).forEach(([k, v]) => {
             temp[k] = maxScore[k] >= v ? v : maxScore[k] - (v - maxScore[k])
-        });
-        return temp;
-    },[usersScore,maxScore])
-    console.log('Adjusted score: ',scores)
+        })
+        return temp
+    }, [usersScore, maxScore])
+    console.log('Adjusted score: ', scores)
 
     const graph = React.useMemo(() => {
         let max = -100
@@ -88,25 +88,25 @@ export default function Score({ usersScore, maxScore, caseDetails }) {
         const data = [
             {
                 subject: 'Judgment',
-                average: maxScore.judgment - 4,
+                average: (maxScore.judgment * 65) / 100,
                 user: scores.judgment,
                 fullMark: maxScore.judgment,
             },
             {
                 subject: 'Rigor',
-                average: maxScore.rigor - 10,
+                average: (maxScore.rigor * 70) / 100,
                 user: scores.rigor,
                 fullMark: maxScore.rigor,
             },
             {
                 subject: 'Structuring',
-                average: maxScore.structuring - 8,
+                average: (maxScore.structuring * 70) / 100,
                 user: scores.structuring,
                 fullMark: maxScore.structuring,
             },
             {
                 subject: 'Synthesis',
-                average: maxScore.synthesis - 9,
+                average: (maxScore.synthesis * 78) / 100,
                 user: scores.synthesis,
                 fullMark: maxScore.synthesis,
             },

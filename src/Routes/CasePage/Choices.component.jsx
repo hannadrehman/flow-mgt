@@ -18,6 +18,15 @@ export const RadioBtn = styled(RadioButton)`
     height: auto;
     line-height: 1.5;
     padding: 8px;
+    box-shadow: 0px 3px 6px #edf0f2;
+    border: none;
+    transition: all 100ms ease-in-out;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    &:hover {
+        box-shadow: 0px 3px 6px #dbd8d8;
+    }
 `
 const OptionText = styled(Text)`
     font-size: 16px;
