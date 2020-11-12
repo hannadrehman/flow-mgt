@@ -3,6 +3,7 @@ import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { Typography, Button, PageHeader  } from 'antd'
 import { staticData } from '../../Cases.fixtures'
+import HelpModal from '../HelpModal/HelpModal.component';
 
 const { Text } = Typography
 
@@ -116,6 +117,8 @@ export default function ClarifyingQuestions() {
             <Button type="primary" block onClick={handleCreate}>
                 Create Structure
             </Button>
+        <HelpModal type="ClearifyingQuestionsPage" />
+
         </div>
     )
 }

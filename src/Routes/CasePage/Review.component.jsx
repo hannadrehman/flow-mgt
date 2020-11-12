@@ -53,7 +53,7 @@ export default function Review({ selectedOptions, allQuestions, caseDetails }) {
         return Object.entries(allQuestions)
             .map(([k, v]) => (v.isfocus ? v : null))
             .filter((item) => {
-                if(!item){
+                if (!item) {
                     return false
                 }
                 const selected = selectedMap[item.questionId]
@@ -75,7 +75,10 @@ export default function Review({ selectedOptions, allQuestions, caseDetails }) {
         <Wrapper>
             <Heading>
                 <Title level={3}>
-                    {`You are done! Congratulations on completing the ${caseDetails.title}. Here is how we think you fared Review`}
+                    {`You are done! Congratulations on completing the ${caseDetails.title}. Here is how we think you fared`}
+                </Title>
+                <Title level={3} style={{ marginTop: -10 }}>
+                    Review
                 </Title>
             </Heading>
             <Mains>

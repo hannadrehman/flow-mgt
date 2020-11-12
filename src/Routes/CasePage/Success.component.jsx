@@ -4,6 +4,7 @@ import Score from './Score.component'
 import Structure from './Structure.component'
 import Review from './Review.component'
 import Relevance from './Relevance.component'
+import HelpModal from '../HelpModal/HelpModal.component';
 
 import {  Menu } from 'antd'
 
@@ -47,6 +48,8 @@ export default function Success({ usersScore, maxScore, caseDetails, selectedOpt
                     <Relevance caseDetails={caseDetails} />
                 )}
             </Mains>
+        <HelpModal type="successPage" />
+
         </Wrapper>
     )
 }

@@ -81,7 +81,10 @@ export default function Structure({ caseDetails }) {
         <Wrapper>
             <Heading>
                 <Title level={3}>
-                    {`You are done! Congratulations on completing the ${caseDetails.title}. Here is how we think you fared Structure`}
+                    {`You are done! Congratulations on completing the ${caseDetails.title}. Here is how we think you fared`}
+                </Title>
+                <Title level={3} style={{ marginTop: -10 }}>
+                    Structure
                 </Title>
             </Heading>
             <Mains>
@@ -89,7 +92,11 @@ export default function Structure({ caseDetails }) {
                     <Header>
                         <HeaderText>Your response</HeaderText>
                         <HeaderText>
-                            {`Time Taken:  ${utils.millisToMinutesAndSeconds(timeTaken)}. Avg time : ${utils.millisToMinutesAndSeconds(2000000)}`}
+                            {`Time Taken:  ${utils.millisToMinutesAndSeconds(
+                                timeTaken
+                            )}. Avg time : ${utils.millisToMinutesAndSeconds(
+                                2000000
+                            )}`}
                         </HeaderText>
                     </Header>
                     <ResponseBody>

@@ -34,16 +34,16 @@ const Solutions = styled.div`
     margin-top: 48px;
 `
 const Question = styled(Panel)`
-&&&{
-  padding: 12px 0px;
-  background: white;
-  margin-bottom: 16px;
-}
+    &&& {
+        padding: 12px 0px;
+        background: white;
+        margin-bottom: 16px;
+    }
 `
 const Accordion = styled(Collapse)`
-&&&{
-  background: white;
-}
+    &&& {
+        background: white;
+    }
 `
 
 export default function Relevance({ usersScore, maxScore, caseDetails }) {
@@ -70,7 +70,10 @@ export default function Relevance({ usersScore, maxScore, caseDetails }) {
         <Wrapper>
             <Heading>
                 <Title level={3}>
-                    {`You are done! Congratulations on completing the ${caseDetails.title}. Here is how we think you fared Relevance`}
+                    {`You are done! Congratulations on completing the ${caseDetails.title}. Here is how we think you fared`}
+                </Title>
+                <Title level={3} style={{ marginTop: -10 }}>
+                    Relevance
                 </Title>
             </Heading>
             <Mains>
@@ -105,11 +108,20 @@ export default function Relevance({ usersScore, maxScore, caseDetails }) {
                     <Accordion
                         expandIconPosition="right"
                         expandIcon={({ isActive }) => {
-                            return <Text strong>{isActive ? 'Hide Solution': 'View Solution'}</Text>
+                            return (
+                                <Text strong>
+                                    {isActive
+                                        ? 'Hide Solution'
+                                        : 'View Solution'}
+                                </Text>
+                            )
                         }}
                     >
                         {questions.irrelevent.map((question) => (
-                            <Question header={question.question} key={question.id}>
+                            <Question
+                                header={question.question}
+                                key={question.id}
+                            >
                                 <Text>{question.explanation}</Text>
                             </Question>
                         ))}

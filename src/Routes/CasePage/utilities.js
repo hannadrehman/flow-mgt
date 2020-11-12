@@ -130,6 +130,13 @@ function getCorrectType(options, type) {
 function tracePath(question, allQuestions, scores, type) {
     let nextQuestion = null
     if (!question.choices) {
+        const table = allQuestions[question.addOnTable]
+        if(table && table.expectInput){
+            scores[type] += table.score[type]
+        }
+        if(question.bulletData && question.expectInput){
+            scores[type] += question.score[type]
+        }
         nextQuestion = allQuestions[getNextLink(question, globalFlags)]
     } else {
         const selectedOption = getCorrectType(question.choices, type)

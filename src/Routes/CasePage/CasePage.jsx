@@ -10,6 +10,7 @@ import Success from './Success.component'
 import AddonTable from './AddonTable.component'
 import Bullets from './Bullets.component'
 import * as utils from './utilities'
+import HelpModal from '../HelpModal/HelpModal.component';
 
 const { Text, Title } = Typography
 
@@ -76,18 +77,29 @@ export const Image = styled.img`
     padding-bottom: 16px;
 `
 const Body = styled.div`
-    margin-top: 16px;
+    margin-top: 48px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid lightgray;
-    padding: 16px;
+    border: 1px solid green;
+    border-radius: 80px;
+    padding: 48px;
 `
 const Intro = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 80vh;
+`
+const HeaderText = styled(Title)`
+    &&& {
+        color: green;
+  `
+const IntoText = styled(Text)`
+  &&& {
+      margin-top:30px;
+      font-weight:500;
+      font-size: 20px;
 `
 
 export default function HomePage() {
@@ -108,6 +120,7 @@ export default function HomePage() {
         non_ticket_revenue_path_flag: false,
         ticket_revenue_path_flag: false,
     })
+    const userInputCorrectAnswerRef = React.useRef(null)
     const [optionFeedback, setOptionFeedback] = React.useState(null)
     const [maxScores, setMaxScore] = React.useState({})
 
@@ -193,23 +206,33 @@ export default function HomePage() {
             console.log('--------------------------------------------------')
             return
         }
-        setCurrentQuestion(nextQuestion)
         if (selectedOption.current) {
             allSelectedOptions.current.push(selectedOption.current)
         }
+
         if (nextQuestion.choices && nextQuestion.choices.length) {
             setIsNextDisabled(true)
         }
-        const tbl = allQuestionsRef.current[nextQuestion.addOnTable]
-        if (tbl) {
-            setAddonTable(tbl)
-            if (tbl.expectInput) {
-                setIsNextDisabled(true)
+        if(currentQuestion.bulletData && currentQuestion.expectInput && userInputCorrectAnswerRef.current){
+            allSelectedOptions.current.push(currentQuestion)
+        }
+
+        if(currentQuestion.addOnTable){
+            if (userInputCorrectAnswerRef.current && addonTable.expectInput) {
+                allSelectedOptions.current.push(addonTable)
             }
         }
+
+        const tbl = allQuestionsRef.current[nextQuestion.addOnTable]
+        setAddonTable(tbl)
+        if (tbl && tbl.expectInput) {
+            setIsNextDisabled(true)
+        }
+      
         if (nextQuestion.expectInput) {
             setIsNextDisabled(true)
         }
+        setCurrentQuestion(nextQuestion)
         utils.setFlags(nextQuestion, globalFlags)
         setCurrentSelectedIndex(null)
         setInputAnswer(null)
@@ -218,6 +241,7 @@ export default function HomePage() {
         //     selectedOption.current = tbl
         // }
         setOptionFeedback(null)
+        userInputCorrectAnswerRef.current = null
     }
     const item = staticData.find((e) => e.id.toString() === id)
 
@@ -231,6 +255,7 @@ export default function HomePage() {
         if (hasTable) {
             if (value === addonTable.correctAnswer) {
                 setInputAnswer(addonTable.messageDescription)
+                userInputCorrectAnswerRef.current = true
             }
             if (value > addonTable.correctAnswer) {
                 setInputAnswer(addonTable.messageDescriptionHigh)
@@ -244,6 +269,7 @@ export default function HomePage() {
         if (currentQuestion.bulletData) {
             if (value === currentQuestion.correctAnswer) {
                 setInputAnswer(currentQuestion.messageDescription)
+                userInputCorrectAnswerRef.current = true
             }
             if (value > currentQuestion.correctAnswer) {
                 setInputAnswer(currentQuestion.messageDescriptionHigh)
@@ -276,7 +302,7 @@ export default function HomePage() {
                         </Popconfirm>
                     }
                     subTitle="Exit Case"
-                    onBack={()=>{}}
+                    onBack={() => {}}
                 />
             </Header>
             {currentQuestion.successMessage && (
@@ -292,10 +318,13 @@ export default function HomePage() {
             {!currentQuestion.successMessage && currentQuestion.intro && (
                 <Intro>
                     <Body>
-                        <Title level={5}>
+                        <HeaderText level={1}>
                             {currentQuestion.question.headerText}
-                        </Title>
-                        <Text>{currentQuestion.question.titleText}</Text>
+                        </HeaderText>
+                        <br />
+                        <IntoText>
+                            {currentQuestion.question.titleText}
+                        </IntoText>
                     </Body>
                     <NextButton
                         type="primary"
@@ -383,6 +412,7 @@ export default function HomePage() {
                     </NextButton>
                 </>
             )}
+        <HelpModal type="casePage" />
         </Wrapper>
     )
 }

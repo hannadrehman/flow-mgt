@@ -5,6 +5,8 @@ import { Typography, Button, PageHeader, Input } from 'antd'
 import { PlusCircleOutlined } from '@ant-design/icons'
 import { staticData } from '../../Cases.fixtures'
 import { useInterval } from '../../hooks/timers'
+import HelpModal from '../HelpModal/HelpModal.component';
+
 const { Text } = Typography
 
 const Wrapper = styled.div`
@@ -242,6 +244,8 @@ export default function CreateStructure() {
             <Button type="primary" block onClick={handleClick}>
                 Submit
             </Button>
+        <HelpModal type="CreateStructurePage" />
+
         </Wrapper>
     )
 }

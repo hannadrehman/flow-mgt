@@ -117,7 +117,10 @@ export default function Score({ usersScore, maxScore, caseDetails }) {
         <Wrapper>
             <Heading>
                 <Title level={3}>
-                    {`You are done! Congratulations on completing the ${caseDetails.title}. Here is how we think you fared Score`}
+                    {`You are done! Congratulations on completing the ${caseDetails.title}. Here is how we think you fared`}
+                </Title>
+                <Title level={3} style={{ marginTop: -10 }}>
+                    Score
                 </Title>
             </Heading>
             <Mains>
@@ -168,7 +171,7 @@ export default function Score({ usersScore, maxScore, caseDetails }) {
                     >
                         <PolarGrid />
                         <PolarAngleAxis dataKey="subject" />
-                        <PolarRadiusAxis />
+                        {/* <PolarRadiusAxis /> */}
                         <Radar
                             name="You"
                             dataKey="user"

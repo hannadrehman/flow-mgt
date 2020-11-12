@@ -53,7 +53,7 @@ export default function AddonTable({
                             <thead>
                                 {table.title && (
                                     <tr>
-                                        <th>{table.title}</th>
+                                        <th colSpan={table.rows[0].columns.length}>{table.title}</th>
                                     </tr>
                                 )}
                             </thead>

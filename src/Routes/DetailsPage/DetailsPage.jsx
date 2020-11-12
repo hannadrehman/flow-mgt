@@ -3,6 +3,7 @@ import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { Typography, Button, PageHeader } from 'antd'
 import { staticData } from '../../Cases.fixtures'
+import HelpModal from '../HelpModal/HelpModal.component';
 
 const { Title } = Typography
 
@@ -20,13 +21,18 @@ const Container = styled.div`
 `
 
 export const Body = styled.div`
-    height: 300px;
     margin-top: 48px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid lightgray;
-    padding: 0 16px;
+    border: 1px solid green;
+    border-radius: 80px;
+    padding: 48px;
+`
+const HeaderText = styled(Title)`
+    &&& {
+        color: green;
+    }
 `
 function createMarkup(html) {
     return { __html: html }
@@ -35,6 +41,11 @@ function createMarkup(html) {
 export default function HomePage() {
     const { push, goBack } = useHistory()
     const { id } = useParams()
+    
+    React.useEffect(() => {
+        localStorage.setItem('questions', '')
+        localStorage.setItem('structure', '')
+    }, [])
 
     function handleStructureClick(id) {
         push(`/create-structure/${item.id}`)
@@ -49,8 +60,11 @@ export default function HomePage() {
                 <PageHeader subTitle="Back to Case Library" onBack={goBack} />
             </Header>
             <Body>
-                <Title level={5}>{item.title}</Title>
+                <HeaderText level={1} color="green">
+                    {item.title}
+                </HeaderText>
                 <div
+                    style={{ fontSize: '20px', fontWeight: 500 }}
                     dangerouslySetInnerHTML={createMarkup(
                         item.detailedDescription
                     )}
@@ -58,7 +72,11 @@ export default function HomePage() {
             </Body>
             <br />
             <Container>
-                <Button type="primary" block onClick={handleClearifyingQuestionsClick}>
+                <Button
+                    type="primary"
+                    block
+                    onClick={handleClearifyingQuestionsClick}
+                >
                     Ask Clarifying questions
                 </Button>
                 &nbsp;&nbsp;
@@ -66,6 +84,7 @@ export default function HomePage() {
                     Create Structure
                 </Button>
             </Container>
+        <HelpModal type="detailsPage" />
         </Wrapper>
     )
 }
