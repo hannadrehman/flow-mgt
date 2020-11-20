@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2a030781eca435a3fac5d2b5fad0134d",
+    "revision": "3bc80af261dbac32a326cb8cd15e7e20",
     "url": "/flow-mgt/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flow-mgt/static/css/2.cd846464.chunk.css"
   },
   {
-    "revision": "07699c7791f4bcd31a8b",
+    "revision": "8a05eb6fe5f9ceb14bd3",
     "url": "/flow-mgt/static/css/main.c1d745a0.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flow-mgt/static/js/2.1585261b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "07699c7791f4bcd31a8b",
-    "url": "/flow-mgt/static/js/main.6a782cb8.chunk.js"
+    "revision": "8a05eb6fe5f9ceb14bd3",
+    "url": "/flow-mgt/static/js/main.44b52eb9.chunk.js"
   },
   {
     "revision": "6b7a1b556410a667a162",
