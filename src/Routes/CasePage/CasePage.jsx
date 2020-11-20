@@ -10,7 +10,7 @@ import Success from './Success.component'
 import AddonTable from './AddonTable.component'
 import Bullets from './Bullets.component'
 import * as utils from './utilities'
-import HelpModal from '../HelpModal/HelpModal.component';
+import HelpModal from '../HelpModal/HelpModal.component'
 
 const { Text, Title } = Typography
 
@@ -213,11 +213,15 @@ export default function HomePage() {
         if (nextQuestion.choices && nextQuestion.choices.length) {
             setIsNextDisabled(true)
         }
-        if(currentQuestion.bulletData && currentQuestion.expectInput && userInputCorrectAnswerRef.current){
+        if (
+            currentQuestion.bulletData &&
+            currentQuestion.expectInput &&
+            userInputCorrectAnswerRef.current
+        ) {
             allSelectedOptions.current.push(currentQuestion)
         }
 
-        if(currentQuestion.addOnTable){
+        if (currentQuestion.addOnTable) {
             if (userInputCorrectAnswerRef.current && addonTable.expectInput) {
                 allSelectedOptions.current.push(addonTable)
             }
@@ -228,7 +232,7 @@ export default function HomePage() {
         if (tbl && tbl.expectInput) {
             setIsNextDisabled(true)
         }
-      
+
         if (nextQuestion.expectInput) {
             setIsNextDisabled(true)
         }
@@ -303,6 +307,15 @@ export default function HomePage() {
                     }
                     subTitle="Exit Case"
                     onBack={() => {}}
+                    extra={[
+                        <Button 
+                            href="https://forms.gle/wdf3yMk2BAcEbxFZA"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            feedback
+                        </Button>,
+                    ]}
                 />
             </Header>
             {currentQuestion.successMessage && (
@@ -412,7 +425,6 @@ export default function HomePage() {
                     </NextButton>
                 </>
             )}
-        <HelpModal type="casePage" />
         </Wrapper>
     )
 }

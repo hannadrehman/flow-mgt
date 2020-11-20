@@ -117,7 +117,7 @@ export default function ClarifyingQuestions() {
             <Button type="primary" block onClick={handleCreate}>
                 Create Structure
             </Button>
-        <HelpModal type="ClearifyingQuestionsPage" />
+        <HelpModal type="clearifyingQuestionsPage" />
 
         </div>
     )

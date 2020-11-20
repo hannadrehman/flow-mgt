@@ -244,7 +244,7 @@ export default function CreateStructure() {
             <Button type="primary" block onClick={handleClick}>
                 Submit
             </Button>
-        <HelpModal type="CreateStructurePage" />
+        <HelpModal type="createStructurePage" />
 
         </Wrapper>
     )
