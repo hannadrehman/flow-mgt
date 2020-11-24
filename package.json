@@ -18,7 +18,7 @@
     "recharts": "^1.8.5",
     "styled-components": "^5.2.0"
   },
-  "homepage": "https://hannadrehman.github.io/flow-mgt/",
+  "homepagexx": "http://app.casesninja.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

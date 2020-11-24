@@ -10,7 +10,6 @@ import Success from './Success.component'
 import AddonTable from './AddonTable.component'
 import Bullets from './Bullets.component'
 import * as utils from './utilities'
-import HelpModal from '../HelpModal/HelpModal.component'
 
 const { Text, Title } = Typography
 
@@ -128,7 +127,7 @@ export default function HomePage() {
         async function getData() {
             try {
                 const res = await fetch(
-                    `https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/questions-${id}.json`,
+                    `http://app.casesninja.com/json/questions-${id}.json`,
                     {}
                 )
                 const resp = await res.json()

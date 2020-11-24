@@ -62,7 +62,7 @@ export default function Structure({ caseDetails }) {
         async function getData() {
             try {
                 const res = await fetch(
-                    `https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/success-structure.json`,
+                    `http://app.casesninja.com/json/success-structure.json`,
                     {}
                 )
                 const resp = await res.json()

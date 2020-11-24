@@ -1,15 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import * as utils from './utilities'
-import { Typography, Progress, Card, Tooltip } from 'antd'
-import {
-    Radar,
-    RadarChart,
-    PolarGrid,
-    Legend,
-    PolarAngleAxis,
-    PolarRadiusAxis,
-} from 'recharts'
+import { Typography, Progress, Card, Tooltip, Button } from 'antd'
+import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis } from 'recharts'
 
 const { Text, Title } = Typography
 
@@ -65,6 +58,13 @@ const ChartWrapper = styled.div`
     align-content: center;
 `
 const Charter = styled.div``
+const Container = styled.div`
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+`
 
 export default function Score({ usersScore, maxScore, caseDetails }) {
     console.log('User score: ', usersScore)
@@ -159,6 +159,18 @@ export default function Score({ usersScore, maxScore, caseDetails }) {
                     ))}
                 </Bars>
             </Mains>
+            <Container>
+                <Button
+                    type="primary"
+                    href="https://forms.gle/wdf3yMk2BAcEbxFZA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <h3>
+                    GIVE FEEDBACK
+                    </h3>
+                </Button>
+            </Container>
             <ChartWrapper>
                 <Charter>
                     <RadarChart

@@ -1923,7 +1923,7 @@
   },
   "SlideAirlineQ_Rigor1_2": {
     "question": "If prices were increased by 13.3%, what would be the impact on demand?",
-    "image": "https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/images/graph-1.png",
+    "image": "http://app.casesninja.com/images/graph-1.png",
     "footnote": "Read each option carefully. Click to select one option as your answer and then click Next. Click Next to proceed with the case.",
     "show_feedback": true,
     "feedback_success": "That's absolutely right! An increase in prices by 13.3% would lead to a drop in demand by 26.6%.",
@@ -2945,7 +2945,7 @@
   },
   "SlideAirlineQ_Rigor2": {
     "question": "What does the graph show about the client's costs and margins, as compared to that of its competitors?",
-    "image": "https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/images/graph-2.png",
+    "image": "http://app.casesninja.com/images/graph-2.png",
     "choices": [
       {
         "answer": "The client has a low cost base, and is thus best suited to keep prices down. Its size suggests that it can sustain losses for some time.",
@@ -3064,7 +3064,7 @@
   },
   "SlideAirlineQ_Rigor4": {
     "question": "Looking at the graph, how would you assess the long-term development of the industry, given the price increase?",
-    "image": "https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/images/graph-3.png",
+    "image": "http://app.casesninja.com/images/graph-3.png",
     "choices": [
       {
         "answer": "Many companies have low margins. Given that demand is inelastic, prices across the board will increase, so that profits for all players would increase in the long run.",

@@ -54,7 +54,7 @@ export default function ClarifyingQuestions() {
         async function getData() {
             try {
                 const res = await fetch(
-                    `https://raw.githubusercontent.com/hannadrehman/flow-mgt/master/src/case-${id}.json`,
+                    `http://app.casesninja.com/json/case-${id}.json`,
                     {}
                 )
                 const json = await res.json()
