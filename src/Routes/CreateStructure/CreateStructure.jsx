@@ -3,7 +3,7 @@ import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { Typography, Button, PageHeader, Input } from 'antd'
 import { PlusCircleOutlined } from '@ant-design/icons'
-import { staticData } from '../../Cases.fixtures'
+import { casesList } from '../ListPage/list'
 import { useInterval } from '../../hooks/timers'
 import HelpModal from '../HelpModal/HelpModal.component';
 
@@ -128,10 +128,15 @@ export default function CreateStructure() {
     }, 500)
 
     function handleClick(id) {
+        const items = inputRefs.current.filter(x=>{
+            const children = x.children.filter(x=>x.value)
+          return children.length > 0
+        })
         localStorage.setItem(
             'structure',
-            JSON.stringify(inputRefs.current || {})
+            JSON.stringify(items || [])
         )
+        console.log(items)
         localStorage.setItem('structureTime', timeElapsed.current)
         push(`/case/${item.id}`)
     }
@@ -181,7 +186,7 @@ export default function CreateStructure() {
             lastTextBox.focus()
         }, 100)
     }
-    const item = staticData.find((e) => e.id.toString() === id)
+    const item = casesList.find((e) => e.id.toString() === id)
 
     function handleInputChange(ev) {
         const { id, value } = ev.target

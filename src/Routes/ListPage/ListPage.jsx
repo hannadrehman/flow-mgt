@@ -1,8 +1,8 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { Typography, Button, PageHeader } from 'antd'
-import { staticData } from '../../Cases.fixtures'
+import { casesList, marketSizingList } from './list'
 
 const { Title, Text } = Typography
 
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `
 const Header = styled.div`
     border-bottom: 1px solid #eadddd;
-    margin-bottom:16px;
+    margin-bottom: 16px;
 `
 const Grid = styled.div`
     display: flex;
@@ -40,21 +40,24 @@ const Container = styled.div`
 `
 
 export default function HomePage() {
-    const { push } = useHistory()
+    const { push, goBack } = useHistory()
+    const { type } = useParams()
+
+    const listItems = type === 'cases' ? casesList : marketSizingList
+
     function handleClick(id) {
-        push(`/details/${id}`)
+        const base = type === 'cases' ? 'details' : 'market-sizing'
+        push(`/${base}/${id}`)
     }
-    function goHome(id) {
-        push(`/`)
-    }
+
     return (
         <Wrapper>
             <Header>
-                <PageHeader subTitle="Back to Home" onBack={goHome} />
+                <PageHeader subTitle="Back to Home" onBack={goBack} />
             </Header>
 
             <Grid>
-                {staticData.map((item) => (
+                {listItems.map((item) => (
                     <GridItem key={item.id}>
                         <GridImage color={item.color} />
                         <Container>

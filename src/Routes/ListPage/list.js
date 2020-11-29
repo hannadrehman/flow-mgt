@@ -1,4 +1,4 @@
-const staticData = [
+const casesList = [
     {
         id: 1,
         title: 'Drug Case',
@@ -18,4 +18,15 @@ const staticData = [
         color: '#fafcc2',
     },
 ]
-export { staticData }
+const marketSizingList = [
+    {
+        id: 1,
+        title: 'Market Sizing: Getting Schooled',
+        description:
+            'Help the Client (a drug manufacturer) to set a suitable price for their new drug',
+        detailedDescription:
+            'DRUG CASE OVERVIEW <br/> Today, we are going to discuss the case of a pharmaceutical company based in the U.S. The client has developed a new drug, PrevenT (Prevent Thrombosis), that helps reduce the rate at which a particular complication of hip-replacement surgery, deep-vein thrombosis (DVT), occurs. <br/>What you need to know is that DVT can lead to very serious medical conditions, including higher risk of pulmonary embolism (PE) or major bleeding. <br/>PrevenT will directly compete against Clearvenax, an established product that is also used to reduce rates of DVT and hence DVT-related complications. Clearvenax is sold at $4 per dose and has a variable production cost of $1 per dose. The client has asked you to help set a suitable price for PrevenT. <br/>',
+        color: '#ccf6c8',
+    }
+]
+export { casesList,marketSizingList }

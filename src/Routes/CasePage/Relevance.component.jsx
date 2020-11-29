@@ -99,10 +99,15 @@ export default function Relevance({ usersScore, maxScore, caseDetails }) {
                     </Card>
                 </Cards>
                 <Solutions>
-                    <Text strong>
-                        These are some questions which we think you could have
-                        avoided
-                    </Text>
+                    {
+                        questions.length > 0 && (
+                            <Text strong>
+                            These are some questions which we think you could have
+                            avoided
+                        </Text>
+                        )
+                    }
+                   
                     <br />
                     <br />
                     <Accordion

@@ -7,6 +7,7 @@ import DetailsPage from './DetailsPage/DetailsPage.jsx'
 import CasePage from './CasePage/CasePage.jsx'
 import CreateStructure from './CreateStructure/CreateStructure.jsx'
 import ClearifyingQuestions from './ClearifyingQuestions/ClearifyingQuestions.jsx'
+import MarketSizing from './MarketSizing/MarketSizing.component';
 
 export default function Router() {
     return (
@@ -15,7 +16,7 @@ export default function Router() {
                 <Route exact path="/">
                     <HomePage />
                 </Route>
-                <Route exact path="/list">
+                <Route exact path="/list/:type">
                     <ListPage />
                 </Route>
                 <Route exact path="/details/:id">
@@ -29,6 +30,9 @@ export default function Router() {
                 </Route>
                 <Route exact path="/clearifying-questions/:id">
                     <ClearifyingQuestions />
+                </Route>
+                <Route exact path="/market-sizing/:id">
+                    <MarketSizing />
                 </Route>
             </Switch>
         </HashRouter>

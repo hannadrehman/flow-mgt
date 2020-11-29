@@ -4,7 +4,7 @@ import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { ArrowLeftOutlined } from '@ant-design/icons'
 import { Typography, Button, PageHeader, Popconfirm } from 'antd'
-import { staticData } from '../../Cases.fixtures'
+import { casesList } from '../ListPage/list'
 import Choices from './Choices.component'
 import Success from './Success.component'
 import AddonTable from './AddonTable.component'
@@ -162,7 +162,7 @@ export default function HomePage() {
     }, [id, qID])
 
     function handleBack(id) {
-        push(`/list`)
+        push(`/list/cases`)
     }
     function onOptionChange(e) {
         const option = currentQuestion.choices[e.target.value]
@@ -246,7 +246,7 @@ export default function HomePage() {
         setOptionFeedback(null)
         userInputCorrectAnswerRef.current = null
     }
-    const item = staticData.find((e) => e.id.toString() === id)
+    const item = casesList.find((e) => e.id.toString() === id)
 
     function handleChange(ev) {
         const value = ev.target.value
@@ -308,6 +308,7 @@ export default function HomePage() {
                     onBack={() => {}}
                     extra={[
                         <Button 
+                        key="1"
                             href="https://forms.gle/wdf3yMk2BAcEbxFZA"
                             target="_blank"
                             rel="noopener noreferrer"

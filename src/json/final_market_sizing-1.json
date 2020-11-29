@@ -1,0 +1,3622 @@
+{
+  "Problem-1": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "66%",
+        "description": "Average concert ticket sell through rate"
+      },
+      {
+        "type": "Calculation",
+        "value": "1,500",
+        "description": "Tickets sold per concert: (2/3) * 2,265 total seats, round to 2,250 seats"
+      },
+      {
+        "type": "Assumption",
+        "value": "6",
+        "description": "Number of concerts per week during main season"
+      },
+      {
+        "type": "Assumption",
+        "value": "30",
+        "description": "Length of the main concert season (in weeks)"
+      },
+      {
+        "type": "Calculation",
+        "value": "270,000",
+        "description": "Total tickets sold: 1.5K tickets / concert * 6 concerts / week * 30 weeks"
+      },
+      {
+        "type": "Assumption",
+        "value": "$100.00",
+        "description": "Average ticket price"
+      },
+      {
+        "type": "Calculation",
+        "value": "$27M",
+        "description": "Total concert revenue: $100 / ticket * 270K tickets"
+      },
+      {
+        "type": "Calculation",
+        "value": "$135M",
+        "description": "Total revenue: $27M / 20% of total revenue"
+      }
+    ],
+    "Question": "You are working with a partner on a pitch deck for an engagement with the Los Angeles Philharmonic orchestra, to explore revenue growth opportunities. You understand that ticket sales at the orchestra\u2019s 2,265 seat main venue (the Disney Concert Hall), where their concert schedule runs 7 months each year, only generates ~20% of revenue, while 80% comes from their 18,000 seat summer venue (the Hollywood Bowl), donations and other sources. The partner would like you to estimate the Philharmonic\u2019s total revenue.",
+    "Title": "The sound of money",
+    "Time taken": {
+      "your_time": "9 seconds",
+      "avg_time": "5 minutes, 31 seconds"
+    },
+    "Final estimate": " $135M",
+    "Source estimate sanity check": {
+      "value": "$146M",
+      "source_text": "Pro Publica",
+      "source_link": "https://projects.propublica.org/nonprofits/organizations/951696734"
+    },
+    "Follow up question": {
+      "question": "Based on customer surveys, you estimate that reducing prices by 10% could generate 20% more tickets sold. What percent change in ticket revenue would that result in?",
+      "options": [
+        "+2%",
+        "+5%",
+        "+8%",
+        "+10%",
+        "Depends on current price and volume"
+      ],
+      "correct_answer": "C",
+      "explanation": "This is a classic problem that can easily solved with the growth rate formula. Thus, you'll want to begin by correctly setting that up: Price * (1 \u2013 10%) * Volume * (1 + 20%) = 90% * 120% * Revenue (eg Price * Volume) = 108% * Revenue. Thus, the answer is plus 8%."
+    }
+  },
+  "Problem-2": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "14",
+        "description": "Length of ski season (in weeks)"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "15K",
+          "5K"
+        ],
+        "description": [
+          "Peak day (2-day weekends) volume of skiers",
+          "Non-peak day (5-day weekdays) volume of skiers"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "420K",
+          "350K"
+        ],
+        "description": [
+          "Peak, total number of lift tickets (eg skier days): 15K * 2 weekend days * 14 weeks",
+          "Non-peak, total number of lift tickets: 5K * 5 weekdays * 14 weeks"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "$50.00",
+          "$30.00"
+        ],
+        "description": [
+          "Peak, average lift ticket price",
+          "Non-peak, average lift ticket price"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "$21M",
+          "$10.5M"
+        ],
+        "description": [
+          "Peak lift ticket revenue: 420K * $50",
+          "Non-peak lift ticket revenue: 350K * $30"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "$100",
+          "$30",
+          "$10",
+          "$10"
+        ],
+        "description": [
+          "10% of skier days drive purchase ski school (price per session)",
+          "20% of skiers days purchase rentals (price per day)",
+          "80% of skiers days purchase food (price per daily food)",
+          "10% of skiers day purchase retail items (price of retail purchases)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "$7.7M",
+          "$4.6M",
+          "$6.2M",
+          "$0.8M"
+        ],
+        "description": [
+          "Ski school revenue: 770K skiers days * 10% * $100",
+          "Rental revenue: 770K * 20% * $30",
+          "Food revenue: 770K * 80% * $10",
+          "Retail revenue: 770K * 10% * $10"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "$19.3M",
+        "description": "Total non-lift ticket revenue: $7.7M + $4.6M + $6.2M + $0.8M"
+      },
+      {
+        "type": "Assumption",
+        "value": "10%",
+        "description": "Percent of revenue which is earned in off-season (%)"
+      },
+      {
+        "type": "Calculation",
+        "value": "$57M",
+        "description": "Total expected revenue for ski resort: ($31.5M lift revenue + $19.3M non-lift revenue) / 90% of revenue"
+      }
+    ],
+    "Question": "Your client, a major ski resort operator, has hired your team to evaluate international opportunities for growth. You are performing an analysis of potential acquisition targets and would like to estimate the revenue of the largest ski resort in Australia, called Pershing. Pershing is privately held, but you know that it receives ~15K skiers per day during its peak days (ski season weekends). Pershing does not own lodging but owns on-mountain retail businesses.",
+    "Title": "Skiing down under",
+    "Time taken": {
+      "your_time": "5 seconds",
+      "avg_time": "6 minutes, 38 seconds"
+    },
+    "Final estimate": " $57M",
+    "Source estimate sanity check": {
+      "value": "$39M",
+      "source_text": "Vail Resorts 10-K",
+      "source_link": "http://files.shareholder.com/downloads/MTN/4407165825x0x913014/68BF4BB5-DB35-4BCD-AAA4-92512CF4D0B4/2016_Proxy_and_Form_10-K.pdf"
+    },
+    "Follow up question": {
+      "question": "Your client would like to estimate the impact of possible pricing changes. Assuming average daily ticket price is $50, and non-ticket revenue is $25 per person, what percent would revenue change if lift ticket prices decrease by 20% and volume increases by 20%? Assume non-ticket revenue remains steady.",
+      "options": [
+        "Decrease 4%",
+        "No change",
+        "Increase 4%",
+        "Increase 10%",
+        "Increase 20%"
+      ],
+      "correct_answer": "C",
+      "explanation": "To solve for this problem, you want to setup an equation that will let you compare current revenue versus new revenue. Thus, current revenue = $50 * Volume (V) + $25V = $75V. New revenue = $50 * 80% * V * 120% + $25 * V * 120%. This can be simplified to: $48V + $30V = $78V. Thus, the change in revenue = ($78V - $75V) / $75V which can be further simplified to: 3 / 75 = 4%."
+    }
+  },
+  "Problem-3": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "n/a",
+        "description": "Market is comprised of two segments: 1) food service sales 2) retail sales"
+      },
+      {
+        "type": "Assumption",
+        "value": "50%",
+        "description": "Heinz dominates the overall market (both segments) and owns X share (%)"
+      },
+      {
+        "type": "Calculation",
+        "value": "$1.2B",
+        "description": "Total overall market size: $600M Heinz revenue / 50% market share"
+      },
+      {
+        "type": "Assumption",
+        "value": "500M",
+        "description": "Population of North America"
+      },
+      {
+        "type": "Assumption",
+        "value": "2.5",
+        "description": "Average household (HH) size (in people)"
+      },
+      {
+        "type": "Calculation",
+        "value": "200M",
+        "description": "Total households (HH) in North America: 500M total people / 2.5 people per household"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "25%",
+          "50%",
+          "25%"
+        ],
+        "description": [
+          "HH that never eat ketchup (%)",
+          "HHs that buy ketchup 1x / year (%)",
+          "HH that buy ketchup 2x per year (%)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "200M",
+        "description": "Number of ketchup bottles purchased: ( HHs * 50% * 1 per year) + ( HHs * 25% * 2 per year)"
+      },
+      {
+        "type": "Assumption",
+        "value": "$3.00",
+        "description": "Average price per bottle of ketchup"
+      },
+      {
+        "type": "Calculation",
+        "value": "$600M",
+        "description": "Total value of retail ketchup sales: $3.00 * 200M"
+      },
+      {
+        "type": "Calculation",
+        "value": "$600M",
+        "description": "Food service sales amount: $1.2B total market (from 3rd step) -  retail sales"
+      }
+    ],
+    "Question": "Your team is working with Kraft Heinz on a growth strategy for ketchup, a product category which generates ~$600M in revenue for the company in North America. Your manager has asked you to determine the market size for ketchup sold to the food service industry in North America.",
+    "Title": "Would you like ketchup with that?",
+    "Time taken": {
+      "your_time": "4 seconds",
+      "avg_time": "4 minutes, 4 seconds"
+    },
+    "Final estimate": " $600M",
+    "Source estimate sanity check": {
+      "value": "$1.0B",
+      "source_text": "Mordor Intelligence",
+      "source_link": "https://www.mordorintelligence.com/industry-reports/ketchup-market"
+    },
+    "Follow up question": {
+      "question": "Market forecasts predict that in the coming years, the overall ketchup market will expand to $1.5B in North America. As the North American market leader, if Heinz can increase its prices by 5% without any impact on volume, how many percentage points would its share of the market change? Assume all other providers keep volume and price steady in this period.",
+      "options": [
+        "No change",
+        "1%",
+        "2%",
+        "2.5%",
+        "5%"
+      ],
+      "correct_answer": "C",
+      "explanation": "To solve for this problem, you want to compare the incremental revenue Heinz expects to make versus the overall market. That will determine the percentage of share Heinz stands to gain. Heinz\u2019s revenue would increase by 5% * $600M = $30M. Its market share would increase by $30M / ($1.5B + $30M) = roughly 2% (technically 1.96%)."
+    }
+  },
+  "Problem-4": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "300M",
+        "description": "Population of the US"
+      },
+      {
+        "type": "Assumption",
+        "value": "2.5",
+        "description": "Average household (HH) has  people"
+      },
+      {
+        "type": "Calculation",
+        "value": "120M",
+        "description": "Number of households: 300M people / 2.5 people per HH"
+      },
+      {
+        "type": "Assumption",
+        "value": "67%",
+        "description": "Percentage of households that travel in a given year"
+      },
+      {
+        "type": "Assumption",
+        "value": "2.5",
+        "description": "Percentage of households that travel for pleasure"
+      },
+      {
+        "type": "Calculation",
+        "value": "60M",
+        "description": "Number of households traveling for pleasure annually: 120M HHs * 2/3 travel * 75% pleasure travel"
+      },
+      {
+        "type": "Assumption",
+        "value": "1.5",
+        "description": "Average number of trips per year per traveling HH"
+      },
+      {
+        "type": "Calculation",
+        "value": "90M",
+        "description": "Pleasure trips annually: 60M HHs * 1.5 trips / year"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "20%",
+          "80%"
+        ],
+        "description": [
+          "Guidebook users: use on every trip (%)",
+          "Non-guidebook users: don't ever use guidebooks (%)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "18M",
+        "description": "Trips where guidebook is used: 90M trips * 20% of travelers use guidebooks"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "50%",
+          "25%",
+          "25%"
+        ],
+        "description": [
+          "Percent that buy guidebooks (%)",
+          "Percent that buy e-books (%)",
+          "Percent that borrow books (%)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "$15.00",
+          "$10.00"
+        ],
+        "description": [
+          "Average price of a physical guidebook",
+          "Average price of an e-book"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "$180M",
+        "description": "Total revenue from guidebooks: (18M trips * 50% buy guidebook * $15 per book) + (18M trips * 25% buy e-book * $10 per e-book)"
+      }
+    ],
+    "Question": "A major book publisher has hired your team to evaluate strategic alternatives for its struggling travel guidebook series. While the travel industry is strong overall, large swaths of consumers have started turning to a collection of free-online resources for travel planning and guidance. To get the case work kicked off, your manager has asked you to provide an internal estimate for the market for travel guidebooks in the US.",
+    "Title": "Finding Revenue",
+    "Time taken": {
+      "your_time": "2 minutes, 47 seconds",
+      "avg_time": "5 minutes, 39 seconds"
+    },
+    "Final estimate": " $180M",
+    "Source estimate sanity check": {
+      "value": "$120M in 2015",
+      "source_text": "Publishers Weekly",
+      "source_link": "https://www.publishersweekly.com/pw/by-topic/new-titles/adult-announcements/article/69396-travel-by-the-numbers-new-travel-books-for-2016.html"
+    },
+    "Follow up question": {
+      "question": "You've just reviewed the latest P&Ls from the CFO and the picture isn't pretty. The client\u2019s expected annual revenue is $20M and expenses are projected to hit $25M. Your analyst suggests that by rationalizing destinations covered, revenues would decline 25% but expenses would decline faster at 30%. What would the client\u2019s new profit margin on its travel guidebook series be if these estimates are right?",
+      "options": [
+        "-25%",
+        "-22%",
+        "-20%",
+        "-17%",
+        "-15%"
+      ],
+      "correct_answer": "D",
+      "explanation": "To solve for this problem, you simply want to setup a formula to calculate new profit margin: ( Expected revenue - Expected expenses ) / Expected revenue. New revenue can be calculated like this: $20M * (1 \u2013 25%) = $20M - $5M = $15M new revenue estimate. New expenses: $25M * (1 \u2013 30%) = $25M - $7.5M = $17.5M new expense estimate. Thus, putting it together you arrive at the expected new profit margin: ($15M - $17.5M) / $15M = -$2.5M / $15M = -17%."
+    }
+  },
+  "Problem-5": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "300M",
+        "description": "Population of the US"
+      },
+      {
+        "type": "Assumption",
+        "value": "2.5",
+        "description": "Average household (HH) has  people"
+      },
+      {
+        "type": "Calculation",
+        "value": "120M",
+        "description": "Number of households: 300M people / 2.5 people per HH"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "50%",
+          "50%"
+        ],
+        "description": [
+          "Younger consumers: Percentage of heads of household (HoH) whose age is between 20 - 50",
+          "Older consumers: Percentage of heads of household (HoH) whose age is between 50 - 80"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "50%",
+          "25%"
+        ],
+        "description": [
+          "Younger HoHs considering a purchasing (%)",
+          "Older HoHs considering a purchasing (%)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "20%",
+          "20%"
+        ],
+        "description": [
+          "Younger HoHs that will act on purchase interest (%)",
+          "Older HoHs that will act on purchase interest (%)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "6M",
+          "3M"
+        ],
+        "description": [
+          "Younger purchasers: 120M HHs * 50% w/ Younger HoHs * 50% consider * 20% purchase",
+          "Older purchasers: 120M HHs * 50% w/ Older HoHs * 25% consider * 20% purchase"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": "50%",
+        "description": "Percentage of users that buy 1 device"
+      },
+      {
+        "type": "Assumption",
+        "value": "50%",
+        "description": "Percentage of users that buy 2 device"
+      },
+      {
+        "type": "Calculation",
+        "value": "$150",
+        "description": "Average price per device"
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "$1.35B",
+          "$675M"
+        ],
+        "description": [
+          "Younger HoHs revenue: 6M purchasers * $150 * 1.5 devices (on average)",
+          "Older HoHs revenue: 3M purchasers * $150 * 1.5 devices (on average)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "$2B (rounded down)",
+        "description": "Total market size: $1.35B from Younger HoHs + $675M from Older HoHs"
+      }
+    ],
+    "Question": "Due to the increasing level of consumer interest in smart home devices (e.g., Echo by Amazon, Google Home, etc.), your client, a major consumer electronics manufacturer, is considering entering the smart home device market. They've been slow off the block in the smart-home category, so they're considering entering the market through an acquisition of a young, but promising start up. To level set some of the acquisition due diligence, you'd like to estimate the market size for smart home devices in the US.",
+    "Title": "Getting Smart",
+    "Time taken": {
+      "your_time": "2 seconds",
+      "avg_time": "5 minutes, 6 seconds"
+    },
+    "Final estimate": " $2B",
+    "Source estimate sanity check": {
+      "value": "$2.2B in 2016",
+      "source_text": "Consumer Tech Association",
+      "source_link": "https://www.cta.tech/News/Press-Releases/2016/January/Record-Year-Ahead-Consumer-Enthusiasm-for-Connect.aspx"
+    },
+    "Follow up question": {
+      "question": "After a long day in the office, you've heard from the Partner that the client is considering making an all-cash offer of $100M for the company. Your team's internal projections suggest the target could earn $10M in profit in the first year and profit will grow by an incremental $10M in each successive year. If these estimates hold true, how long will it take to recoup the investment?",
+      "options": [
+        "3 years",
+        "3.5 years",
+        "4 years",
+        "4.5 years",
+        "10 years"
+      ],
+      "correct_answer": "C",
+      "explanation": "To solve for this, simply setup an equation to calculate when total profit will equal $100: $10M (year 1) + $20M (year 2) + $30M (year 3) + $40M (year 4) = $100M"
+    }
+  },
+  "Problem-6": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "300M",
+        "description": "Total population of the US"
+      },
+      {
+        "type": "Assumption",
+        "value": "Age 0 to 80",
+        "description": "Population evenly distributed between ages"
+      },
+      {
+        "type": "Assumption",
+        "value": "Age 10 to 70",
+        "description": "Core market is people of ages"
+      },
+      {
+        "type": "Calculation",
+        "value": "225M",
+        "description": "Eligible market total: ((70-10) / 80) * 300M people"
+      },
+      {
+        "type": "Assumption",
+        "value": "66%",
+        "description": "Two thirds of people eat breakfast"
+      },
+      {
+        "type": "Calculation",
+        "value": "150M",
+        "description": "Breakfast eaters in the US: 2/3 * 225M"
+      },
+      {
+        "type": "Assumption",
+        "value": "20%",
+        "description": "Only a small percentage of breakfast eaters will eat breakfast bars"
+      },
+      {
+        "type": "Calculation",
+        "value": "30M",
+        "description": "Number of breakfast bar eaters: 20% * 150M"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "0 / year",
+          "12 / year",
+          "50 / year"
+        ],
+        "description": [
+          "1/3 eat never eat breakfast bars (eat energy or nutrition bar instead)",
+          "1/3 eat traditional breakfast bars occasionally (1x / month)",
+          "1/3 eat traditional breakfast bars regularly (almost 1x / week)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "620M",
+        "description": "Breakfast bars eaten annually: (30M * 1/3 * 12 times) + (30M * 1/3 * 50 times) = 120M + 500M"
+      },
+      {
+        "type": "Assumption",
+        "value": "$1.00",
+        "description": "Price of a breakfast bar"
+      },
+      {
+        "type": "Calculation",
+        "value": "$620M",
+        "description": "Total value of breakfast bar market: 620M * $1.00"
+      }
+    ],
+    "Question": "Your client, a major manufacturer of cereals and food bars, is re-evaluating their traditional breakfast cereal bar product line, as energy and nutrition bars are growing faster and increasingly replacing traditional breakfast bars. Your manager would like you to determine the market size for breakfast bars.",
+    "Title": "Large appetite",
+    "Time taken": {
+      "your_time": "2 seconds",
+      "avg_time": "4 minutes, 5 seconds"
+    },
+    "Final estimate": " $620M",
+    "Source estimate sanity check": {
+      "value": "$764M",
+      "source_text": "Agriculture Department, CA",
+      "source_link": "http://www.agr.gc.ca/eng/industry-markets-and-trade/statistics-and-market-information/agriculture-and-food-market-information-by-region/united-states-and-mexico/market-intelligence/snack-cereal-and-nutrition-bars-in-the-united-states/?id=1421353894973"
+    },
+    "Follow up question": {
+      "question": "Your client estimates that the breakfast bar market will soon grow to $854M. Furthermore, the client believes it's likely they'll hold a 10% share of that market while maintaining a 20% profit margin. On average, energy and nutrition bars sell for twice the price of breakfast bars, and earn a 25% profit margin. How much more profit would the client earn if they sold the same volume of energy and nutrition bars?",
+      "options": [
+        "$4M",
+        "$17M",
+        "$25.5M",
+        "$34M",
+        "$42.5M"
+      ],
+      "correct_answer": "C",
+      "explanation": "The client\u2019s share of the market is $854M * 10% = ~$85M, and they earn $85M * 20% = $17M in profit. If energy and nutrition bars sell for twice the price, the same volume of bars results in $85M * 2 = $170M in revenue and $170M * 25% = $42.5M in profit. Their additional profit would be $25.5M."
+    }
+  },
+  "Problem-7": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "80%",
+        "description": "The top 100 airports represent X volume of all global volume"
+      },
+      {
+        "type": "Assumption",
+        "value": "1,000",
+        "description": "Top 100 airports handle Y amount of flights daily"
+      },
+      {
+        "type": "Calculation",
+        "value": "125K",
+        "description": "Total number of worldwide flights daily: (100 top airports * 1K flights daily) / 80% of flight volume"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "25%",
+          "50%",
+          "20%",
+          "5%"
+        ],
+        "description": [
+          "Short flights with no meals",
+          "Medium flights which serve 1 meal to business class only",
+          "Long flights which serve 1 meal to all",
+          "Long haul which serve 2 meals to all"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": "10%",
+        "description": "Percent of passengers that are first class or business class"
+      },
+      {
+        "type": "Assumption",
+        "value": "100",
+        "description": "Average number of passengers per flight"
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "625K",
+          "2,500K",
+          "1,250K"
+        ],
+        "description": [
+          "# of meals for Medium: 125K * 50% of flights * 10% first/business * 100 passengers",
+          "# of meals for Long: 125K * 20% flights * 100 passengers",
+          "# of meals for Long haul: 125K * 5% flights * 2 meals / passenger * 100 passengers"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "1M",
+          "3.375M"
+        ],
+        "description": [
+          "Total # of business / first meals daily: 625K + (10% * 2,500K) + (10% * 1,250K)",
+          "Total # of economy meals daily: (2,500K * 90%) + (1,250 * 90%)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "$10.00",
+          "$5.00"
+        ],
+        "description": [
+          "Cost of first/business meal",
+          "Cost of economy meal"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "$17M",
+          "$10M"
+        ],
+        "description": [
+          "Total daily cost of meals, economy: round 3.375M to 3.4M, thus: 3.4M * $5",
+          "Total daily cost of meals, business / first: 1M * $10"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "$10B",
+        "description": "Total annual cost of meals: $27M * 365 days, round $27M to $25M, round 365 to 400"
+      }
+    ],
+    "Question": "Your client is a global player in the in-flight catering services industry, which has had a rough decade as airlines have rationalized their in-flight meal offerings. You are working on a broad-ranging, cost optimization project. As part of this project, you've been asked by your Principal to size the market for in-flight meal services worldwide. You know that there are 9,000 commercial airports worldwide.",
+    "Title": "Chicken or Beef",
+    "Time taken": {
+      "your_time": "2 seconds",
+      "avg_time": "6 minutes, 3 seconds"
+    },
+    "Final estimate": " $10.0B",
+    "Source estimate sanity check": {
+      "value": "$13.9B",
+      "source_text": "Business Wire",
+      "source_link": "businesswire.com/news/home/20170213006081/en/Global-18-Billion-In-Flight-Catering-Services-Market"
+    },
+    "Follow up question": {
+      "question": "Based off of internal analysis done by another case team, the costs of the business have grown at 4% annually, largely driven by costs of the raw food stuffs materials. If costs continue to rise at that rate and if the in-flight catering companies continue to pass those costs along directly to the airlines, how large will the market be in 5 years? For the calculation, assume the base market is currently $13.9B.",
+      "options": [
+        "Roughly $15B",
+        "Roughly $15.5B",
+        "Roughly $16B",
+        "Roughly $16.5B",
+        "Roughly $17B"
+      ],
+      "correct_answer": "E",
+      "explanation": "To solve this problem, you need to estimate the market size after a few years of consistent growth. This could be done by multiplying out each year and compounding. However, it's fastest to setup a consistent growth rate formula and use an estimated growth rate since the CAGR is relatively small (eg sub 10%). Thus, you can set the following formula: $13.9B * (1.04 ^ 5). You can simplify this to: $14B * (1 + .04 * 5) = $14B * 1.2 = $16.8B. Hence, the best answer is roughly $17B."
+    }
+  },
+  "Problem-8": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "4",
+        "description": "Average movie theater screen has X showings per day"
+      },
+      {
+        "type": "Assumption",
+        "value": "6",
+        "description": "Showings per week that classify as peak volume (2 each on Fri, Sat, Sun)"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "50",
+          "10"
+        ],
+        "description": [
+          "Peak showing, number of tickets sold",
+          "Non-peak showing, number of tickets sold"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "15K",
+          "11K"
+        ],
+        "description": [
+          "Peak, ticket volume per screen: 6 showings/week * 52 weeks * 50 tickets/showing, round to 50 weeks",
+          "Non-peak, ticket volume per screen: (28-6) showings/week * 52 weeks * 10 tickets/showing, round to 50 weeks"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "26K",
+        "description": "Total ticket volume per screen: 15K peak + 11K non-peak"
+      },
+      {
+        "type": "Calculation",
+        "value": "1B",
+        "description": "Total ticket volume: 26K tickets * 40K screens, round tickets to 25K"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "80%",
+          "20%"
+        ],
+        "description": [
+          "Adult moviegoers (%)",
+          "Child moviegoers (%)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "$5.00",
+          "$3.00"
+        ],
+        "description": [
+          "Adult ticket price",
+          "Child ticket price"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "$4B",
+          "$0.6B"
+        ],
+        "description": [
+          "Adult ticket revenue: 1B * 80% * $5 per ticket",
+          "Children ticket revenue: 1B * 20% * $3 per ticket"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "$4.6B",
+        "description": "Total ticket revenue: $4B + $0.6B"
+      },
+      {
+        "type": "Assumption",
+        "value": "25%",
+        "description": "Percentage of moviegoers who buy concessions"
+      },
+      {
+        "type": "Assumption",
+        "value": "$4.00",
+        "description": "Average cost of concessions ($ per moviegoer)"
+      },
+      {
+        "type": "Calculation",
+        "value": "$1B",
+        "description": "Concessions revenue: 1B ticket buyers * 25% buy concessions * $4.00"
+      },
+      {
+        "type": "Calculation",
+        "value": "$5.6B",
+        "description": "Total movie theater revenue: $4.6B + $1B"
+      }
+    ],
+    "Question": "Your client, a major US movie studio, has hired your team to review its strategy in international markets. You are reviewing the largest international market, China, and would like to estimate the movie theater revenue in China. You know that there are now 40K movie screens in China.",
+    "Title": "It's showtime!",
+    "Time taken": {
+      "your_time": "42 seconds",
+      "avg_time": "6 minutes, 44 seconds"
+    },
+    "Final estimate": " $5.6B",
+    "Source estimate sanity check": {
+      "value": "$6.6B",
+      "source_text": "Hollywood Reporter",
+      "source_link": "http://www.hollywoodreporter.com/news/china-box-office-growth-slows-37-percent-2016-official-data-shows-960217"
+    },
+    "Follow up question": {
+      "question": "Assume $2.5B of China\u2019s movie theater revenue comes from US films. For 50% of that revenue, there are revenue sharing agreements where US studios receive 30% of box office receipts. The other 50% of revenue is from 30 films where the studios receive a flat fee of $10M per film. How much revenue did the US studios receive?",
+      "options": [
+        "$300M",
+        "$375M",
+        "$500M",
+        "$675M",
+        "$750M"
+      ],
+      "correct_answer": "D",
+      "explanation": "To solve this problem, the key is to write down the formula which will calculate US revenues per the contractual sharing arrangements. This will have two key parts: 1) the percentage revenue sharing films and 2) the flat fee. Thus, percentage sharing revenue is: ($2.5B * 50% * 30%) and flat fee revenue is: (30 * $10M), so the final equation is: ($2.5B * 50% * 30%) + (30 * $10M) = $675M"
+    }
+  },
+  "Problem-9": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": [
+          "300M",
+          "100M",
+          "50M"
+        ],
+        "description": [
+          "US population",
+          "Mexican population",
+          "Canadian population"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "13K kWh",
+        "description": "kWh per capita in the US: 3.9T kWh used in the US / 300M people in the US"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "50% less",
+          "20% more"
+        ],
+        "description": [
+          "Mexican per capita kWh consumption relative to the US",
+          "Canadian per capita kWh consumption relative to US"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "6.5 kWh",
+          "15.6 kWh"
+        ],
+        "description": [
+          "Mexican per capita usage: 13K kWh * 50% less",
+          "Canadian per capita usage: 13K kWh * 120%"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "650B kWh",
+          "750B kWh"
+        ],
+        "description": [
+          "Mexican kWh usage per year: 6.5K * 100M",
+          "Canadian kWh usage per year: 15.6K * 50M"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "5.3T kWh",
+        "description": "Total NA kWh annual usage: 3.9T kWh from US + 650B kWh from Mexico + 750B kWh from Canada"
+      }
+    ],
+    "Question": "Your client is a US based global power generation firm that is planning to construct a series of new power plants in Mexico and Canada. You have been hired to evaluate their growth strategy, and would like to estimate the volume of electricity consumption in North America. You know that total electricity consumption in the US is 3.9T kilowatt hours (kWh) per year.",
+    "Title": "Border surge",
+    "Time taken": {
+      "your_time": "1 minutes, 0 seconds",
+      "avg_time": "4 minutes, 32 seconds"
+    },
+    "Final estimate": " 5.3T kWh",
+    "Source estimate sanity check": {
+      "value": "4.7T kWh",
+      "source_text": "Wikipedia",
+      "source_link": "https://en.wikipedia.org/wiki/List_of_countries_by_electricity_consumption"
+    },
+    "Follow up question": {
+      "question": "The associate consultant on your team has confirmed that the most up to date numbers for North American power consumption is 4.7T kWh. If North America represents 20% of worldwide electricity consumption, and worldwide consumption is expected to increase 2% annually, what will be the consumption in 5 years?",
+      "options": [
+        "18T kWh",
+        "20T kWh",
+        "22T kWh",
+        "24T kWh",
+        "26T kWh"
+      ],
+      "correct_answer": "E",
+      "explanation": "To solve for this, first start by calculating current global power consumption. To do this, you can setup the equation: 4.7T kWh NA consumption / 20% of world share = 23.5T kWh worldwide consumption. Next, you'll want to use the growth rate shortcut to estimate consumption after 5 years at a 2% CAGR. Thus, the equation is: 23.5T kWh * (1 + 2%) ^ 5. This simplifies to: 23.5T * ~1.1 = 25.9T kWh."
+    }
+  },
+  "Problem-10": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "50M",
+        "description": "Population of the UK"
+      },
+      {
+        "type": "Assumption",
+        "value": "2.5",
+        "description": "Average household (HH) size (in people)"
+      },
+      {
+        "type": "Assumption",
+        "value": "60%",
+        "description": "Percentage of households that own their home (%)"
+      },
+      {
+        "type": "Calculation",
+        "value": "12M",
+        "description": "Number of homeowners: (50M people / 2.5 people per HH) * 60% owners"
+      },
+      {
+        "type": "Assumption",
+        "value": "80%",
+        "description": "Percentage of homeowners who have a mortgage (%)"
+      },
+      {
+        "type": "Calculation",
+        "value": "9.6M",
+        "description": "Homes with a mortgage: 12M homeowners * 80% carry a mortgage"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "80%",
+          "20%"
+        ],
+        "description": [
+          "Single family home (SFH) mortgages (%)",
+          "Condo / apt mortgages (%)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "$250K",
+          "$50K"
+        ],
+        "description": [
+          "Single family home average value",
+          "Condo / apt. average value"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": "60%",
+        "description": "Average mortgage is X of current asset value"
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "$1.2T",
+          "$0.06T"
+        ],
+        "description": [
+          "SFH mortgage value: 10M * 80% are SFH * $250K avg. value * 60%",
+          "Condo/apt. value: 10M * 20% are apt. * $50K value * 60%"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "$1.26T",
+        "description": "Total value of the UK mortgage market: $1.2T + $0.06T"
+      }
+    ],
+    "Question": "Your client, a leading bank in the UK, has hired your firm to help design and implement improvements to the sales processes and incentive structure in its mortgage division. To establish a baseline understanding, your Engagement Manager wants to understand the UK mortgage market relative to the global market. To get started, she's asked you to estimate the value of outstanding mortgages in the UK.",
+    "Title": "Real assets",
+    "Time taken": {
+      "your_time": "2 seconds",
+      "avg_time": "5 minutes, 17 seconds"
+    },
+    "Final estimate": " $1.26T",
+    "Source estimate sanity check": {
+      "value": "$1.3T",
+      "source_text": "TheCityUK",
+      "source_link": "https://www.finder.com/uk/mortgage-statistics"
+    },
+    "Follow up question": {
+      "question": "Currently, the client has a sales force of 1,500 associates and pays an average commission of $500 per mortgage sold. The analyst on your team leading the sales efficiency work stream believes there is ample head room to boost mortgage originations per sales associate. If each salesperson closes one incremental mortgage per month, how much additional compensation expense will the bank pay in a year?",
+      "options": [
+        "$750K",
+        "$900K",
+        "$5M",
+        "$7.5M",
+        "$9M"
+      ],
+      "correct_answer": "E",
+      "explanation": "To solve, you want to setup a simple equation: 1,500 salespeople * 12 extra mortgages annually / salesperson * $500 commission per mortgage. If you multiply this all out, you'll arrive at $9M."
+    }
+  },
+  "Problem-11": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "50M",
+        "description": "Population of Italy"
+      },
+      {
+        "type": "Assumption",
+        "value": "50%",
+        "description": "Italians consume 8 cups of liquid per day (2 liters), of which water is X percent"
+      },
+      {
+        "type": "Calculation",
+        "value": "50M liters",
+        "description": "Liters of water consumer daily: 50M people * 2 liters / day * 50% is water"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "50%",
+          "50%"
+        ],
+        "description": [
+          "Percent of water consumed that is bottled (assume higher for Europe)",
+          "Percent of water consumer that is tap"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "25M",
+        "description": "Liters of bottled water consumed daily: 50M liters of water * 50% of water consumed is bottled"
+      },
+      {
+        "type": "Assumption",
+        "value": "1",
+        "description": "Size of average bottle of water (in liters)"
+      },
+      {
+        "type": "Calculation",
+        "value": "25M",
+        "description": "Number of bottled waters consumed daily:  liters / 1 liter per bottle"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "75%",
+          "20%",
+          "5%"
+        ],
+        "description": [
+          "Still water, as percent of bottled water",
+          "Sparkling water, as percent of bottled water",
+          "Flavored water, as percent of bottled water"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "10B",
+        "description": "Total annual bottled waters consumed: 365 days * 25M bottles daily, round to 400 days"
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "7.5B",
+          "2.0B",
+          "0.5B"
+        ],
+        "description": [
+          "Bottles of still water consumed annually: 10B * 75%",
+          "Bottles of sparkling water consumed annually: 10B * 20%",
+          "Bottles of flavored water consumed annually: 10B * 5%"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "$1.00",
+          "$1.50",
+          "$2.00"
+        ],
+        "description": [
+          "Still water, avg. price per bottle",
+          "Sparking water, avg. price per bottle",
+          "Flavored water, avg. price per bottle"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "$7.5B",
+          "$3.0B",
+          "$1.0B"
+        ],
+        "description": [
+          "Still water, annual revenue: 7.5B * $1.00",
+          "Sparkling water, annual revenue: 2.0B * $1.50",
+          "Flavored water, annual revenue: 0.5B * $2.00"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "$11.5B",
+        "description": "Total annual bottled water market: $7.5B + $3.0B + $1.0B"
+      }
+    ],
+    "Question": "Your client is a major producer of bottled mineral water in Europe that's been operating successfully for twenty-five years. They were one of the initial pioneers of bottled water in the European market and they're now looking to innovate again. The regional head for Italy has hired you to evaluate growth opportunities in newer categories such as flavored water. As part of this effort, your Project Leader would like you to size the overall bottled water market in Italy.",
+    "Title": "Sparkling opportunity?",
+    "Time taken": {
+      "your_time": "10 seconds",
+      "avg_time": "7 minutes, 6 seconds"
+    },
+    "Final estimate": " $11.5B",
+    "Source estimate sanity check": {
+      "value": "$12.3B",
+      "source_text": "Mordor Intelligence",
+      "source_link": "https://www.mordorintelligence.com/industry-reports/europe-bottled-water-market"
+    },
+    "Follow up question": {
+      "question": "To get his bearings straight, the Partner on your case inquires about the size of the global market for bottled water. He's jumping on a quick office leads call but will be back in fifteen minutes to catch up on the market opportunity. If the $12.3B market in Italy is 18% of Europe, and Europe represents 22% of the global market, about how large is the global market?",
+      "options": [
+        "Roughly $200B",
+        "Roughly $225B",
+        "Roughly $250B",
+        "Roughly $275B",
+        "Roughly $300B"
+      ],
+      "correct_answer": "E",
+      "explanation": "This question is essentially just two \"market math\" questions embedded in each other. To solve for it, you want to start with the market size you know, which is Italy, and then extrapolate first to the European market and then to the Global market. To do this, setup the following formula: $12.3B / 18% / 22%. You could convert that into fractions and do exact math, but it's easier to realize that you're essentially dividing by 1/5 twice, which is the same thing as multiplying by 5 twice. Hence, you get: roughly $12B * 5 * 5 = roughly $300B."
+    }
+  },
+  "Problem-12": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "60M",
+        "description": "Population of Kenya (Africa total population is 1B)"
+      },
+      {
+        "type": "Assumption",
+        "value": "Ages 0 to 60",
+        "description": "Population is evenly distributed between age range"
+      },
+      {
+        "type": "Assumption",
+        "value": "Ages 0 to 3",
+        "description": "Target market is only a small segment of ages"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "0%",
+          "25%",
+          "50%"
+        ],
+        "description": [
+          "Percent potty trained, age 0 to 1",
+          "Percent potty trained, age 1 to 2",
+          "Percent potty trained, age 2 to 3"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "1M",
+          "0.75M",
+          "0.5M"
+        ],
+        "description": [
+          "Age 0 to 1, non potty-trained: 60M * 1 / 60 * 100%",
+          "Age 1 to 2, non potty-trained: 60M * 1 / 60 * 75%",
+          "Age 2 to 3, non potty-trained: 60M * 1 / 60 * 50%"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "2.25M",
+        "description": "Total non potty-trained target market: 1M + 0.75M + 0.5M"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "90%",
+          "10%"
+        ],
+        "description": [
+          "Percent can't afford or doesn't care to use diapers",
+          "Percent who use diapers"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "80%",
+          "20%"
+        ],
+        "description": [
+          "Diaper users who use disposable diapers (%)",
+          "Diaper users who use cloth diapers (%)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": "180K",
+        "description": "Children who use disposable diapers: 2.25M target age children * 10% can afford * 80% use disposable"
+      },
+      {
+        "type": "Assumption",
+        "value": "4",
+        "description": "Average number of diapers used per day"
+      },
+      {
+        "type": "Assumption",
+        "value": "240M",
+        "description": "Number of diapers used annually: 180K * 4 * 365 days = ~150K (round down) * 4 * ~400 days (round up)"
+      },
+      {
+        "type": "Assumption",
+        "value": "$0.20",
+        "description": "Average cost of a diaper"
+      },
+      {
+        "type": "Calculation",
+        "value": "$48M",
+        "description": "Total market size: 240M * $0.20"
+      }
+    ],
+    "Question": "Your client, a manufacturer of disposable baby diapers, is expanding into new, emerging markets and would like to assess the opportunity in Africa. Given your Partner's expertise in helping North American companies break into the African market, they've come to your firm. As a first step, your Partner has tasked you with determining the current market size for disposable diapers in one of Africa\u2019s largest countries, Kenya.",
+    "Title": "New frontiers",
+    "Time taken": {
+      "your_time": "48 seconds",
+      "avg_time": "5 minutes, 36 seconds"
+    },
+    "Final estimate": " $48M",
+    "Source estimate sanity check": {
+      "value": "$53M",
+      "source_text": "Transparency Market Research",
+      "source_link": "http://www.transparencymarketresearch.com/east-africa-baby-diapers-market.html"
+    },
+    "Follow up question": {
+      "question": "In order to establish a successful foothold in Africa, your team determines that the client will need to invest $5M to establish operations in Kenya. If their profit is $0.05 per diaper, and they expect to sell 10M diapers in year 1, 20M in year 2 (increasing 10M each year), how long will it take to break even on the initial investment?",
+      "options": [
+        "1 year",
+        "2 years",
+        "4 years",
+        "6 years",
+        "10 years"
+      ],
+      "correct_answer": "C",
+      "explanation": "To solve this problem, first start by calculating the core break even question, which is how many diapers do they need to produce to make up the $5M investment. Thus, the first equation is: $5M / $0.05 = 100M diapers. Now, you need to calculate how long it will take the client to sell 100M diapers: 10M (year 1) + 20M (year 2) + 30M (year 3) + 40M (year 4) = 100M diapers. Thus, after 4 years the client will break even."
+    }
+  },
+  "Problem-13": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "400M",
+        "description": "Population of South America"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "25%",
+          "25%",
+          "45%",
+          "5%"
+        ],
+        "description": [
+          "People who never fly (%)",
+          "Rare flyers, 1 round trip per 5 years (%)",
+          "Occasional flyers, 1 round trip per year (%)",
+          "Frequent flyers, 3 round trips per year"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "40M",
+          "360M",
+          "120M"
+        ],
+        "description": [
+          "Rare flyers: 400M * 25% * 2/5 flights per year",
+          "Occasional flyers: 400M * 45% * 2 flights per year",
+          "Frequent flyers: 400M * 5% * 6 flights per year"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "520M",
+        "description": "Total number of annual passengers: 40M + 360M + 120M"
+      },
+      {
+        "type": "Assumption",
+        "value": "200",
+        "description": "Average commercial plane seats X number of passengers"
+      },
+      {
+        "type": "Assumption",
+        "value": "80%",
+        "description": "Percent of plane filled on any given flight (%)"
+      },
+      {
+        "type": "Assumption",
+        "value": "4",
+        "description": "Average commercial plane flies Y number of flights per day"
+      },
+      {
+        "type": "Assumption",
+        "value": "350",
+        "description": "Average number of days per a commercial plane flies"
+      },
+      {
+        "type": "Calculation",
+        "value": "224K",
+        "description": "Number of passengers per plane per year: 200 seats * 80% full * 4 flights per day * 350 days per year"
+      },
+      {
+        "type": "Calculation",
+        "value": "Roughly 2,350 planes",
+        "description": "Number of planes: 520M people / 224K planes, round to 220K planes"
+      },
+      {
+        "type": "Assumption",
+        "value": "2",
+        "description": "Number of engines per commercial plane"
+      },
+      {
+        "type": "Calculation",
+        "value": "4,700",
+        "description": "Total number of engines: 2,350 planes * 2 engines per plane"
+      }
+    ],
+    "Question": "Your new client is a manufacturer of commercial aircraft engines worldwide. Your client contact, the head of the South American region, is asking your team to analyze the market and propose a growth strategy for the region. You would like to determine how many commercial aircraft engines are currently in service in South America.",
+    "Title": "Growth engine",
+    "Time taken": {
+      "your_time": "5 seconds",
+      "avg_time": "5 minutes, 13 seconds"
+    },
+    "Final estimate": " 4,700",
+    "Source estimate sanity check": {
+      "value": "3,026",
+      "source_text": "Global Aviation",
+      "source_link": "https://globalaviationaerospace.com/tag/aircraft-engine-market-share"
+    },
+    "Follow up question": {
+      "question": "Your client currently has about 100M passengers annually, and volume is expected to grow by 2% each year. Assuming the current fleet is fully utilized and a new aircraft has carries an average of 500K passengers annually, how many additional aircraft will they need in 6 years?",
+      "options": [
+        "Roughly 12",
+        "Roughly 14",
+        "Roughly 22",
+        "Roughly 24",
+        "Roughly 28"
+      ],
+      "correct_answer": "D",
+      "explanation": "To answer this question, start by setting up an equation to estimate how many passengers your client will handle annually in 6 years. This can be setup as follows: 100M passengers * (1 + 2% growth rate) ^ 6 years. Using the growth rate simplification, we can simplify this to: 100M * ~1.12 = ~112M passengers. Thus, we'll have 12M additional passengers the client needs to serve: ~112M \u2013 100M. Now, we can determine the number of aircraft needed with the following equation: 12M additional passengers / 500K capacity per aircraft. Thus, the client needs 24 additional aircraft."
+    }
+  },
+  "Problem-14": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "7.5B",
+        "description": "Global population"
+      },
+      {
+        "type": "Assumption",
+        "value": "n/a",
+        "description": "Relevant population is everyone in 1) developed and 2) less developed markets"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "20%",
+          "40%",
+          "40%"
+        ],
+        "description": [
+          "Percent living in developed countries (%)",
+          "Percent living in less developed countries (%)",
+          "Percent living in undeveloped countries (%)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "1.5B",
+          "3.0B"
+        ],
+        "description": [
+          "People in developed markets: 7.5B * 20% in developed",
+          "People in less developed markets: 7.5B * 40% less developed"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "25%",
+          "10%"
+        ],
+        "description": [
+          "Developed country dentist visit rates, percent who go annually (%)",
+          "Less developed country dentist visit rates, percent who go annually (%)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": "10",
+        "description": "Dental filling is needed once in every X years (for people who visit)"
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "37.5M",
+          "30M"
+        ],
+        "description": [
+          "Developed market annual fillings: 1.5B * 25% * 1/10",
+          "Less developed market annual fillings: 3B * 10% * 1/10"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": "$20.00",
+        "description": "Average price of fillings materials"
+      },
+      {
+        "type": "Calculation",
+        "value": "$1.35B",
+        "description": "Total market for dental fillings materials: (37.5M + 30M) * $20 per filling"
+      }
+    ],
+    "Question": "After a series of three, long industrials cases you've just been staffed on your first healthcare case. Your client is a major manufacturer of specialty dental materials (e.g., fillings, dentures, etc.). Your team is conducting a strategic review of their various product lines. Your manager has asked you to size the worldwide market for tooth filling materials (i.e. fillings made from silver, composite, ceramic or other materials).",
+    "Title": "Open wide",
+    "Time taken": {
+      "your_time": "8 seconds",
+      "avg_time": "5 minutes, 32 seconds"
+    },
+    "Final estimate": " $1.35B",
+    "Source estimate sanity check": {
+      "value": "$1.1B",
+      "source_text": "Globe Newswire",
+      "source_link": "https://globenewswire.com/news-release/2016/11/07/887276/0/en/Tooth-Filling-Materials-Market-size-to-exceed-1-4bn-by-2024-Global-Market-Insights-Inc.html"
+    },
+    "Follow up question": {
+      "question": "The Asian market is currently 30% of the $1.1B total and is projected to grow at 5% annually, due to increasing awareness of dental care. How large will the Asian market be in 4 years?",
+      "options": [
+        "$360M",
+        "$370M",
+        "$380M",
+        "$390M",
+        "$400M"
+      ],
+      "correct_answer": "E",
+      "explanation": "To solve this problem, you need to take two steps. First, calculate the Asian market size currently. Then, use the growth rate addition short cut to estimate the market size once it grows at a 5% CAGR for 4 years. Thus, the correct equation is: $1.1B * 30% = $330M current market size. Future market size: $330M * (1 + 5%) ^ 4 = $330M * ~120% = $396M. Given we know we're underestimating the CAGR with the shortcut, we must round up versus down to account for that and $400M is the best answer."
+    }
+  },
+  "Problem-15": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "300M",
+        "description": "Population of US"
+      },
+      {
+        "type": "Assumption",
+        "value": "2.5",
+        "description": "Average household (HH) size (in people)"
+      },
+      {
+        "type": "Calculation",
+        "value": "120M",
+        "description": "Number of households (HHs): 300M people / 2.5 people per HH"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "20%",
+          "40%",
+          "40%"
+        ],
+        "description": [
+          "HHs who don't own a car (%)",
+          "HHs that own 1 car (%)",
+          "HHs that own 2 cars (%)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "144M",
+        "description": "Privately owned cars: (120M * 40% * 1 car) + (120M * 40% * 2 cars)"
+      },
+      {
+        "type": "Assumption",
+        "value": "10",
+        "description": "1 commercial use car (taxis, rental cars etc) for every X private passenger cars"
+      },
+      {
+        "type": "Calculation",
+        "value": "15M",
+        "description": "Commercial passenger cars: 144M * 1/10, round up to 150M to keep numbers round"
+      },
+      {
+        "type": "Assumption",
+        "value": "10",
+        "description": "1 commercial truck/bus for every Y private passenger cars"
+      },
+      {
+        "type": "Assumption",
+        "value": "15M",
+        "description": "Commercial trucks / buses: 144M * 1/10, round up to 150M to keep numbers round"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "10K",
+          "20K",
+          "40K"
+        ],
+        "description": [
+          "Private car miles per year",
+          "Commercial passenger car miles per year",
+          "Commercial truck / bus miles per year"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "20",
+          "10"
+        ],
+        "description": [
+          "Cars average miles per gallon (MPG)",
+          "Truck/bus average miles per gallon (MPG)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "500",
+          "1,000",
+          "4,000"
+        ],
+        "description": [
+          "Private car gallons used per year: 10K / 20",
+          "Commercial car gallons used per year: 20K / 20",
+          "Commercial truck / bus gallons used per year: 40K / 10"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "Roughly 70B",
+          "15B",
+          "60B"
+        ],
+        "description": [
+          "Private car, total gallons annually: 144M * 500",
+          "Commercial car, total gallons annually: 15M * 1,000",
+          "Commercial truck / bus, total gallons annually: 15M * 4,000"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "145B",
+        "description": "Total gallons used annually: 70B + 15B + 60B"
+      }
+    ],
+    "Question": "After transferring to the Houston office, your first new case, unsurprisingly, is for a multinational corporation in the oil and gas industry. The Partner who sold the case has worked with the client multiple times over the last four years and has been brought in to help re-evaluate their distribution strategy for motor gasoline. As a starting point, you'd like to ground yourself by estimating the volume of motor gasoline consumed in the US annually.",
+    "Title": "A Full Tank",
+    "Time taken": {
+      "your_time": "13 seconds",
+      "avg_time": "6 minutes, 7 seconds"
+    },
+    "Final estimate": " 145B",
+    "Source estimate sanity check": {
+      "value": "143B",
+      "source_text": "US Energy Information Admin",
+      "source_link": "https://www.eia.gov/tools/faqs/faq.php?id=23&t=10"
+    },
+    "Follow up question": {
+      "question": "The analyst on your team confirms that the latest number on annual gallons consumed is 143B. If average prices remain at $2.00 per gallon and volume increases by 5% next year, what will be the market size in dollars next year?",
+      "options": [
+        "$286B",
+        "$290B",
+        "$294B",
+        "$298B",
+        "$300B"
+      ],
+      "correct_answer": "E",
+      "explanation": "To start, you'll want to set up an equation to understand what total volume will be one year from now. Thus, you've got the equation: 143B * (1 + 5%). This can be simplified to: 143B + ~7B = 150B. Now that you've got volume, simply set up an equation to get total market size: 150B gallons * $2.00 per gallon: $300B."
+    }
+  },
+  "Problem-16": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "300M",
+        "description": "Population of the US"
+      },
+      {
+        "type": "Assumption",
+        "value": "2.5",
+        "description": "Average household (HH) size (in people)"
+      },
+      {
+        "type": "Calculation",
+        "value": "120M",
+        "description": "Number of HHs in the US: 300M / 2.5 people per HH"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "20%",
+          "40%",
+          "40%"
+        ],
+        "description": [
+          "HH doesn't own car (%)",
+          "HH owns 1 car (%)",
+          "HH owns 2 cars (%)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "144M",
+        "description": "Total number of privately owned cars: (120M * 40% own 1 car * 1 car) + (120M * 40 own 2 cars * 2 cars)"
+      },
+      {
+        "type": "Assumption",
+        "value": "10,000",
+        "description": "Average miles driven per car per year"
+      },
+      {
+        "type": "Assumption",
+        "value": "5",
+        "description": "Average oil change occurs every X years"
+      },
+      {
+        "type": "Calculation",
+        "value": "2",
+        "description": "Oil changes per year per car: 10,000 / 5,000"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "20%",
+          "80%"
+        ],
+        "description": [
+          "% of cars that are newer (0 to 2 years old)",
+          "% of cars that are older (3 to 10 years old)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "29M",
+          "115M"
+        ],
+        "description": [
+          "Number of newer cars: 144M * 20%",
+          "Number of older cars: 144M \u2013 29M"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": "90%",
+        "description": "Oil changes are covered by manufacturers for cars 0-2 years old and X of owners use that"
+      },
+      {
+        "type": "Calculation",
+        "value": "6M",
+        "description": "Fast lube store oil changes for newer cars: 29M * 10% use fast lube store * 2 changes / year, (round 29M to 30M)"
+      },
+      {
+        "type": "Assumption",
+        "value": "50%",
+        "description": "For older cars, Y percent of owners use fast lube stores"
+      },
+      {
+        "type": "Calculation",
+        "value": "115M",
+        "description": "Fast lube store oil changes for older cars:  * 50% * 2 changes / year"
+      },
+      {
+        "type": "Assumption",
+        "value": "$30.00",
+        "description": "Average price of a fast lube store oil change"
+      },
+      {
+        "type": "Calculation",
+        "value": "$3.6B",
+        "description": "Total spend on oil changes: (115M + 6M) * $30 / change"
+      },
+      {
+        "type": "Assumption",
+        "value": "80%",
+        "description": "Oil changes account for Z percent of revenue at Fast Lube stores"
+      },
+      {
+        "type": "Calculation",
+        "value": "$4.5B",
+        "description": "Overall Fast Lube annual market size in the US: $3.6B oil change revenue / 80%"
+      }
+    ],
+    "Question": "Your client, the operator of a chain of fast lube/auto oil change service stores in the US, has asked your team to identify revenue growth and profit improvement opportunities. Given the rapidly shifting consumer perceptions around public transport and electric vehicles, the client is thinking ahead on ways to shore up revenue. To get started, your Principal has asked you to determine the size of the overall market for these auto services.",
+    "Title": "Smooth growth",
+    "Time taken": {
+      "your_time": "14 seconds",
+      "avg_time": "5 minutes, 19 seconds"
+    },
+    "Final estimate": " $4.5B",
+    "Source estimate sanity check": {
+      "value": "$5.0B",
+      "source_text": "Business Wire",
+      "source_link": "http://www.businesswire.com/news/home/20100908006019/en/Research-Markets-Fast-Lube-Auto-Oil-Change"
+    },
+    "Follow up question": {
+      "question": "For a $30 oil change, total cost of sales and operating expenses are currently 90% of revenues. You are piloting changes that would reduce expenses to 88% of revenues. If 1 store completes 30 oil changes daily and you are running a pilot across 100 stores, how much profit improvement would there be in 1 month?",
+      "options": [
+        "$540",
+        "$1.8K",
+        "$5.4K",
+        "$18K",
+        "$54K"
+      ],
+      "correct_answer": "E",
+      "explanation": "To solve for this problem, you want to first find the profit differential one one change and then scale it for volume per store, stores and days. First, calculate the current profit: Current profit is $30 * (1 \u2013 90%) = $3.00. Then, calculate the new profit: New profit is $30 * (1 \u2013 88%) = $3.60. Now, setup the equation for 1 month profit delta: 1 month profit is: ($3.60 - $3) * 30/day * 30 days * 100 stores. This simplifies to: $0.60 * 900 * 100 = $54,000."
+    }
+  },
+  "Problem-17": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "100M",
+        "description": "Total population of Japan"
+      },
+      {
+        "type": "Assumption",
+        "value": "Age 0 to 80",
+        "description": "Population evenly distributed between ages"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "30%",
+          "20%",
+          "5%",
+          "0%"
+        ],
+        "description": [
+          "Diagnosis levels, age 60-80",
+          "Diagnosis levels, age 40-60",
+          "Diagnosis levels, age 20-40",
+          "Diagnosis levels, age 0-20"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "7.5M",
+          "5M",
+          "1.25M",
+          "0M"
+        ],
+        "description": [
+          "Ages 60 \u2013 80: 100M * 25% of pop * 30% diagnosed",
+          "Ages 40 \u2013 60: 100M * 25% of pop * 20% diagnosed",
+          "Ages 20 \u2013 40: 100M * 25% of pop * 5% diagnosed",
+          "Ages 0 \u2013 20: 100M * 25% of pop * 0% diagnosed"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "13.75M",
+        "description": "Total diagnosed population: 7.5M + 5.0M + 1.25M"
+      },
+      {
+        "type": "Assumption",
+        "value": "66%",
+        "description": "Percentage of diagnosed population that take drugs to treat hypertension"
+      },
+      {
+        "type": "Calculation",
+        "value": "Roughly 9M",
+        "description": "Absolute amount of diagnosed drug takers: 13.75M * (2/3 take drugs)"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "90%",
+          "10%"
+        ],
+        "description": [
+          "Generic drugs (as % of volume)",
+          "Brand name drugs (as % of volume)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "$20.00",
+          "$200.00"
+        ],
+        "description": [
+          "Generic spend per month",
+          "Brand name spend per month"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "Roughly $1.94B",
+          "Roughly $2.16B"
+        ],
+        "description": [
+          "Generic annual revenues: 9M * 90% take generic * $20 per month * 12 months",
+          "Brand name annual revenues: 9M * 10% take brand * $200 per month * 12 months"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "$4.1B",
+        "description": "Total market size for the drug category in Japan: $1.94B generics + $2.16B brand"
+      }
+    ],
+    "Question": "Your client is a worldwide drug manufacturer, specializing in various classes of brand name and generic anti-hypertensive (high blood pressure) drugs. The regional head for Japan has hired your team to assist in developing a 5-year strategic plan, and you would like to size the market for anti-hypertensive drugs in Japan.",
+    "Title": "The pressure is on",
+    "Time taken": {
+      "your_time": "14 seconds",
+      "avg_time": "2 minutes, 19 seconds"
+    },
+    "Final estimate": " $4.1B",
+    "Source estimate sanity check": {
+      "value": "$6.4B",
+      "source_text": "Business Insights",
+      "source_link": "http://download.bioon.com.cn/view/upload/201303/16084307_4163.pdf"
+    },
+    "Follow up question": {
+      "question": "The client has 5 potential new drugs in late stage clinical trials. Historical statistics show that 40% of drugs complete the final stage of trials, and of the drugs that complete trials, 50% get approved to go to market. If each new drug in the market is expected to generate $200M in annual revenue, how much annual revenue is expected from these new drugs?",
+      "options": [
+        "$200M",
+        "$400M",
+        "$500M",
+        "$900M",
+        "$1B"
+      ],
+      "correct_answer": "A",
+      "explanation": "Essentially, you are calculating the expected value of a drug pipeline which has five drugs in it. To do this, you'll want to setup an equation which calculates the probability that any of the five drugs makes it through the trial and approval process. Thus, the equation is: 5 drugs * 40% trial success * 50% approval for go to market = 1 new drug goes to market. Thus, the annual expected revenue is: 1 drug * $200M annual revenue = $200M."
+    }
+  },
+  "Problem-18": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "300M",
+        "description": "Total population of the US"
+      },
+      {
+        "type": "Assumption",
+        "value": "Age 0 to 80",
+        "description": "Population evenly distributed between ages"
+      },
+      {
+        "type": "Assumption",
+        "value": "Ages 60 to 80",
+        "description": "Relevant population is within the age range"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "Age 60 - 70",
+          "Age 70 - 80"
+        ],
+        "description": [
+          "Early Entry ages",
+          "Standard Entry ages"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "96%",
+          "2%",
+          "2%"
+        ],
+        "description": [
+          "Early Entry group living in private residences",
+          "Early Entry group in assisted living",
+          "Early Entry group living in nursing homes"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "90%",
+          "5%",
+          "5%"
+        ],
+        "description": [
+          "Standard Entry group living in private residences",
+          "Standard Entry group in assisted living",
+          "Standard Entry group living in nursing homes"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "37.5M",
+          "37.5M"
+        ],
+        "description": [
+          "Population of Early Entry age group: (1/8) * 300M",
+          "Population of Standard Entry age group: (1/8) * 300M"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "750K",
+        "description": "Early Entry group living in nursing homes: 37.5M * 2%"
+      },
+      {
+        "type": "Calculation",
+        "value": "1.9M",
+        "description": "Standard Entry group living in nursing homes: 37.5M * 5%"
+      },
+      {
+        "type": "Calculation",
+        "value": "2.6M",
+        "description": "Total population living in nursing homes: 0.750M + 1.90M"
+      },
+      {
+        "type": "Assumption",
+        "value": "125",
+        "description": "Average nursing home population"
+      },
+      {
+        "type": "Calculation",
+        "value": "Roughly 21,000",
+        "description": "Number of nursing homes required for 2.6M people at 125 per home (if filled to capacity): 2.6M / 125"
+      },
+      {
+        "type": "Assumption",
+        "value": "80%",
+        "description": "Average utilization of nursing homes"
+      },
+      {
+        "type": "Calculation",
+        "value": "25,000",
+        "description": "Total number of nursing homes in the US: 21K nursing homes / 80% utilization, round to 20K homes"
+      }
+    ],
+    "Question": "Your client, a major nursing home operator in the US, is considering an acquisition of a smaller competitor, and you are evaluating potential synergies. The project has an accelerated timeline and your team needs to begin work before the first meeting and data exchange with the client happens on Monday. As a result, your manager has asked you to determine the number of nursing facilities in the US over the weekend.",
+    "Title": "Healthy business",
+    "Time taken": {
+      "your_time": "14 seconds",
+      "avg_time": "4 minutes, 19 seconds"
+    },
+    "Final estimate": " 25,000",
+    "Source estimate sanity check": {
+      "value": "15,600",
+      "source_text": "US Center for Disease Control",
+      "source_link": "https://www.cdc.gov/nchs/fastats/nursing-home-care.htm"
+    },
+    "Follow up question": {
+      "question": "Your team estimates that the merged company can achieve cost savings in administrative and overhead expenses of 10% in year 1 and 20% in year 2 and beyond. These expenses are currently $20M for the client and $10M for the target. If restructuring and severance costs are $6M, how long will it take for the changes to yield financial benefits?",
+      "options": [
+        "0.5 year",
+        "1 year",
+        "1.5 years",
+        "2 years",
+        "3.5 years"
+      ],
+      "correct_answer": "C",
+      "explanation": "To calculate this, first calculate and sum the cost savings the company is expected to achieve in the first two years. Thus, you'll have: ($20M + $10M) * 10% = $3M savings in year 1, and ($20M + $10M) * 20% = $6M savings in year 2. Given the company needs to recoup $6M in costs, the key question becomes how long into the 2nd year will it take them to realize $3M in savings, since they'll realize the first $3M of savings in year 1: $3M * 1 year + $6M * \u00bd year = $6M total savings in 1.5 years."
+    }
+  },
+  "Problem-19": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "n/a",
+        "description": "Relevant MTA rider population is residents and tourists"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "8M",
+          "50M"
+        ],
+        "description": [
+          "NYC population",
+          "Annual tourist volume"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": "80%",
+        "description": "Percentage of residents that ride mass transit (%)"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "10%",
+          "50%",
+          "40%"
+        ],
+        "description": [
+          "Percentage of residents that are power users",
+          "Percentage of residents that are moderate users",
+          "Percentage of residents that are light users"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "0.6M(rounded)",
+          "3M(rounded)",
+          "2.5M(rounded)"
+        ],
+        "description": [
+          "Number of resident power users: 8M residents * 80% ride MTA * 10% power users",
+          "Number of resident moderate users: 8M residents * 80% ride MTA * 50% moderate users",
+          "Number of resident light users: 8M residents * 80% ride MTA * 40% light users"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "14",
+          "8",
+          "4"
+        ],
+        "description": [
+          "Resident power users: Take a X rides per week",
+          "Moderate resident users: Take Y rides per week",
+          "Light resident users: Take a Z rides per week"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "0.42B",
+          "1.2B",
+          "0.5B"
+        ],
+        "description": [
+          "Resident power trips: 600K residents * 14 rides / week * 50 weeks",
+          "Moderate resident trips: 3M residents * 8 rides / week * 50 weeks",
+          "Light resident trips: 2.5M residents * 4 rides / week * 50 weeks"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "2.12B",
+        "description": "Total number of resident trips annually: 0.42B (power users) + 1.2B (moderate) + 0.5B (light)"
+      },
+      {
+        "type": "Assumption",
+        "value": "50%",
+        "description": "Percentage of tourists that ride mass transit"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "50%",
+          "50%"
+        ],
+        "description": [
+          "Percentage of moderate tourist users",
+          "Percentage of light tourist users"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "4",
+          "2"
+        ],
+        "description": [
+          "Moderate tourist users take X trips",
+          "Light tourist users take Y trips"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "50M",
+          "25M"
+        ],
+        "description": [
+          "Moderate tourist trips: 50M tourists * 50% take MTA * 50% moderate * 4 trips",
+          "Light tourist trips: 50M tourists * 50% take MTA * 50% light * 2 trips"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": "$2.00",
+        "description": "Average ticket price including discounts"
+      },
+      {
+        "type": "Calculation",
+        "value": "4.39B",
+        "description": "Total revenue: (2.12B resident trips * $2) + ( (50M moderate tourist trips + 25M light tourist trips) * $2)"
+      }
+    ],
+    "Question": "The New York Metropolitan Transportation Authority (MTA), which has been wrestling with funding and operational issues over the last few years, has hired your firm to help identify new sources of revenue to reduce operating losses. The senior Principal leading the case has asked you start by estimating the MTA\u2019s annual revenue from transit (subway and bus) fares.",
+    "Title": "Sub-optimal revenues",
+    "Time taken": {
+      "your_time": "14 seconds",
+      "avg_time": "4 minutes, 56 seconds"
+    },
+    "Final estimate": " $4.39B",
+    "Source estimate sanity check": {
+      "value": "$4.4B",
+      "source_text": "NYC MTA",
+      "source_link": "http://web.mta.info/mta/budget/pdf/2015_Consolidated-Financials.pdf"
+    },
+    "Follow up question": {
+      "question": "In the last year, the MTA\u2019s loss was a whopping -$1.6B. The NYC Transit Director, who is your primary client, has said that this level of losses absolutely can't continue in the upcoming years. If MTA increase fares by $0.25 on each of its 2.4B rides, how much would its new profit (or loss) be?",
+      "options": [
+        "-$1.0B",
+        "-$600M",
+        "$0",
+        "$600M",
+        "$1B"
+      ],
+      "correct_answer": "A",
+      "explanation": "To solve for this, you'll want to setup an equation to calculate future expected profits or losses. Thus, you'll want the equation: incremental fares + current profit = future expected profits. Filling in this equation we get the following: ($0.25 incremental per ride * 2.4B rides) + -$1.6B. This simplifies to: $0.6B incremental + -$1.6B = -$1.0B."
+    }
+  },
+  "Problem-20": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "1B",
+        "description": "Population of India"
+      },
+      {
+        "type": "Assumption",
+        "value": "0 - 80",
+        "description": "Population is evenly distributed between ages"
+      },
+      {
+        "type": "Assumption",
+        "value": "16 - 80",
+        "description": "Relevant population is between ages"
+      },
+      {
+        "type": "Calculation",
+        "value": "800M",
+        "description": "Target population: 1B people * ((80 - 16) / 80 ) relevant age distribution"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "75%",
+          "25%"
+        ],
+        "description": [
+          "Rural population, as a percentage of total",
+          "Urban population, as a percentage of total"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "20%",
+          "50%"
+        ],
+        "description": [
+          "Percentage of rural adults that own smartphones",
+          "Percentage of urban adults that own smartphones"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "120M",
+          "100M"
+        ],
+        "description": [
+          "Rural smartphone footprint: 800M adults * 75% rural * 20% own smartphone",
+          "Urban smartphone footprint: 800M adults * 25% urban * 50% own smartphone"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "3",
+          "2"
+        ],
+        "description": [
+          "Rural replacement cycle, in years",
+          "Urban replacement cycle, in years"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "40M",
+          "50M"
+        ],
+        "description": [
+          "Rural smartphones purchased annually: 120M smartphones / 3 year replacement cycle",
+          "Urban smartphones purchased annually: 100M smartphones / 2 year replacement cycle"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "90M",
+        "description": "Annual smartphone purchases: 40M rural purchases + 50M urban purchases"
+      }
+    ],
+    "Question": "Your client, a global consumer electronics manufacturer, has hired your team to develop a customer segmentation and marketing strategy for the fast growing smartphone market in India. Ultimately, your Engagement Manager believes that success will hinge on capturing a majority of the bottom tier of the smartphone purchasers. However, to make sure the team doesn't miss any opportunities, the EM has asked you to estimate the total volume of smartphones sold in India this past year.",
+    "Time taken": {
+      "your_time": "12 seconds",
+      "avg_time": "5 minutes, 53 seconds"
+    },
+    "Final estimate": " 90M",
+    "Source estimate sanity check": {
+      "value": "109M in 2016",
+      "source_text": "India Brand Equity Foundation",
+      "source_link": "https://www.ibef.org/industry/telecommunications.aspx"
+    },
+    "Follow up question": {
+      "question": "The latest report from the leading telecomms banking analyst that covers the India market suggests that unit volume will continue to increase at a 5% CAGR. Assuming the analyst's prediction holds, how long will it take the Indian smart phone market to double in size?",
+      "options": [
+        "Roughly 10 years",
+        "Roughly 12 years",
+        "Roughly 14 years",
+        "Roughly 16 years",
+        "Roughly 20 years"
+      ],
+      "correct_answer": "C",
+      "explanation": "To solve this, you can easily use the rule of 72, which provides a short cut for estimating how quickly something will double. Thus, the equation is: 72 / 5% CAGR = 14.4 years."
+    }
+  },
+  "Problem-21": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "1.0B",
+        "description": "Population of India"
+      },
+      {
+        "type": "Assumption",
+        "value": "Ages 0 to 80",
+        "description": "Population evenly distributed between ages"
+      },
+      {
+        "type": "Assumption",
+        "value": "Ages 20 to 80",
+        "description": "Relevant population is within the age range"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "80%",
+          "20%"
+        ],
+        "description": [
+          "Literate (as % of population)",
+          "Illiterate (as % of population)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "600M",
+        "description": "Number of literate adults: 1B people * ((80-20) / 80) * 80% literate"
+      },
+      {
+        "type": "Assumption",
+        "value": "2",
+        "description": "Number of adults per household (HH)"
+      },
+      {
+        "type": "Calculation",
+        "value": "300M",
+        "description": "Number of households (HH): 600M / 2 adults per HH"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "50%",
+          "20%",
+          "25%",
+          "5%"
+        ],
+        "description": [
+          "HHs that never buy newspapers (%)",
+          "HHs that subscribe to newspapers (%)",
+          "HHs that occasionally buy newspapers, 12x / year (%)",
+          "HHs that subscribe digitally (%)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "$25.00",
+          "$0.25",
+          "$5.00"
+        ],
+        "description": [
+          "Print subscription price",
+          "Individual daily paper price",
+          "Digital subscription price"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "$1.5B",
+          "$0.225B",
+          "$0.075B"
+        ],
+        "description": [
+          "Print subscriber revenue: 300M * 20% * $25 per sub",
+          "Occasional buyers: 300M * 25% * $0.25 per paper * 12 papers",
+          "Digital: 300M * 5% * $5"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "$1.8B",
+        "description": "Total revenue opportunity from circulation (subs + daily purchases): $1.5B + $0.225B + $0.075B"
+      }
+    ],
+    "Question": "Your client, the head of newspaper publishing for a media conglomerate, is considering entering the news market in India. Prior to bringing on your team, the client has done his own research on revenue opportunity and cross-checked it with some industry benchmarks as well. However, he'd feel more comfortable getting a solid analysis from your team too. Please estimate the revenues from newspaper circulation (excluding advertising) in India.",
+    "Title": "Newspaper Market",
+    "Time taken": {
+      "your_time": "4 seconds",
+      "avg_time": "5 minutes, 13 seconds"
+    },
+    "Final estimate": " $1.8B",
+    "Source estimate sanity check": {
+      "value": "$1.2B",
+      "source_text": "PWC",
+      "source_link": "http://www.pwc.com/gx/en/entertainment-media/pdf/newspapers-and-magazines-outlook-article.pdf"
+    },
+    "Follow up question": {
+      "question": "Assume advertising revenue is twice as large as the $1.2B in circulation revenue. If the client believes they can enter the market with a $50M investment, capture 5% of the market, and earn a margin of 10%, how long will it take to recoup their investment?",
+      "options": [
+        "Roughly 3 years",
+        "Roughly 4.5 years",
+        "Roughly 5 years",
+        "Roughly 5.5 years",
+        "Roughly 6 years"
+      ],
+      "correct_answer": "A",
+      "explanation": "Essentially, this is a break even question where a few pieces of work need to be up front. First, you need to establish the total market size, including the advertising business. Thus, total market = $1.2B / 1/3 = $3.6B. Now, determine the profit the client is expected to make annually. To do this, you must first calculate their revenues based on market share and then calculate their absolute margin. Client revenues are $3.6B * 5% of the market = $180M. Client profit is $180M revenues * 10% margin = $18M. Finally, to break even: $50M / $18M = 2.7 years"
+    }
+  },
+  "Problem-22": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "1.4B",
+        "description": "Population of China"
+      },
+      {
+        "type": "Assumption",
+        "value": "1%",
+        "description": "Percentage of Chinese population that purchases luxury goods"
+      },
+      {
+        "type": "Assumption",
+        "value": "Age 0 - 80",
+        "description": "Population is evenly distributed between ages"
+      },
+      {
+        "type": "Assumption",
+        "value": "20 and up",
+        "description": "Relevant population is ages X and up"
+      },
+      {
+        "type": "Calculation",
+        "value": "10.5M",
+        "description": "Potential luxury good buyers: 1.4B people * 75% in right age group * 1% who buy luxury goods"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "33%",
+          "33%",
+          "33%"
+        ],
+        "description": [
+          "Percent not interested in watches and don't buy",
+          "Percent with mild interest (buy once each decade)",
+          "Percent with significant interest (buy once every five years)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": "1.05M",
+        "description": "Total luxury watches sold in China: (10.5M * 33% of luxury buyers * 1/10) + (10.5M * 33% of luxury buyers * 1/5)"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "$2,000",
+          "$10,000"
+        ],
+        "description": [
+          "Average selling price of entry level luxury watch",
+          "Average selling price of high end luxury watch"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "90%",
+          "10%"
+        ],
+        "description": [
+          "Entry level sales volume (as percent)",
+          "High end sales volume (as percent)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "$2,800",
+        "description": "Average cost of a luxury watch: (90% * $2,000) + (10% * $10,000)"
+      },
+      {
+        "type": "Calculation",
+        "value": "$3.0B",
+        "description": "Total market size for luxury watches in China: 1.05M * $2,800, round to 1M * $3,000"
+      }
+    ],
+    "Question": "Your client is a Swiss manufacturer of watches that specializes in the luxury sector. They've got an incredible company history and have been operating globally for over 100 years now. You are working on a strategy for one of their largest export markets, China, and your Principal has asked you to size the market in China for luxury watches (defined as watches $1,000+).",
+    "Title": "Time is money",
+    "Time taken": {
+      "your_time": "2 minutes, 45 seconds",
+      "avg_time": "4 minutes, 51 seconds"
+    },
+    "Final estimate": " $3.0B",
+    "Source estimate sanity check": {
+      "value": "$2.9B",
+      "source_text": "Bain & Co.",
+      "source_link": "http://www.bain.com/Images/BAIN_REPORT_Global_Luxury_2015.pdf"
+    },
+    "Follow up question": {
+      "question": "Your client mentions that multiple competitors have upped prices over the last five years while their own have been steady. In order to match competition and maintain premium price positioning, the client plans to increase prices by 10%. In turn, they expect volume to decline by 5%. How much will revenue change next year?",
+      "options": [
+        "Decrease 5%",
+        "Decrease 4.5%",
+        "No change",
+        "Increase 4.5%",
+        "Increase 5%"
+      ],
+      "correct_answer": "D",
+      "explanation": "This is a classic variable rate change problem. To solve it, you want to start by setting up the equation which accounts for both the price hike as well as the expected volume decline. Thus, next year price * volume = (1 + 10%) * (1 \u2013 5%). This reduces to: 110% * 95% = 104.5%. If you struggle with that math, you can convert it into fractions and reduce. Thus, you'd have 110/100 * 95/100. This simplifies to: 11/10 * 19/20 = 209/200. Now you can divide top and bottom by 2, thus yielding: 104.5/100."
+    }
+  },
+  "Problem-23": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "3%",
+        "description": "Conversion rate, visitors who purchase divided by total number of visitors (%)"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "50%",
+          "25%",
+          "25%"
+        ],
+        "description": [
+          "Flight purchasers, as % of total",
+          "Hotel purchasers, as % of total",
+          "Package purchasers, as % of total"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "750K",
+          "375K",
+          "375K"
+        ],
+        "description": [
+          "Flight purchasers per month: 50M monthly visitors * 3% total conversion * 50% flight conversion",
+          "Hotel purchasers per month: 50M monthly visitors * 3% total conversion * 25% flight conversion",
+          "Package purchasers per month: 50M monthly visitors * 3% total co"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "$300.00",
+          "$150.00",
+          "$800.00"
+        ],
+        "description": [
+          "Average flight price ($)",
+          "Average hotel price per night ($)",
+          "Average package price ($)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "1.5",
+          "2",
+          "1"
+        ],
+        "description": [
+          "Average number of flights purchased",
+          "Average number of hotel nights booked",
+          "Average number of packages purchased"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "5%",
+          "10%",
+          "10%"
+        ],
+        "description": [
+          "Average flight commission for Orbitz (%)",
+          "Average hotel commission for Orbitz (%)",
+          "Average package commission for Orbitz (%)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "$Roughly 17M",
+          "$11.25M",
+          "$30M"
+        ],
+        "description": [
+          "Flight revenue: 750K purchasers * $300 per flight * 1.5 flights on average * 5% Orbitz commission",
+          "Hotel revenue: 375K purchasers * $150 per night * 2 nights on average * 10% Orbitz commission",
+          "Package revenue: 375K purchasers * $800 per package * 1 package"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "$58.25M monthly",
+        "description": "Total monthly bookings revenue: $17M from flights + $11.25M from hotels + $30M from packages"
+      },
+      {
+        "type": "Calculation",
+        "value": "$696M",
+        "description": "Total annual bookings revenue: $58.25M * 12 months, round to $58M"
+      }
+    ],
+    "Question": "Your client is a global, online travel company, and your team has been hired to perform a strategic review. You are performing an analysis of Orbitz, one of its major competitors. Due to a recent acquisition, Orbitz\u2019s standalone financials are no longer publicly available and you would like to estimate its net revenues from travel bookings (i.e. hotel and flight, not advertising). You know that the site receives about 50M visits per month.",
+    "Title": "In the right orbit",
+    "Time taken": {
+      "your_time": "1 minutes, 25 seconds",
+      "avg_time": "5 minutes, 32 seconds"
+    },
+    "Final estimate": " $696M",
+    "Source estimate sanity check": {
+      "value": "$657M",
+      "source_text": "SEC Archives",
+      "source_link": "https://www.sec.gov/Archives/edgar/data/1394159/000139415915000045/oww1231201410k.htm#s02110AA0A54E65FC568BCEDEF094B377"
+    },
+    "Follow up question": {
+      "question": "If Orbitz derives 35% of its revenues from advertising and other sources, how much would its total revenue be? Assume that Orbitz's non-advertising revenue is $675M.",
+      "options": [
+        "Roughly $800M",
+        "Roughly $850M",
+        "Roughly $900M",
+        "Roughly $950M",
+        "Roughly $1,000M"
+      ],
+      "correct_answer": "E",
+      "explanation": "To solve for this question, you want to need to setup the equation: $657M non-advertising / (1 \u2013 35% advertising and other revenues) = $657M / .65. You can round this to: ~$650M / .65 = ~$1B"
+    }
+  },
+  "Problem-24": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "150M",
+        "description": "Population of Japan"
+      },
+      {
+        "type": "Assumption",
+        "value": "2.5",
+        "description": "Average household (HH) size (in people)"
+      },
+      {
+        "type": "Calculation",
+        "value": "60M",
+        "description": "Number of HHs in Japan: 150M people / 2.5 people per HH"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "25%",
+          "50%",
+          "25%"
+        ],
+        "description": [
+          "HHs who don't own a car (%)",
+          "HHs that own 1 car (%)",
+          "HHs that own 2 cars (%)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "60M",
+        "description": "Number of privately owned cars in Japan: ( * 50% * 1) + ( * 25% * 2)"
+      },
+      {
+        "type": "Assumption",
+        "value": "10",
+        "description": "There is 1 commercial use cars (eg taxis, rentals) for every X privately owned cars"
+      },
+      {
+        "type": "Calculation",
+        "value": "6M",
+        "description": "Number of commercial use cars in Japan: 60M * 10%"
+      },
+      {
+        "type": "Assumption",
+        "value": "10",
+        "description": "There is 1 commercial truck/bus for every Y number of private passenger cars"
+      },
+      {
+        "type": "Calculation",
+        "value": "6M",
+        "description": "Number of commercial trucks/buses in Japan: 60M * 10%"
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "66M",
+          "6M"
+        ],
+        "description": [
+          "Total number of cars (commercial + residential): 60M + 6M",
+          "Total number of trucks/buses: 6M"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": "10",
+        "description": "Average lifespan of any type of vehicle (in years)"
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "6M",
+          "60M",
+          "1M",
+          "5M"
+        ],
+        "description": [
+          "New cars: 66M * (1/10)",
+          "Old cars: 66M - New cars",
+          "New trucks/buses: 6M * (1/10)",
+          "Old trucks/buses: 6M - New trucks/buses"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "4",
+          "4",
+          "6"
+        ],
+        "description": [
+          "Cars have X amount of tires",
+          "2/3 of trucks/buses have Y amount of tires",
+          "1/3 of trucks/buses have Z amount of tires"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": "4",
+        "description": "Average lifespan of a tire (in years)"
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "24M",
+          "60M",
+          "4.7M",
+          "6M"
+        ],
+        "description": [
+          "Annual number of tires for newer cars: 6M * 4",
+          "Annual number of tires for older cars: 60M * 4 * (1/4)",
+          "Annual number of tires for new trucks/buses: (1M * 2/3 * 4) + (1M * 1/3 * 6)",
+          "Annual number of tires for older trucks/buses: (5M * 2/3 * 4 * (1/4)) + (5M *"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "95M",
+        "description": "Total number of tires needed domestically: 24M + 60M + 4.7M + 6M (round 4.7M to 5M)"
+      },
+      {
+        "type": "Calculation",
+        "value": "145M",
+        "description": "Total number of tires produced in Japan (for domestic and export use): 95M / (2/3)"
+      }
+    ],
+    "Question": "Your client is a global manufacturer of automotive tires based in Japan, who has recieved a boost recently atfer being featured in a popular automotive film franchise. Your team has been engaged to help review their five year strategic plan. To start, you would like to estimate the market volume for tires produced in Japan, and already know that Japan exports roughly 1/3 of its tires and sells the rest domestically.",
+    "Title": "The rubber meets the road",
+    "Time taken": {
+      "your_time": "2 minutes, 3 seconds",
+      "avg_time": "6 minutes, 26 seconds"
+    },
+    "Final estimate": " 145M tires",
+    "Source estimate sanity check": {
+      "value": "151.8M tires",
+      "source_text": "Japan Automotive Tyre Manufacturers Association",
+      "source_link": "http://www.jatma.or.jp/media/pdf/tyre_industry_2016.pdf"
+    },
+    "Follow up question": {
+      "question": "The Partner on the case has decided that your team should really push the client on capitalizing on their current brand awareness boon. Thus, he wants to get a better estimate of the global market for tires. If Japan\u2019s output of 151.8M tires is 20% of the world\u2019s output, and the market is growing at 3%, how large will the market be next year?",
+      "options": [
+        "Roughly 740M",
+        "Roughly 760M",
+        "Roughly 780M",
+        "Roughly 800M",
+        "Roughly 900M"
+      ],
+      "correct_answer": "C",
+      "explanation": "To solve for this, you first want to calculate the current world output of tires and then grow that market by 3%. First, set up the market math equation for total market size: 151.8M / 20%, which can be re-written as roughly 150M * 5. Next, you want to account for the market growth, so: 750M * 1.03. 1% of 750M is 7.5M, so 103% of 750M is 772.5M."
+    }
+  },
+  "Problem-25": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "500M",
+        "description": "Population of North America"
+      },
+      {
+        "type": "Assumption",
+        "value": "Ages 0 to 80",
+        "description": "Population evenly distributed between ages"
+      },
+      {
+        "type": "Assumption",
+        "value": "Ages 60 to 80",
+        "description": "Relevant population is within the age range"
+      },
+      {
+        "type": "Assumption",
+        "value": "20%",
+        "description": "Percent of older adults who have any sort of cardiovascular conditions (%)"
+      },
+      {
+        "type": "Assumption",
+        "value": "10%",
+        "description": "Percent of adults w/ cardio conditions that have arrhythmia (e.g., need pacemaker)"
+      },
+      {
+        "type": "Calculation",
+        "value": "2.5M",
+        "description": "Adults requiring a pacemaker: 500M * ((80-60) / 80) age range * 20% have cardio issue * 10% have arrhythmia"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "33%",
+          "66%"
+        ],
+        "description": [
+          "Adults who have issue but go undiagnosed / can't afford / do nothing (%)",
+          "Adults who get a pacemaker (%)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "Roughly 1.7M",
+        "description": "Number of adults who get pacemaker: 2.5M * 2/3"
+      },
+      {
+        "type": "Assumption",
+        "value": "5%",
+        "description": "Percent of pacemaker owns who will ever need replacement"
+      },
+      {
+        "type": "Calculation",
+        "value": "85K",
+        "description": "New patients getting pacemakers annually: 1.7M / 20 age cohorts"
+      },
+      {
+        "type": "Calculation",
+        "value": "Roughly 4K",
+        "description": "Patients getting pacemaker replacements, annually: ((1.7M \u2013 85K new) * 5% replacement rate) / 20 age cohorts"
+      },
+      {
+        "type": "Assumption",
+        "value": "$20,000",
+        "description": "Cost of a pacemaker"
+      },
+      {
+        "type": "Calculation",
+        "value": "$1.8B",
+        "description": "NA Pacemaker total market: (85K new + 4K replacements) * $20K"
+      }
+    ],
+    "Question": "Your client is a manufacturer of medical devices, based outside of Minneapolis, MN, that is planning to enter the market for cardiac pacemakers. They've got extensive experience producing medical devices for a wide range of applications but this is their first entrance into the cardiac space. You are studying the current competitive landscape and would like to size the North American market for cardiac pacemakers.",
+    "Title": "Opportunity knocks",
+    "Time taken": {
+      "your_time": "10 seconds",
+      "avg_time": "5 minutes, 14 seconds"
+    },
+    "Final estimate": " $1.8B",
+    "Source estimate sanity check": {
+      "value": "$2B ($4.9B * 40% North America)",
+      "source_text": "Grandview Research",
+      "source_link": "http://www.grandviewresearch.com/industry-analysis/pacemaker-market"
+    },
+    "Follow up question": {
+      "question": "If Medicare coverage increases, industry volume is expected to increase too. Assume the average cost of a pacemaker is $20K and the average profit margin on a pacemaker is 18%. If volume increases by 15K units, how much will profits in the industry increase?",
+      "options": [
+        "$45M",
+        "$50M",
+        "$54M",
+        "$57M",
+        "60M"
+      ],
+      "correct_answer": "C",
+      "explanation": "This is a very straight forward profit calculation. To solve, you simply want to calculate the profit per pacemaker unit and then scale it up for the expected 15K unit increase. Thus, you have: $20K * 18% = $3,600 profit per unit. And then multiply: $3,600 profit * 15K units = $54M."
+    }
+  },
+  "Problem-26": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "500M",
+        "description": "Population of North America"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "50%",
+          "50%"
+        ],
+        "description": [
+          "Percent male",
+          "Percent female"
+        ]
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "50%",
+          "30%",
+          "20%",
+          "30%",
+          "40%",
+          "30%"
+        ],
+        "description": [
+          "Male never use (%)",
+          "Male occasional use (%)",
+          "Male regular use (%)",
+          "Female never use (%)",
+          "Female occasional use (%)",
+          "Female regular use (%)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "75M",
+          "50M",
+          "100M",
+          "75M"
+        ],
+        "description": [
+          "# of male occasional users: 500M * 50% * 30%",
+          "# of male regular users: 500M * 50% * 20%",
+          "# of female occasional users: 500M * 50% * 40%",
+          "# of female regular users: 500M * 50% * 30%"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "0.5",
+          "2"
+        ],
+        "description": [
+          "Occasional users consume X bottles per year",
+          "Regular users consume Y bottles per year"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "138M",
+          "200M"
+        ],
+        "description": [
+          "Bottles used by males each year: (75M occasional users * 0.5 bottles) + (50M regular users * 2 bottles)",
+          "Bottles used by females each year: (100M occasional * 0.5 bottles) + (75M regular * 2 bottles)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "$5.00",
+          "$20.00"
+        ],
+        "description": [
+          "Avg. price per regular bottle",
+          "Avg. price per luxury bottle"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "80% mass / 20% luxury",
+          "70% mass / 30% luxury"
+        ],
+        "description": [
+          "Male spend breakdown (%)",
+          "Female spend breakdown (%)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "$1.1B",
+          "$1.9B"
+        ],
+        "description": [
+          "Male spend annually: (138M * 80% * $5) + (138M * 20% * $20)",
+          "Female spend annually: (200M * 70% * $5) + (200M * 30% * $20)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "$3.0B",
+        "description": "Total NA annual market: $1.1B + $1.9B"
+      }
+    ],
+    "Question": "Your client is a manufacturer of beauty and personal care products that is planning to introduce a line of sunscreen products targeted at men. Over the past decade, they've experienced consistent growth in their core product line but they believe that growth will slow significantly in the next five years. As a result, they are actively looking for new opportunities, such as sunscreen targeted toward a male audience. To get started, your manager has asked you to size the overall North American market for sunscreen products.",
+    "Title": "Sun bum",
+    "Time taken": {
+      "your_time": "14 seconds",
+      "avg_time": "5 minutes, 22 seconds"
+    },
+    "Final estimate": " $3.0B",
+    "Source estimate sanity check": {
+      "value": "$3.4B",
+      "source_text": "Transparency Market Research",
+      "source_link": "http://www.transparencymarketresearch.com/sun-care-market.html"
+    },
+    "Follow up question": {
+      "question": "The client is pricing its new men\u2019s sunscreen product at $12 per bottle and is projecting a relatively modest 100K in 1st-year sales volume, largely due to launch date and time needed to ramp up retail partnerships. If production and operating expense is $9/bottle plus the client is planning to invest an additional $2M in initial marketing expense, what will be the profit in year 1?",
+      "options": [
+        "Loss of $1.7M",
+        "Loss of $800K",
+        "$0",
+        "Gain of $800K",
+        "Gain of $1.7M"
+      ],
+      "correct_answer": "A",
+      "explanation": "This is a fairly straight forward profitability calculation. To solve, set up the profit equation and include an extra $2M marketing expense: 100K units * ($12 price - $9 cost) - $2M expense. This reduces down to: $300K - $2M = -$1.7M. Thus, the client will take a loss of $1.7M in their first year, assuming these estimates hold true."
+    }
+  },
+  "Problem-27": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "300M",
+        "description": "Population of US"
+      },
+      {
+        "type": "Assumption",
+        "value": "2.5",
+        "description": "Average household (HH) size (in people)"
+      },
+      {
+        "type": "Calculation",
+        "value": "120M",
+        "description": "Number of households (HHs): 300M people / 2.5 people per HH"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "20%",
+          "40%",
+          "40%"
+        ],
+        "description": [
+          "HHs with no car (%)",
+          "HHs with 1 car (%)",
+          "HHs with 2 cars (%)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "144M",
+        "description": "Number of privately owned cars: (120M * 40% * 1 car) + (120M * 40% * 2 cars)"
+      },
+      {
+        "type": "Assumption",
+        "value": "10",
+        "description": "Average car is replaced every X years"
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "14M",
+          "130M"
+        ],
+        "description": [
+          "New cars annually: 144M / 10 year replacement cycle",
+          "Old cars annually: (144M - New cars)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "80%",
+          "80%"
+        ],
+        "description": [
+          "New cars, percent financed (%)",
+          "New cars, percent of overall value financed (%)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "50%",
+          "50%"
+        ],
+        "description": [
+          "Old cars, percent with outstanding loans (%)",
+          "Old cars, percent of car value financed (%)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "$35K",
+          "$20K"
+        ],
+        "description": [
+          "Price of average new car",
+          "Value of average old car"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "Roughly $300B",
+          "$650B"
+        ],
+        "description": [
+          "New car loan value: 14M * 80% financed * $35K value * 80% of value financed",
+          "Old: 130M * 50% financed * $20K car value * 50% of value financed"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "$950B",
+        "description": "Total value of US auto loans outstanding: $300B + $650B"
+      }
+    ],
+    "Question": "Your client, the head of the auto lending unit at a major credit union, has hired your firm to formulate strategic initiatives to reach its growth targets. In order to get things kicked off, you'll need to estimate the current size of the automotive lending market in the US.",
+    "Title": "Fast market",
+    "Time taken": {
+      "your_time": "15 seconds",
+      "avg_time": "5 minutes, 33 seconds"
+    },
+    "Final estimate": " $950B",
+    "Source estimate sanity check": {
+      "value": "$1T",
+      "source_text": "Experian",
+      "source_link": "https://www.experian.com/assets/automotive/quarterly-webinars/2016-q1-safm.pdf"
+    },
+    "Follow up question": {
+      "question": "Your research team just let you know that the latest new car volume number is 17.5M. Additionally, the consensus forecast is that interest rates will rise, driving a origination decline of 5%. What is the expected volume next year?",
+      "options": [
+        "16.2M",
+        "16.4M",
+        "16.6M",
+        "16.8M",
+        "17M"
+      ],
+      "correct_answer": "C",
+      "explanation": "To solve for this problem, you want to find the value of 95% of the current new car volume. Thus, the equation is: 17.5M * (1 \u2013 5%). This can be re-written as 17.5M - (0.05 * 17.5M) = 16.625M. Thus, the best answer is 16.6M."
+    }
+  },
+  "Problem-28": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "1.4B",
+        "description": "Population of China"
+      },
+      {
+        "type": "Assumption",
+        "value": "Ages 0 to 80",
+        "description": "Population evenly distributed between ages"
+      },
+      {
+        "type": "Assumption",
+        "value": "Age 20 to 80",
+        "description": "Relevant population is within the age range"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "50%",
+          "50%"
+        ],
+        "description": [
+          "Rural population (%)",
+          "Urban population (%)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "75%",
+          "25%"
+        ],
+        "description": [
+          "Rural adults that have a credit card (%)",
+          "Urban adults that have a credit cards (%)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "Roughly 400M",
+          "Roughly 130M"
+        ],
+        "description": [
+          "Urban card holders: 1.4B * ((80-20) / 80) age ranges * 50% urban * 75% w/ cards",
+          "Rural card holders: 1.4B * ((80-20) / 80) age ranges * 50% rural * 25% card holders"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "75% frequently / 25% occasionally",
+          "25% frequently /"
+        ],
+        "description": [
+          "Urban, percent who use card frequently vs. occasionally (%)",
+          "Rural, percent who use card frequently vs. occasionally (%)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "300",
+          "50"
+        ],
+        "description": [
+          "Frequent use (uses per year)",
+          "Occasional use (uses per year)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "95B",
+          "15B"
+        ],
+        "description": [
+          "Urban txns: (400M holders * 75% frequent * 300 uses) + (400M holders * 25% occasional * 50 uses)",
+          "Rura txnsl: (130M holders * 25% frequent * 300 uses) + (130M holders * 75% occasional * 50 uses)"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "110B",
+        "description": "Total transactions annually: 95B + 15B"
+      }
+    ],
+    "Question": "Your client, a leading credit card payment processor, has hired your firm to support its expansion in China, which has recently loosened restrictions against foreign competitors participating in its market. Before your team meets for the case kick off on Monday, your Partner would like you to estimate the annual number of credit card transactions (volume, not $) in China.",
+    "Title": "Gimme credit",
+    "Time taken": {
+      "your_time": "14 seconds",
+      "avg_time": "6 minutes, 16 seconds"
+    },
+    "Final estimate": " 110B transactions",
+    "Source estimate sanity check": {
+      "value": "145B transactions (426B * 34% credit)",
+      "source_text": "Payment Eye and China Economic Review",
+      "source_link": "http://www.paymenteye.com/2016/09/22/china-ahead-of-uk-in-digital-transaction-volumes/"
+    },
+    "Follow up question": {
+      "question": "Right now, your client holds about a 6% share of the credit card market in China. After their planned expansion, if they're able to grow to own 10% market share of the 145B in transactions, and the average transaction size is $15, about how much is their dollar transaction volume?",
+      "options": [
+        "$200B",
+        "$220B",
+        "$240B",
+        "$260B",
+        "$280B"
+      ],
+      "correct_answer": "B",
+      "explanation": "To solve for this, you need to complete two steps. First, calculate the number of transactions they process. Then, multiply the transactions against the expected value per transaction. Thus, 145B total transactions * 10% client share = 14.5B transactions annually. For total volume, the equation is: 14.5B txns * $15 per txn. This can be rounded to simplify the math: 15B * $15 = $225B. Since we rounded the number of transactions up by roughly ~3%, we know the true answer will be roughly 3% below $225B. Thus, $220B is the best answer."
+    }
+  },
+  "Problem-29": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "10M",
+        "description": "Number of tourists in South Africa annually"
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "60%",
+          "40%"
+        ],
+        "description": [
+          "Percent that stay in hotels",
+          "Percent that stay in other accommodations"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "6M",
+        "description": "Number of tourism hotel stayers annually: 10M tourists * 60% stay in hotels"
+      },
+      {
+        "type": "Assumption",
+        "value": "2",
+        "description": "Average number of people per party"
+      },
+      {
+        "type": "Calculation",
+        "value": "3M",
+        "description": "Number of hotel rooms rented: 6M guests / 2 people per party"
+      },
+      {
+        "type": "Assumption",
+        "value": "4",
+        "description": "Average number of nights stayed for tourists"
+      },
+      {
+        "type": "Assumption",
+        "value": "12M",
+        "description": "Number of hotel room nights booked by tourists: 3M rooms * 4 nights per tourism party"
+      },
+      {
+        "type": "Assumption",
+        "value": "66%",
+        "description": "Percentage of the overall SA hotel market that is for tourism"
+      },
+      {
+        "type": "Calculation",
+        "value": "18M",
+        "description": "Total number of hotel room nights (tourism plus business): 12M / (2/3)"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "10%",
+          "50%",
+          "40%"
+        ],
+        "description": [
+          "Luxury rooms (%)",
+          "Mid-priced rooms (%)",
+          "Budget rooms (%)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "$200",
+          "$100",
+          "$50"
+        ],
+        "description": [
+          "Luxury avg. price",
+          "Mid-priced avg. price",
+          "Budget avg. price"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "$360M",
+          "$900M",
+          "$360M"
+        ],
+        "description": [
+          "Luxury revenues: 18M * 10% Luxury rooms * $200",
+          "Mid-priced revenues: 18M * 50% Mid-priced rooms * $100",
+          "Budget revenues: 18M * 40% Budget rooms * $50"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "$1.62B",
+        "description": "Total market size for hotel rooms (all segments, all room types): $360M + $900M + $360M"
+      }
+    ],
+    "Question": "Your client is an international hotel operator that is considering opening a chain of hotels in South Africa. This will be their first entry onto the African continent and thus they're looking for extra guidance in shoring up their projections. Your Engagement Manager has asked you to estimate the room revenue (only) for hotels in the South African market.",
+    "Title": "Room for us?",
+    "Time taken": {
+      "your_time": "18 seconds",
+      "avg_time": "4 minutes, 57 seconds"
+    },
+    "Final estimate": " $1.62B",
+    "Source estimate sanity check": {
+      "value": "$1.2B (13.1B Rand)",
+      "source_text": "PWC",
+      "source_link": "https://www.pwc.co.za/en/assets/pdf/hospitality-outlook2015.pdf"
+    },
+    "Follow up question": {
+      "question": "After the Ebola outbreak in other parts of Africa, tourism to South Africa has also declined, and average occupancy rates have declined from 60% to 50%. Your manager would like to you build a series of sensitivity analyses that take into account revenue projections for a variety of scenarios, including infectious disease outbreak. If the Ebola scare can be used as a prototypical disease outbreak scenario, what is the percentage revenue decline expected in that scenario (assuming no price changes)?",
+      "options": [
+        "Roughly 10%",
+        "Roughly 12%",
+        "Roughly 15%",
+        "Roughly 17%",
+        "Roughly 20%"
+      ],
+      "correct_answer": "D",
+      "explanation": "To figure out the hit to revenue, you want to consider the drop in occupancy as a percentage. Since price doesn't change at all in this question,"
+    }
+  },
+  "Problem-30": {
+    "header": [
+      "Type",
+      "Description",
+      "Value(s)"
+    ],
+    "list": [
+      {
+        "type": "Assumption",
+        "value": "600M",
+        "description": "Population of the European Union"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "15%",
+          "25%",
+          "40%",
+          "20%"
+        ],
+        "description": [
+          "Never travel: percentage of people who never fly (%)",
+          "Rare travelers: percentage of people who rarely travel (%)",
+          "Occasional travelers: percentage of people who occasionally travel (%)",
+          "Frequent travelers: percentage of people who frequently travel (%)"
+        ]
+      },
+      {
+        "type": "Assumption",
+        "value": [
+          "0.5",
+          "1",
+          "6"
+        ],
+        "description": [
+          "Rare travelers: take X roundtrips per year",
+          "Occasional travelers: take Y roundtrips per year",
+          "Frequent travelers: take Z roundtrips per year"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": [
+          "150M",
+          "480M",
+          "1,440M"
+        ],
+        "description": [
+          "Rare travelers: 600M * 25% rare traverlers * 0.5 roundtrips * 2 legs",
+          "Occasional travelers: 600M * 40% occasional traverlers * 1 roundtrips * 2 legs",
+          "Frequent travelers: 600M * 20% frequent traverlers * 6 roundtrips * 2 legs"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "2.07B",
+        "description": "Total number of trips per year: 150M from rare travelers + 480M from occasional + 1.44B from frequent"
+      },
+      {
+        "type": "Segmentation",
+        "value": [
+          "50%",
+          "40%",
+          "10%"
+        ],
+        "description": [
+          "Travel by flight, as percentage of total",
+          "Travel by rail, as percentage of total",
+          "Other methods, as percentage of total"
+        ]
+      },
+      {
+        "type": "Calculation",
+        "value": "1.035B",
+        "description": "Total number of flights per year: 2.07B trips * 50% travel by rail"
+      }
+    ],
+    "Question": "Major European airlines have enjoyed a brief moment in the sun but a combination of looming events (e.g., Brexit, increased low-cost competition, EU regulatory environment) have cast doubt on the future. Your client is one of the major European airlines that would like to get ahead of situation and believes they can wring additional profit from further fleet optimization. To kick things off, you would like to determine the annual volume of air passengers in Europe.",
+    "Title": "Flying high",
+    "Time taken": {
+      "your_time": "16 seconds",
+      "avg_time": "5 minutes, 38 seconds"
+    },
+    "Final estimate": " 1.035B",
+    "Source estimate sanity check": {
+      "value": "880M in 2014",
+      "source_text": "EuroStat",
+      "source_link": "http://ec.europa.eu/eurostat/statistics-explained/index.php/Passenger_transport_statisticsEuroStat"
+    },
+    "Follow up question": {
+      "question": "Your client has 604 engines in service currently out of 3,026 total by European airlines, and is planning to install an incremental 200 next year. Assuming no other competitors are changing their volume in service, how much would your client\u2019s market share increase next year?",
+      "options": [
+        "4%",
+        "5%",
+        "6%",
+        "7%",
+        "8%"
+      ],
+      "correct_answer": "B",
+      "explanation": "You can solve for this by setting up the equation: Share this year - Share next year = Incremental share gain / loss. To do this, start by calculating each piece. Share this year is: 604 / 3,026 = 20%. Share next year is: (604 + 200) / (3,026 + 200). This simplifies to: ~800 / ~3,200 = 25%. Thus, you end up with: 25% - 20% = 5% increase."
+    }
+  }
+}

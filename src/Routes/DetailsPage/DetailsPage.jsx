@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { Typography, Button, PageHeader } from 'antd'
-import { staticData } from '../../Cases.fixtures'
+import { casesList } from '../ListPage/list'
 import HelpModal from '../HelpModal/HelpModal.component';
 
 const { Title } = Typography
@@ -53,7 +53,7 @@ export default function HomePage() {
     function handleClearifyingQuestionsClick(id) {
         push(`/clearifying-questions/${item.id}`)
     }
-    const item = staticData.find((e) => e.id.toString() === id)
+    const item = casesList.find((e) => e.id.toString() === id)
     return (
         <Wrapper>
             <Header>

@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { Typography, Button, PageHeader  } from 'antd'
-import { staticData } from '../../Cases.fixtures'
+import { casesList } from '../ListPage/list'
 import HelpModal from '../HelpModal/HelpModal.component';
 
 const { Text } = Typography
@@ -45,7 +45,7 @@ const Question = styled.div`
 export default function ClarifyingQuestions() {
     const { goBack, push } = useHistory()
     const { id } = useParams()
-    const item = staticData.find((e) => e.id.toString() === id)
+    const item = casesList.find((e) => e.id.toString() === id)
     const [questions, setQuestions] = React.useState([])
     const [selectedQuestion, setSelectedQuestion] = React.useState(null)
     const list = React.useRef([])
@@ -82,7 +82,7 @@ export default function ClarifyingQuestions() {
     function handleCreate(){
       localStorage.setItem(
           'questions',
-          JSON.stringify(list.current || {})
+          JSON.stringify(list.current || [])
       )
       push(`/create-structure/${item.id}`)
     }

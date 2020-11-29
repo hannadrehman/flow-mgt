@@ -74,9 +74,8 @@ export default function Structure({ caseDetails }) {
         getData()
     }, [])
 
-    const structureData = JSON.parse(localStorage.getItem('structure'))
-    const timeTaken = parseInt(localStorage.getItem('structureTime'), 10)
-
+    const structureData = JSON.parse(localStorage.getItem('structure') || "[]")
+    const timeTaken = parseInt(localStorage.getItem('structureTime') || 0, 10)
     return (
         <Wrapper>
             <Heading>
@@ -127,7 +126,7 @@ export default function Structure({ caseDetails }) {
             <Mains>
                 <Response>
                     <Header color="#305D7B">
-                        <HeaderText>RocketBlocks suggested answer</HeaderText>
+                        <HeaderText>Suggested answer</HeaderText>
                     </Header>
                     <ResponseBody>
                         <Text>
