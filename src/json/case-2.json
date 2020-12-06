@@ -1,56 +1,56 @@
 [
     {
         "id": 1,
-         "relevant": false,
-         "explanation": "lorem ipsum", 
-        "question": "Are there any particular margins the client is looking for?",
+         "relevant": true,
+         "explanation": "This is a valid question. However, we’d recommend this to be the least priority among the questions you may have. Possibly check your assumptions at the end of all of your questions.", 
+        "question": "•	What kind of flights do they operate – the kind of capacity, the kind of customers – should I assume all are in line with a normal LCC?",
         "type": "text",
         "imageUrl": "url",
-        "text": "Not particularly. Perhaps we’d be in a better position to understand that once you know more about the sales and cost structure."
+        "text": "Yes, like a normal LCC. I would have mentioned if otherwise."
     },
     {
         "id": 2,
-         "relevant": true,
-         "explanation": "lorem ipsum",
-        "question": "Who is the primary customer of the drug?",
+         "relevant": false,
+         "explanation": "This is classic fishing for data. Let this be part of the structure and later investigation.",
+        "question": "•	What did the company do earlier to turn profitable?",
         "type": "text",
         "imageUrl": "url",
-        "text": "Hospitals"
+        "text": "Fair Question. However, is that information going to influence your structure or problem solving approach at the moment? I think not."
     },
     {
         "id": 3,
-         "relevant": false,
-         "explanation": "lorem ipsum",
-        "question": "Can I have more information about our competitor drug Clearvenax?",
+         "relevant": true,
+         "explanation": "This is an excellent question – lots of interviewees accept the fact but fail to enquire why",
+        "question": "•	Why have the fuel costs gone up?",
         "type": "text",
         "imageUrl": "url",
-        "text": "At this stage, there is no relevant information to share other than already mentioned"
+        "text": "That is a good question. Lets assume its some international volatility."
     },
     {
         "id": 4,
-        "question": "Is our client global or primarily based out of the US?",
-         "relevant": true,
-         "explanation": "lorem ipsum",
+        "question": "Is the client looking at a quick fix or a long term solution?",
+         "relevant": false,
+         "explanation": "While on the surface, this might appear to be a reasonable question, its actually not. As a consultant, you are expected to be thorough and factor in short term and long term recommendations in your suggestions.",
         "type": "text",
         "imageUrl": "url",
-        "text": "The client is primarily based out of the US. Is that information relevant to the case? Think about it. "
+        "text": "A mix of both!"
     },
     {
         "id": 5,
-        "question": "What are the kind of drugs our client manufactures?",
-         "relevant": true,
-         "explanation": "lorem ipsum",
+        "question": "•	Approximately, what was the previous profitability/percentage of margin in the last financial year?",
+         "relevant": false,
+         "explanation": "The quantity of profit % has no bearing on your structure typically. If it did, it would have been read out in the problem statement.",
         "type": "text",
         "imageUrl": "url",
-        "text": "There is no data available at this stage on that. I can tell you that the client does indeed manufacture other drugs"
+        "text": "Lets discuss at a later stage. I see no reason why would need that at the moment."
     },
     {
         "id": 6,
-        "question": "What is our variable production cost per dose?",
+        "question": "•	What is the business model of the client?",
          "relevant": false,
-         "explanation": "lorem ipsum",
+         "explanation": "Though slightly obvious, this is a good question since the airline could be in other businesses such as cargo or private jets etc.",
         "type": "text",
         "imageUrl": "url",
-        "text": "We will get that in due course. I don’t think its relevant at this stage."
+        "text": "It’s a typical LCC airline with B2C businesses – revenue from tickets and other on-board value-added-services during booking and on-board."
     }
 ]
