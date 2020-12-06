@@ -55,7 +55,7 @@
   },
   "SlideAirlineQ1_4": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "This may seem like a question where all the answers may be true. But on closer analysis, one may realize that the core issue the client is facing is profitability which is a function of revenue and costs. Therefore, the ideal choice is the one where each of the factors are explored which is the marked option in green. To note, the words used here are comprehensive. They clearly convey that you want to consider revenue and costs while investigating other elements. The  option that refers to competition which is certainly important to look into but its a subset of the comprehensive being suggested in the first choice. The remaining option incorrectly focuses exclusively on revenue. One shouldn't make any assumptions without data at the beginning of the case.",
     "question": "What factors should we explore for their impact on our client's profitability?",
     "choices": [
       {
@@ -542,7 +542,7 @@
   },
   "SlideAirlineQ2_9_5_0": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "To be fair, both are good choices but if you observe clearly, from an execution standpoint, the new areas option is a more long term bet compared to the client requirement. Besides, the time involved in executing evaluation of new businesses, strategizing and then getting operational resources onboarded is far longer compared to the other choice which is a relatively easier stream of income",
     "question": "What are the additional sources of revenue that the client could consider?",
     "non_ticket_revenue_path_flag": true,
     "choices": [
@@ -572,7 +572,7 @@
   },
   "SlideAirlineQ3_52": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "The math clearly shows the right answer in this case. Pay close observation to the logical reasoning to back up the calcuations.",
     "question": "Well, that's a feasible suggestion. Our past experience suggests that we may be able to reduce nonfuel costs by 5-10 percent in the short term. But do you think that would be enough, given the steep hike in fuel prices? (You may need the following information: sales are $1,500 million; profit margin is 20 percent; the expected fuel price increase is 50 percent; and current fuel costs are half as much as nonfuel costs.)",
     "cost_path_flag": true,
     "entrySet": 3,
@@ -683,7 +683,7 @@
   },
   "SlideAirlineQ3_61": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "The math clearly shows the right answer in this case. Pay close observation to the logical reasoning to back up the calcuations. ",
     "question": "I would suggest investigating non-fuel costs. Our past experience suggests that we may be able to reduce non-fuel costs by 5-10 percent in the short term. But do you think that would be enough, given the steep hike in fuel prices? (You may need the following information: sales are $1,500 million; profit margin is 20 percent; expected fuel price increase is 50 percent; and current fuel costs are half as much as non-fuel costs.)",
     "choices": [
       {
@@ -712,7 +712,7 @@
   },
   "SlideAirlineQ3_62": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Reducing fuel price is a tad unrealistic given that the fuel price is dictated internationally and impacts the entire industry. Expecting our client to be able to influence that price is ideal but hard to acheive atleast in the short term. The other two options on the other hand are close. Optimizing the flight network to save on fuel and other operating expenses makes sense given that optimizing the route network clearly leads to cost reduction but remember that leads to revenue reduction too given the lower flights operations. Reducing fuel consumption on the other hand is a more actionable measure since aircrafts may carry excess fuel that could be potentially reduced oir potentially higher efficiencies can be achieved or the weight of the aircraft could be reduced on-board",
     "question": "Okay. How can the client nevertheless reduce fuel costs, when fuel prices have increased?",
     "choices": [
       {
@@ -752,7 +752,7 @@
   },
   "SlideAirlineQ3_64": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Reducing fuel price is a tad unrealistic given that the fuel price is dictated internationally and impacts the entire industry. Expecting our client to be able to influence that price is ideal but hard to acheive atleast in the short term. The other two options on the other hand are close. Optimizing the flight network to save on fuel and other operating expenses makes sense given that optimizing the route network clearly leads to cost reduction but remember that leads to revenue reduction too given the lower flights operations. Reducing fuel consumption on the other hand is a more actionable measure since aircrafts may carry excess fuel that could be potentially reduced oir potentially higher efficiencies can be achieved or the weight of the aircraft could be reduced on-board",
     "question": "Well, reducing non-fuel costs by 5-10 percent actually means reducing them by $40-80 million. It seems as if the client has to explore ways of reducing fuel costs as well. How do you think that can be done?",
     "choices": [
       {
@@ -792,7 +792,7 @@
   },
   "SlideAirlineQ3_68": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Again, all three are actionable measures that could be right in varying degrees. However, the option to adjust the fleet mix or lower fuel consumption stands out owing to the fact that it is more comprehensive in offering options compared to the other two options",
     "question": "How can fuel usage be reduced?",
     "choices": [
       {
@@ -832,7 +832,7 @@
   },
   "SlideAirlineQ3_69": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Clearly the first option appears to be most feasible given that multiple players would be looking for fuel price reduction. The second option could work but one would imagine the scope of carrying this out by an individual airline could be limited. The third option could be a choice but given the nature of volatility of fuel, it is the least preferred among the three. ",
     "question": "How can the client reduce the fuel purchase price?",
     "choices": [
       {
@@ -872,7 +872,7 @@
   },
   "SlideAirlineQ3_70": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Optimizing the flight network clearly stands out for its comprehensiveness and actionability. One can imagine data being available for this influencing the choice. Among the remaining two options, code-sharing arrangements with other airlines fares better since partnerships are common in the industry and this doesn't involve incurring potentially further Capex or liabilities (like the remaining option would)",
     "question": "How can the client optimize its flight network?",
     "choices": [
       {
@@ -912,7 +912,7 @@
   },
   "SlideAirlineQ3_80": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Clearly, reducing the fuel purchase price appears to be most feasible given that fuel efficiency is no longer a factor",
     "question": "Because the client's fleet is relatively new, it is already fuel-efficient. What other options exist to reduce costs?",
     "choices": [
       {
@@ -941,7 +941,7 @@
   },
   "SlideAirlineQ3_81": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Since we are talking of scale of impact, reducing fuel purchase price stands out compared to the other option",
     "question": "This is too small a lever to have a substantial impact on costs.",
     "choices": [
       {
@@ -970,7 +970,7 @@
   },
   "SlideAirlineQ3_82": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "The option with reducing fuel purchase stands out since it focuses purely on cost reduction",
     "question": "Cutting back on flights would reduce sales as well and thus have an adverse impact on revenues. What other options exist to reduce costs?",
     "choices": [
       {
@@ -999,7 +999,7 @@
   },
   "SlideAirlineQ3_83": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Both options indicate cost reduction. However, canceling connections entails revenue reduction too. Hence the other option is more favoured. ",
     "question": "This would be difficult to negotiate in the short term, and given the selling power in this scenario, buying cooperatives stand limited chance of success.",
     "choices": [
       {
@@ -1028,7 +1028,7 @@
   },
   "SlideAirlineQ3_84": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Strategic options such as adjusting its fleet mix to increase fuel efficiency or reducing the amount of baggage allowed per passenger are quick fixes compared to the other option",
     "question": "I see your point, but given the time frame we're looking at, it may be difficult to implement this. What other options exist to reduce costs?",
     "choices": [
       {
@@ -1057,7 +1057,7 @@
   },
   "SlideAirlineQ3_85": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Both options indicate cost reduction. However, canceling connections entails revenue reduction too. Hence the other option is more favoured. ",
     "question": "This is a feasible option, but it's too late to consider this for the current price explosion. However, the client can look at price hedging to reduce volatility in the future.",
     "choices": [
       {
@@ -1086,7 +1086,7 @@
   },
   "SlideAirlineQ3_86": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Ideal solution would be optimizing existing operations to give the required boost and only the option examining decreasing fuel usage or reducing the amount of baggage satisfies that. The other option provides valid recommendations but those are possibly implementable in the long term",
     "question": "This is a feasible option, but how would it affect the client's image in the market? Moreover, reestablishing these connections in the next boom phase would entail substantial cost. What are the other available options?",
     "choices": [
       {
@@ -1115,7 +1115,7 @@
   },
   "SlideAirlineQ3_87": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Ideal solution would be optimizing existing operations to give the required boost and only the option examining decreasing fuel usage or reducing the amount of baggage satisfies that. The other option provides valid recommendations but those are possibly implementable in the long term",
     "question": "This may be feasible in the long term, depending on other airlines, but it cannot be considered in the short term. What other options exist to reduce costs?",
     "choices": [
       {
@@ -1144,7 +1144,7 @@
   },
   "SlideAirlineQ3_88": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Ideal solution would be optimizing existing operations to give the required boost and only the option examining decreasing fuel usage or reducing the amount of baggage satisfies that. The other option provides valid recommendations but those are possibly implementable in the long term",
     "question": "This could be a feasible option in the long term, though the client cannot act upon this in the short term. What other options exist to reduce costs?",
     "choices": [
       {
@@ -1173,7 +1173,7 @@
   },
   "SlideAirlineQ3_95": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Optimizing existing operations would definitely be a positive option from a cost reduction perspective compared to the highly expensive acquisition",
     "question": "Buying cooperatives are difficult to negotiate in the short term. Moreover, given the selling power in this scenario, they stand limited chance of success. Hedging via financial instruments to reduce price volatility is a feasible option, but only in the long term. It is too late to use this option to compensate for the current price increase. What are the other available options?",
     "choices": [
       {
@@ -1202,7 +1202,7 @@
   },
   "SlideAirlineQ3_96": {
     "isfocus": true,
-    "explanation": "loreum",
+    "explanation": "Optimizing existing operations would definitely be a positive option from a cost reduction perspective compared to the highly expensive acquisition",
     "question": "This is a feasible option, but how would it affect the client's image in the market? Moreover, reestablishing these connections in the next boom phase would entail substantial cost. What are the other available options?",
     "choices": [
       {
