@@ -56,6 +56,9 @@
 	},
 	"SlideDrugQ1_4": {
 		"question": "Sure. What exactly would you like to know?",
+		"isfocus": true,
+		"explanation": "Although, all the options seem like a good starting point. But, it is important to understand the demand perspective first - who are the end-customers, their buying criteria, market-size etc.",
+		"alternate_question_text": "What exactly would you like to know more abt customer and product?",
 		"choices": [{
 				"answer": "I'd like to understand the demand perspective.",
 				"direction": "left",
@@ -284,6 +287,9 @@
 	},
 	"SlideDrugQ1_22": {
 		"question": "Why do you think it's important to make that distinction?",
+		"isfocus": true,
+		"explanation": "Each of the two groups (hospitals and patients) might have different motivation to purchase the product. Hence it is important to understand which group we are selling to before we can decide the price.",
+		"alternate_question_text": "Why do you think it's important to make that distinction between the group (hostipals and patients) whom we will sell to?",
 		"choices": [{
 				"answer": "The difference is important. I need to know which of these two groups we'd sell to, because each group will have different motivations for their purchase decisions.",
 				"direction": "left",
@@ -481,6 +487,8 @@
 	},
 	"SlideDrugQ1_43": {
 		"question": "Okay. Which aspects of costs would you consider in pricing PrevenT?",
+		"isfocus": true,
+		"explanation": "Hospitals are the end-customers and our drug help them reduce complications. So, the cost incurred by hospitals in treating complications is important to consider.",
 		"choices": [{
 				"answer": "I'd like to know about the costs incurred by hospitals in treating the complications related to hip endoprosthesis.",
 				"direction": "left",
@@ -507,6 +515,8 @@
 	},
 	"SlideDrugQ1_44": {
 		"question": "Okay. Given that the closest competitor, Clearvenax, is priced at $4 per dose, how would you price PrevenT?",
+		"isfocus": true,
+		"explanation": "Hospital's buying decision is solely based on what provides them more economic value and savings. PrevenT results in more savings to hospitals as compared to Clearvenax and hence, hospitals will be willing to pay more for it than Clearvenax and we can charge over $4",
 		"choices": [{
 				"answer": "A little less than $4 the client should undercut the competition.",
 				"direction": "left",
@@ -674,6 +684,8 @@
 	},
 	"SlideDrugQ1_67": {
 		"question": "Well, hospitals are very focused on maximizing their profits. That means they make their buying decisions based on the drugs' economic value to them. What other information would you need to execute this value-based pricing for PrevenT?",
+		"isfocus": true,
+		"explanation": "Because PrevenT reduces complication rates for DVT more than Clearvenax, hospitals would derive higher value from using PrevenT. Therefore, they would be willing to pay more for it. PrevenT's price should therefore be based on hospitals' willingness to pay (WTP) for the drug. In order to calculate this, we need to compare the economic value of one dose of PrevenT to that of Clearvenex",
 		"choices": [{
 				"answer": "I'd need to calculate the cost savings per patient from reducing complications related to hip surgery, and then determine the economic value of one dose of PrevenT compared with the economic value of one dose of Clearvenax.",
 				"direction": "left",
@@ -1021,6 +1033,8 @@
 	},
 	"SlideDrugQ1_117": {
 		"question": "The new findings do imply that there are actually two markets for PrevenT\u2014one comprising high-risk patients, and the other made up of normal-risk patients. What should the client do?",
+		"isfocus": true,
+		"explanation": "Hospitals buying decision is based solely on which drug provides more cost-savings.  So, before we can make any recommendation to client, it is important to look at economic value for hospitals while using PrevenT for each patient-group.",
 		"choices": [{
 				"answer": "The client should look at economic value for customers\u2014that is, hospitals\u2014in both markets before making a decision.",
 				"direction": "left",
@@ -1096,6 +1110,8 @@
 	},
 	"SlideDrugQ1_122": {
 		"question": "I think you need to look at the economic value of PrevenT in both markets. How do you think economic value would be affected by the existence of two different markets?",
+		"isfocus": true,
+		"explanation": "Since the rate of complications for high-risk patients is higher, hospitals will achieve more savings when using PrvenT for this group as compared to that from normal-risk group. So, hospitals will be willing to pay a higher price for PrevenT.",
 		"choices": [{
 				"answer": "The economic value of PrevenT would be higher for hospitals in the case of high-risk patients. Therefore, the client can charge a higher price for PrevenT.",
 				"direction": "left",
@@ -1181,6 +1197,8 @@
 	},
 	"SlideDrugQ1_127": {
 		"question": "You can't really say that there would be no impact. Considering that the complication rates for DVT among high-risk patients are significantly lower if PrevenT is used, hospitals would save a lot more in costs by using this drug versus Clearvenax. Therefore, the economic value of using the drug would be higher, which would have an impact on PrevenT's pricing. How would you go about pricing PrevenT now?",
+		"isfocus": true,
+		"explanation": "It's important to differentiate between the two groups of patients and calculate the value that hospital derives from using the drug with patients from each group. Once we compute the economic values that drug provides to each group, we can calculate the hospital's willingness to pay while treating patients from different groups and the corresponding annual contribution margin for each group.",
 		"currState": 0,
 		"choices": [{
 				"answer": "I'd consider the high-risk patients a new group of patients and calculate WTP and the annual contribution margin for this group separately. Do we have data to do that?",
@@ -1293,6 +1311,8 @@
 	},
 	"SlideDrugQ1_141": {
 		"question": "Correct. If PrevenT reduces its price by $3, Clearvenax would have to sell its drug at $1, which would not be affordable because its production cost is also $1. What would this imply for the price of PrevenT for normal-risk and for high-risk patients?",
+		"isfocus": true,
+		"explanation": "We now know that hospitals would be willing to pay up to $14 to use PrevenT for high-risk patients, and $6 for normal-risk patients. So, if we reduce the price of each by $3,  price for normal-risk patients will be $3 and that of high-risk be $11.  The answer saying 'should be marketed for the two groups at different prices',  might seem correct too, but we need to go with the other option as it is more specific.",
 		"choices": [{
 				"answer": "If PrevenT were marketed for normal-risk patients, the price would be $3. Otherwise, for high-risk patients, the price would be $11.",
 				"direction": "left",
@@ -1340,6 +1360,8 @@
 	},
 	"SlideDrugQ1_145": {
 		"question": "Well, PrevenT decided to drive Clearvenax out of the market and would have to choose between marketing the drug for normal-risk patients at $3 or for high-risk patients at $11. What would you recommend?",
+		"isfocus": true,
+		"explanation": "Even though the potential profit per unit is higher in high-risk patient group, the annual contribution margin might be lower if the market-size of high-risk patients is sizeably small compared to normal-risk. So, it is important to calculate annual contribution margins for both groups before we can make the final recommendation.",
 		"currState": 0,
 		"choices": [{
 				"answer": "I would like to first calculate the annual contribution margins for both potential markets. ",
