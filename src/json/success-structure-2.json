@@ -1,0 +1,70 @@
+{
+  "answers": [
+    {
+      "id": 0,
+      "value": "Sales",
+      "children": [
+        {
+          "id": 0,
+          "value": "Split by geography/ markets"
+        },
+        {
+          "id": 1,
+          "value": "Split of channels for tickets"
+        },
+        {
+          "id": 2,
+          "value": "Pricing strategy"
+        },
+        {
+          "id": 3,
+          "value": "Average utilization per flight, per route"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "value": "Costs",
+      "children": [
+        {
+          "id": 0,
+          "value": "Fuel Costs – reason and investigating"
+        },
+        {
+          "id": 1,
+          "value": "Non-fuel costs breakdown"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "value": "External",
+      "children": [
+        {
+          "id": 0,
+          "value": "Competition – are we the only ones affected by this?"
+        },
+        {
+          "id": 1,
+          "value": "Regulatory issues? "
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "id": 1,
+      "title": "Key considerations",
+      "children": [
+        {
+          "id": 0,
+          "value": "It is important to understand if the client has a preference for any pricing models? If not, value-based pricing is most common and we can proceed with it."
+        },
+        {
+          "id": 1,
+          "value": "Customers have an idea of how much it would be reasonable to pay for a product, with this being quantified as an expected price. Perceived value is fundamentally personal and different individuals will be willing to pay different prices for the same product."
+        }
+      ]
+    }
+  ]
+}

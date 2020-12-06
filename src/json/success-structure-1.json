@@ -1,0 +1,78 @@
+{
+  "answers": [
+    {
+      "id": 0,
+      "value": "Customers",
+      "children": [
+        {
+          "id": 0,
+          "value": "End customers(hospitals or patients)?"
+        },
+        {
+          "id": 1,
+          "value": "Critieria used by customer to choose amongst different options available?"
+        },
+        {
+          "id": 2,
+          "value": "How price sensitive are the customers?"
+        },
+        {
+          "id": 3,
+          "value": "How much are customer ready to pay for this additional value?"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "value": "Product",
+      "children": [
+        {
+          "id": 0,
+          "value": "What features make our product better than the next best alternative?"
+        },
+        {
+          "id": 1,
+          "value": "Can we sell different versions of the medicine at different price points?"
+        },
+        {
+          "id": 2,
+          "value": "Pricing model preference, if any? -- value-based, cost-based or competition-based."
+        },
+        {
+          "id": 3,
+          "value": "Any possible cross-sell / upsell that we should take into account when pricing this specific medicine?"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "value": "Cost",
+      "children": [
+        {
+          "id": 0,
+          "value": "Fixed and variable cost split"
+        },
+        {
+          "id": 1,
+          "value": "Any additional storage requirements that might add to cost?"
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "id": 1,
+      "title": "Key considerations",
+      "children": [
+        {
+          "id": 0,
+          "value": "It is important to understand if the client has a preference for any pricing models? If not, value-based pricing is most common and we can proceed with it."
+        },
+        {
+          "id": 1,
+          "value": "Customers have an idea of how much it would be reasonable to pay for a product, with this being quantified as an expected price. Perceived value is fundamentally personal and different individuals will be willing to pay different prices for the same product."
+        }
+      ]
+    }
+  ]
+}
