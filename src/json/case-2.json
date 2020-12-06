@@ -3,7 +3,7 @@
         "id": 1,
          "relevant": true,
          "explanation": "This is a valid question. However, we’d recommend this to be the least priority among the questions you may have. Possibly check your assumptions at the end of all of your questions.", 
-        "question": "•	What kind of flights do they operate – the kind of capacity, the kind of customers – should I assume all are in line with a normal LCC?",
+        "question": "What kind of flights do they operate – the kind of capacity, the kind of customers – should I assume all are in line with a normal LCC?",
         "type": "text",
         "imageUrl": "url",
         "text": "Yes, like a normal LCC. I would have mentioned if otherwise."
@@ -12,7 +12,7 @@
         "id": 2,
          "relevant": false,
          "explanation": "This is classic fishing for data. Let this be part of the structure and later investigation.",
-        "question": "•	What did the company do earlier to turn profitable?",
+        "question": "What did the company do earlier to turn profitable?",
         "type": "text",
         "imageUrl": "url",
         "text": "Fair Question. However, is that information going to influence your structure or problem solving approach at the moment? I think not."
@@ -21,7 +21,7 @@
         "id": 3,
          "relevant": true,
          "explanation": "This is an excellent question – lots of interviewees accept the fact but fail to enquire why",
-        "question": "•	Why have the fuel costs gone up?",
+        "question": "Why have the fuel costs gone up?",
         "type": "text",
         "imageUrl": "url",
         "text": "That is a good question. Lets assume its some international volatility."
@@ -37,7 +37,7 @@
     },
     {
         "id": 5,
-        "question": "•	Approximately, what was the previous profitability/percentage of margin in the last financial year?",
+        "question": "Approximately, what was the previous profitability/percentage of margin in the last financial year?",
          "relevant": false,
          "explanation": "The quantity of profit % has no bearing on your structure typically. If it did, it would have been read out in the problem statement.",
         "type": "text",
@@ -46,7 +46,7 @@
     },
     {
         "id": 6,
-        "question": "•	What is the business model of the client?",
+        "question": "What is the business model of the client?",
          "relevant": false,
          "explanation": "Though slightly obvious, this is a good question since the airline could be in other businesses such as cargo or private jets etc.",
         "type": "text",
