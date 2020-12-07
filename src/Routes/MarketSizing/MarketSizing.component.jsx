@@ -6,8 +6,9 @@ import {
     DeleteOutlined,
     PlusCircleOutlined,
 } from '@ant-design/icons'
+import * as utils from '../CasePage/utilities'
 import { useHistory, useParams } from 'react-router-dom'
-import { marketSizingList } from '../ListPage/list'
+import { useInterval } from '../../hooks/timers'
 
 const { Title, Text } = Typography
 const { Option } = Select
@@ -20,6 +21,8 @@ const Header = styled.div`
 const InfoHeader = styled.div`
     padding: 16px;
     background-color: #1890ff;
+    display: flex;
+    justify-content: space-between;
 `
 const InfoBody = styled.div`
     padding: 16px;
@@ -31,6 +34,15 @@ const InfoText = styled(Text)`
     color: white;
     font-weight: 600;
     font-size: 18px;
+`
+const AnswerText = styled(Text)`
+    font-size: 18px;
+    padding: 2px 0px;
+    border-bottom: 1px solid #ebe3e3;
+`
+const SourceText = styled(Text)`
+    font-size: 16px;
+    padding: 12px 0px;
 `
 const HeaderText = styled(Text)`
     font-weight: 600;
@@ -61,20 +73,26 @@ const defInfo = {
 export default function MarketSizing() {
     const { push } = useHistory()
     const { id } = useParams()
-    const [problems, setProblems] = React.useState(defInfo)
+    const [problem, setProblem] = React.useState()
     const [info, setInfo] = React.useState([defInfo])
-    const [size, setSize] = React.useState()
+    const [, setSize] = React.useState()
     const [showResults, setShowResults] = React.useState(false)
+    const timeElapsed = React.useRef(0)
+    const [timeDelay, setTimeDelay] = React.useState(500)
+
+    useInterval(() => {
+        timeElapsed.current += 500
+    }, timeDelay)
 
     React.useEffect(() => {
         async function getData() {
             try {
                 const res = await fetch(
-                    `http://app.casesninja.com/json/final_market_sizing-${id}.json`,
+                    `http://app.casesninja.com/json/final_market_sizing-1.json`,
                     {}
                 )
                 const resp = await res.json()
-                setProblems(resp)
+                setProblem(resp[id])
             } catch (e) {
                 console.log(e)
             }
@@ -82,10 +100,8 @@ export default function MarketSizing() {
         getData()
     }, [id])
 
-    const item = marketSizingList.find((e) => e.id.toString() === id)
-
     function handleBack(id) {
-        push(`/list/market`)
+        push(`/market-sizing/list`)
     }
 
     function handleDelete(id) {
@@ -138,9 +154,20 @@ export default function MarketSizing() {
 
     function handleSubmit() {
         setShowResults(true)
+        setTimeDelay(null)
     }
 
-    return (
+    const disableBtn = !(
+        info[0].type.length &&
+        info[0].description.length &&
+        info[0].value.length
+    )
+
+    console.log(problem)
+
+    return !problem ? (
+        ''
+    ) : (
         <Wrapper>
             <Header>
                 <PageHeader
@@ -170,91 +197,160 @@ export default function MarketSizing() {
             </Header>
             <br />
             <div>
-                <Title level={3}>{item.title}</Title>
-                <div
-                    dangerouslySetInnerHTML={createMarkup(
-                        item.detailedDescription
-                    )}
-                />
+                <Title level={3}>{problem.Title}</Title>
+                <div dangerouslySetInnerHTML={createMarkup(problem.Question)} />
             </div>
             <br />
-            {!showResults && (
+            <div>
+                <InfoHeader>
+                    <InfoText>Your Response(s)</InfoText>
+                    {showResults && (
+                        <InfoText>
+                            {`Time Taken:  ${utils.millisToMinutesAndSeconds(
+                                timeElapsed.current
+                            )}. Avg time : ${problem['Time taken'].avg_time}`}
+                        </InfoText>
+                    )}
+                </InfoHeader>
+                <div>
+                    <InfoBody>
+                        <Headergrid>
+                            {problem.header.map((item, index) => (
+                                <HeaderText key={index}>{item}</HeaderText>
+                            ))}
+                        </Headergrid>
+                        {info.map((elem) => (
+                            <InfoGrid key={elem.id}>
+                                <HeaderText>
+                                    <Select
+                                        style={{ width: '100%' }}
+                                        onChange={(ev) =>
+                                            handleTypeChange(ev, elem.id)
+                                        }
+                                        placeholder="Select"
+                                    >
+                                        <Option value="Assumption">
+                                            Assumption
+                                        </Option>
+                                        <Option value="Calculation">
+                                            Calculation
+                                        </Option>
+                                        <Option value="Segmentation">
+                                            Segmentation
+                                        </Option>
+                                    </Select>
+                                </HeaderText>
+                                <HeaderText>
+                                    <Input
+                                        placeholder="Short decription (e.g, 180M House / 3 people ...)"
+                                        onChange={(ev) =>
+                                            handleDescChange(ev, elem.id)
+                                        }
+                                    />
+                                </HeaderText>
+                                <HeaderText>
+                                    <Input
+                                        placeholder="Value or na"
+                                        onChange={(ev) =>
+                                            handleValueChange(ev, elem.id)
+                                        }
+                                    />
+                                </HeaderText>
+                                <HeaderText>
+                                    <DeleteOutlined
+                                        onClick={() => handleDelete(elem.id)}
+                                    />
+                                </HeaderText>
+                            </InfoGrid>
+                        ))}
+                        <Button
+                            type="link"
+                            icon={<PlusCircleOutlined />}
+                            onClick={handleAdd}
+                        >
+                            Add
+                        </Button>
+                        <br />
+                        <Text>Final Sizing</Text>
+                        <br />
+                        <Input
+                            style={{ width: '120px' }}
+                            placeholder="Final Sizing"
+                            onChange={(ev) => setSize(ev.target.value)}
+                        />
+                    </InfoBody>
+                    <br />
+                    {!showResults && info.length > 0 && (
+                        <Button disabled={disableBtn} onClick={handleSubmit}>
+                            Submit
+                        </Button>
+                    )}
+                </div>
+            </div>
+            <br />
+            <br />
+            {showResults && (
                 <div>
                     <InfoHeader>
-                        <InfoText>Your Response(s)</InfoText>
+                        <InfoText>Our Suggested Answer(s)</InfoText>
                     </InfoHeader>
                     <div>
                         <InfoBody>
                             <Headergrid>
-                                <HeaderText>Type</HeaderText>
-                                <HeaderText>Description</HeaderText>
-                                <HeaderText>Value(s)</HeaderText>
+                                {problem.header.map((item, index) => (
+                                    <HeaderText key={index}>{item}</HeaderText>
+                                ))}
                             </Headergrid>
-                            {info.map((elem) => (
-                                <InfoGrid key={elem.id}>
-                                    <HeaderText>
-                                        <Select
-                                            style={{ width: 120 }}
-                                            onChange={(ev) =>
-                                                handleTypeChange(ev, elem.id)
-                                            }
-                                            placeholder="Select"
-                                        >
-                                            <Option value="jack">Jack</Option>
-                                            <Option value="lucy">Lucy</Option>
-                                            <Option value="Yiminghe">
-                                                yiminghe
-                                            </Option>
-                                        </Select>
-                                    </HeaderText>
-                                    <HeaderText>
-                                        <Input
-                                            placeholder="Short decription (e.g, 180M House / 3 people ...)"
-                                            onChange={(ev) =>
-                                                handleDescChange(ev, elem.id)
-                                            }
-                                        />
-                                    </HeaderText>
-                                    <HeaderText>
-                                        <Input
-                                            placeholder="Value or na"
-                                            onChange={(ev) =>
-                                                handleValueChange(ev, elem.id)
-                                            }
-                                        />
-                                    </HeaderText>
-                                    <HeaderText>
-                                        <DeleteOutlined
-                                            onClick={() =>
-                                                handleDelete(elem.id)
-                                            }
-                                        />
-                                    </HeaderText>
+                            {problem.list.map((elem, index) => (
+                                <InfoGrid key={index}>
+                                    <AnswerText>{elem.type}</AnswerText>
+                                    <AnswerText>
+                                        {typeof elem.description === 'string'
+                                            ? elem.description
+                                            : elem.description.map((x, i) => (
+                                                  <div key={i}>{x}</div>
+                                              ))}
+                                    </AnswerText>
+                                    <AnswerText>
+                                        {typeof elem.value === 'string'
+                                            ? elem.value
+                                            : elem.value.map((x, i) => (
+                                                  <div key={i}>{x}</div>
+                                              ))}
+                                    </AnswerText>
                                 </InfoGrid>
                             ))}
-                            <Button
-                                type="link"
-                                icon={<PlusCircleOutlined />}
-                                onClick={handleAdd}
-                            >
-                                Add
-                            </Button>
-                            <br />
-                            <Text>Final Sizing</Text>
-                            <br />
-                            <Input
-                                style={{ width: '120px' }}
-                                placeholder="Final Sizing"
-                                onChange={(ev) => setSize(ev.target.value)}
-                            />
                         </InfoBody>
+                    </div>
+                    <br />
+                    <div>
+                        <SourceText>{`Final estimate: ${problem['Final estimate']}`}</SourceText>
                         <br />
-                        <Button type="primary" onClick={handleSubmit}>
-                            Submit
-                        </Button>
+                        <SourceText>{`Source estimate sanity check: ${problem['Source estimate sanity check'].value}`}</SourceText>
+                        (
+                        <SourceText>
+                            Source:{' '}
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={
+                                    problem['Source estimate sanity check']
+                                        .source_link
+                                }
+                            >
+                                {
+                                    problem['Source estimate sanity check']
+                                        .source_text
+                                }
+                            </a>
+                        </SourceText>
+                        )
                     </div>
                 </div>
             )}
+            <br />
+            <br /> <br />
+            <br />
         </Wrapper>
     )
 }

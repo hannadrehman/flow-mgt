@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 export default function HomePage() {
     const { push } = useHistory()
     function handleClick() {
-        push('list')
+        push('list/cases')
     }
     return (
         <Wrapper>

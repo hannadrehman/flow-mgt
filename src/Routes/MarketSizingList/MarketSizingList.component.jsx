@@ -2,9 +2,8 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import { Typography, Button, PageHeader } from 'antd'
-import { casesList } from './list'
 
-const { Title, Text } = Typography
+const { Title } = Typography
 
 const Wrapper = styled.div`
     margin: 0 auto;
@@ -39,15 +38,29 @@ const Container = styled.div`
     align-content: center;
 `
 
-export default function HomePage() {
+export default function MarketSizingList() {
     const { push, goBack } = useHistory()
-
-    const listItems = casesList
+    const [listItems, setlistItems] = React.useState([])
+    
+    React.useEffect(() => {
+        async function getData() {
+            try {
+                const res = await fetch(
+                    `http://app.casesninja.com/json/final_market_sizing-1.json`,
+                    {}
+                )
+                const resp = await res.json()
+                setlistItems(resp)
+            } catch (e) {
+                console.log(e)
+            }
+        }
+        getData()
+    }, [])
 
     function handleClick(id) {
-        push(`/details/${id}`)
+        push(`/market-sizing/${id}`)
     }
-
     return (
         <Wrapper>
             <Header>
@@ -55,22 +68,19 @@ export default function HomePage() {
             </Header>
 
             <Grid>
-                {listItems.map((item) => (
-                    <GridItem key={item.id}>
-                        <GridImage color={item.color} />
+                {Object.entries(listItems).map(([key,item]) => (
+                    <GridItem key={key}>
+                        <GridImage color="#cbffa0"/>
                         <Container>
-                            <Title level={5}>{item.title}</Title>
-                        </Container>
-                        <Container>
-                            <Text>{item.description}</Text>
+                            <Title level={5}>{item.Title}</Title>
                         </Container>
                         <Container>
                             <Button
                                 block
                                 danger
-                                onClick={() => handleClick(item.id)}
+                                onClick={() => handleClick(key)}
                             >
-                                Try {item.title}
+                                Try {item.Title}
                             </Button>
                         </Container>
                     </GridItem>
