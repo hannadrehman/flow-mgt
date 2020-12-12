@@ -5,7 +5,7 @@ import { Typography, Button, PageHeader, Input } from 'antd'
 import { PlusCircleOutlined } from '@ant-design/icons'
 import { casesList } from '../ListPage/list'
 import { useInterval } from '../../hooks/timers'
-import HelpModal from '../HelpModal/HelpModal.component';
+import HelpModal from '../HelpModal/HelpModal.component'
 
 const { Text } = Typography
 
@@ -122,22 +122,20 @@ export default function CreateStructure() {
     const { id } = useParams()
     const [treeData, setTreeData] = React.useState(defaultTree)
     const inputRefs = React.useRef(defaultInput)
-    const timeElapsed = React.useRef(0)
+    const [timeElapsed, setTimeElapsed] = React.useState(0)
+
     useInterval(() => {
-        timeElapsed.current += 500
+        setTimeElapsed((p) => (p += 500))
     }, 500)
 
     function handleClick(id) {
-        const items = inputRefs.current.filter(x=>{
-            const children = x.children.filter(x=>x.value)
-          return children.length > 0
+        const items = inputRefs.current.filter((x) => {
+            const children = x.children.filter((x) => x.value)
+            return children.length > 0
         })
-        localStorage.setItem(
-            'structure',
-            JSON.stringify(items || [])
-        )
+        localStorage.setItem('structure', JSON.stringify(items || []))
         console.log(items)
-        localStorage.setItem('structureTime', timeElapsed.current)
+        localStorage.setItem('structureTime', timeElapsed)
         push(`/case/${item.id}`)
     }
     function handleNodeEnterPress(ev) {
@@ -249,8 +247,7 @@ export default function CreateStructure() {
             <Button type="primary" block onClick={handleClick}>
                 Submit
             </Button>
-        <HelpModal type="createStructurePage" />
-
+            <HelpModal type="createStructurePage" />
         </Wrapper>
     )
 }

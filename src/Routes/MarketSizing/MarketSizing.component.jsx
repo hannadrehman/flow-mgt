@@ -90,13 +90,12 @@ export default function MarketSizing() {
     const [info, setInfo] = React.useState([defInfo])
     const [size, setSize] = React.useState()
     const [showResults, setShowResults] = React.useState(false)
-    const timeElapsed = React.useRef(0)
     const [timeDelay, setTimeDelay] = React.useState(500)
     const [isFollowUpCorrect, setIsFollowUpCorrect] = React.useState(false)
     const [isFollowUpSubmit, setIsFollowUpSubmit] = React.useState(false)
-
+    const [timeElapsed, setTimeElapsed] = React.useState(0)
     useInterval(() => {
-        timeElapsed.current += 500
+        setTimeElapsed((p) => (p += 500))
     }, timeDelay)
 
     React.useEffect(() => {
@@ -232,15 +231,11 @@ export default function MarketSizing() {
                 <div>
                     <InfoHeader>
                         <InfoText>Your Response(s)</InfoText>
-                        {showResults && (
-                            <InfoText>
-                                {`Time Taken:  ${utils.millisToMinutesAndSeconds(
-                                    timeElapsed.current
-                                )}. Avg time : ${
-                                    problem['Time taken'].avg_time
-                                }`}
-                            </InfoText>
-                        )}
+                        <InfoText>
+                            {`Time Taken:  ${utils.millisToMinutesAndSeconds(
+                                timeElapsed
+                            )}`}
+                        </InfoText>
                     </InfoHeader>
                     <div>
                         <InfoBody>
@@ -330,6 +325,15 @@ export default function MarketSizing() {
                     <div>
                         <InfoHeader>
                             <InfoText>Your Response(s)</InfoText>
+                            {showResults && (
+                                <InfoText>
+                                    {`Time Taken:  ${utils.millisToMinutesAndSeconds(
+                                        timeElapsed
+                                    )}. Avg time : ${
+                                        problem['Time taken'].avg_time
+                                    }`}
+                                </InfoText>
+                            )}
                         </InfoHeader>
                         <div>
                             <InfoBody>
@@ -437,7 +441,10 @@ export default function MarketSizing() {
                                 {problem['Follow up question'].question}
                             </HeaderText>
                             <div>
-                                <Radio.Group onChange={handleRadioChange} disabled={isFollowUpSubmit}>
+                                <Radio.Group
+                                    onChange={handleRadioChange}
+                                    disabled={isFollowUpSubmit}
+                                >
                                     {problem['Follow up question'].options.map(
                                         (item, index) => (
                                             <Radio
@@ -452,7 +459,7 @@ export default function MarketSizing() {
                                 </Radio.Group>
                                 <br />
                                 <div>
-                                <br />
+                                    <br />
                                     {isFollowUpCorrect && isFollowUpSubmit && (
                                         <Title level={4}>
                                             Correct Answer !!
