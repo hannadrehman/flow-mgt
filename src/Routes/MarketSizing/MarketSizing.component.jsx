@@ -1,6 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button, PageHeader, Popconfirm, Typography, Select, Input } from 'antd'
+import {
+    Button,
+    PageHeader,
+    Popconfirm,
+    Typography,
+    Select,
+    Input,
+    Radio,
+} from 'antd'
 import {
     ArrowLeftOutlined,
     DeleteOutlined,
@@ -70,15 +78,22 @@ const defInfo = {
     id: 0,
 }
 
+const radioStyle = {
+    display: 'block',
+    height: '30px',
+    lineHeight: '30px',
+}
 export default function MarketSizing() {
     const { push } = useHistory()
     const { id } = useParams()
     const [problem, setProblem] = React.useState()
     const [info, setInfo] = React.useState([defInfo])
-    const [, setSize] = React.useState()
+    const [size, setSize] = React.useState()
     const [showResults, setShowResults] = React.useState(false)
     const timeElapsed = React.useRef(0)
     const [timeDelay, setTimeDelay] = React.useState(500)
+    const [isFollowUpCorrect, setIsFollowUpCorrect] = React.useState(false)
+    const [isFollowUpSubmit, setIsFollowUpSubmit] = React.useState(false)
 
     useInterval(() => {
         timeElapsed.current += 500
@@ -88,7 +103,7 @@ export default function MarketSizing() {
         async function getData() {
             try {
                 const res = await fetch(
-                    `http://app.casesninja.com/json/final_market_sizing-1.json`,
+                    `http://app.casesninja.com/json/final_market_sizing-1.json?q=12`,
                     {}
                 )
                 const resp = await res.json()
@@ -165,6 +180,18 @@ export default function MarketSizing() {
 
     console.log(problem)
 
+    function handleRadioChange(e) {
+        const correct = problem['Follow up question'].correct_answer
+        const selected = e.target.value
+
+        if (correct === selected) {
+            setIsFollowUpCorrect(true)
+        }
+        if (correct !== selected) {
+            setIsFollowUpCorrect(false)
+        }
+        setIsFollowUpSubmit(true)
+    }
     return !problem ? (
         ''
     ) : (
@@ -201,98 +228,19 @@ export default function MarketSizing() {
                 <div dangerouslySetInnerHTML={createMarkup(problem.Question)} />
             </div>
             <br />
-            <div>
-                <InfoHeader>
-                    <InfoText>Your Response(s)</InfoText>
-                    {showResults && (
-                        <InfoText>
-                            {`Time Taken:  ${utils.millisToMinutesAndSeconds(
-                                timeElapsed.current
-                            )}. Avg time : ${problem['Time taken'].avg_time}`}
-                        </InfoText>
-                    )}
-                </InfoHeader>
-                <div>
-                    <InfoBody>
-                        <Headergrid>
-                            {problem.header.map((item, index) => (
-                                <HeaderText key={index}>{item}</HeaderText>
-                            ))}
-                        </Headergrid>
-                        {info.map((elem) => (
-                            <InfoGrid key={elem.id}>
-                                <HeaderText>
-                                    <Select
-                                        style={{ width: '100%' }}
-                                        onChange={(ev) =>
-                                            handleTypeChange(ev, elem.id)
-                                        }
-                                        placeholder="Select"
-                                    >
-                                        <Option value="Assumption">
-                                            Assumption
-                                        </Option>
-                                        <Option value="Calculation">
-                                            Calculation
-                                        </Option>
-                                        <Option value="Segmentation">
-                                            Segmentation
-                                        </Option>
-                                    </Select>
-                                </HeaderText>
-                                <HeaderText>
-                                    <Input
-                                        placeholder="Short decription (e.g, 180M House / 3 people ...)"
-                                        onChange={(ev) =>
-                                            handleDescChange(ev, elem.id)
-                                        }
-                                    />
-                                </HeaderText>
-                                <HeaderText>
-                                    <Input
-                                        placeholder="Value or na"
-                                        onChange={(ev) =>
-                                            handleValueChange(ev, elem.id)
-                                        }
-                                    />
-                                </HeaderText>
-                                <HeaderText>
-                                    <DeleteOutlined
-                                        onClick={() => handleDelete(elem.id)}
-                                    />
-                                </HeaderText>
-                            </InfoGrid>
-                        ))}
-                        <Button
-                            type="link"
-                            icon={<PlusCircleOutlined />}
-                            onClick={handleAdd}
-                        >
-                            Add
-                        </Button>
-                        <br />
-                        <Text>Final Sizing</Text>
-                        <br />
-                        <Input
-                            style={{ width: '120px' }}
-                            placeholder="Final Sizing"
-                            onChange={(ev) => setSize(ev.target.value)}
-                        />
-                    </InfoBody>
-                    <br />
-                    {!showResults && info.length > 0 && (
-                        <Button disabled={disableBtn} onClick={handleSubmit}>
-                            Submit
-                        </Button>
-                    )}
-                </div>
-            </div>
-            <br />
-            <br />
-            {showResults && (
+            {!showResults && (
                 <div>
                     <InfoHeader>
-                        <InfoText>Our Suggested Answer(s)</InfoText>
+                        <InfoText>Your Response(s)</InfoText>
+                        {showResults && (
+                            <InfoText>
+                                {`Time Taken:  ${utils.millisToMinutesAndSeconds(
+                                    timeElapsed.current
+                                )}. Avg time : ${
+                                    problem['Time taken'].avg_time
+                                }`}
+                            </InfoText>
+                        )}
                     </InfoHeader>
                     <div>
                         <InfoBody>
@@ -301,56 +249,234 @@ export default function MarketSizing() {
                                     <HeaderText key={index}>{item}</HeaderText>
                                 ))}
                             </Headergrid>
-                            {problem.list.map((elem, index) => (
-                                <InfoGrid key={index}>
-                                    <AnswerText>{elem.type}</AnswerText>
-                                    <AnswerText>
-                                        {typeof elem.description === 'string'
-                                            ? elem.description
-                                            : elem.description.map((x, i) => (
-                                                  <div key={i}>{x}</div>
-                                              ))}
-                                    </AnswerText>
-                                    <AnswerText>
-                                        {typeof elem.value === 'string'
-                                            ? elem.value
-                                            : elem.value.map((x, i) => (
-                                                  <div key={i}>{x}</div>
-                                              ))}
-                                    </AnswerText>
+                            {info.map((elem) => (
+                                <InfoGrid key={elem.id}>
+                                    <HeaderText>
+                                        <Select
+                                            style={{ width: '100%' }}
+                                            onChange={(ev) =>
+                                                handleTypeChange(ev, elem.id)
+                                            }
+                                            placeholder="Select"
+                                        >
+                                            <Option value="Assumption">
+                                                Assumption
+                                            </Option>
+                                            <Option value="Calculation">
+                                                Calculation
+                                            </Option>
+                                            <Option value="Segmentation">
+                                                Segmentation
+                                            </Option>
+                                        </Select>
+                                    </HeaderText>
+                                    <HeaderText>
+                                        <Input
+                                            placeholder="Short decription (e.g, 180M House / 3 people ...)"
+                                            onChange={(ev) =>
+                                                handleDescChange(ev, elem.id)
+                                            }
+                                        />
+                                    </HeaderText>
+                                    <HeaderText>
+                                        <Input
+                                            placeholder="Value or na"
+                                            onChange={(ev) =>
+                                                handleValueChange(ev, elem.id)
+                                            }
+                                        />
+                                    </HeaderText>
+                                    <HeaderText>
+                                        <DeleteOutlined
+                                            onClick={() =>
+                                                handleDelete(elem.id)
+                                            }
+                                        />
+                                    </HeaderText>
                                 </InfoGrid>
                             ))}
-                        </InfoBody>
-                    </div>
-                    <br />
-                    <div>
-                        <SourceText>{`Final estimate: ${problem['Final estimate']}`}</SourceText>
-                        <br />
-                        <SourceText>{`Source estimate sanity check: ${problem['Source estimate sanity check'].value}`}</SourceText>
-                        (
-                        <SourceText>
-                            Source:{' '}
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={
-                                    problem['Source estimate sanity check']
-                                        .source_link
-                                }
+                            <Button
+                                type="link"
+                                icon={<PlusCircleOutlined />}
+                                onClick={handleAdd}
                             >
-                                {
-                                    problem['Source estimate sanity check']
-                                        .source_text
-                                }
-                            </a>
-                        </SourceText>
-                        )
+                                Add
+                            </Button>
+                            <br />
+                            <Text>Final Sizing</Text>
+                            <br />
+                            <Input
+                                style={{ width: '120px' }}
+                                placeholder="Final Sizing"
+                                onChange={(ev) => setSize(ev.target.value)}
+                            />
+                        </InfoBody>
+                        <br />
+                        {!showResults && info.length > 0 && (
+                            <Button
+                                disabled={disableBtn}
+                                onClick={handleSubmit}
+                            >
+                                Submit
+                            </Button>
+                        )}
                     </div>
                 </div>
             )}
             <br />
-            <br /> <br />
             <br />
+            {showResults && (
+                <React.Fragment>
+                    <div>
+                        <InfoHeader>
+                            <InfoText>Your Response(s)</InfoText>
+                        </InfoHeader>
+                        <div>
+                            <InfoBody>
+                                <Headergrid>
+                                    {problem.header.map((item, index) => (
+                                        <HeaderText key={index}>
+                                            {item}
+                                        </HeaderText>
+                                    ))}
+                                </Headergrid>
+                                {info.map((elem, index) => (
+                                    <InfoGrid key={index}>
+                                        <AnswerText>{elem.type}</AnswerText>
+                                        <AnswerText>
+                                            {elem.description}
+                                        </AnswerText>
+                                        <AnswerText>{elem.value}</AnswerText>
+                                    </InfoGrid>
+                                ))}
+                                <br />
+                                <div>
+                                    <SourceText>{`Final estimate: ${size}`}</SourceText>
+                                </div>
+                            </InfoBody>
+                        </div>
+                        <br />
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <div>
+                        <InfoHeader>
+                            <InfoText>Our Suggested Answer(s)</InfoText>
+                        </InfoHeader>
+                        <div>
+                            <InfoBody>
+                                <Headergrid>
+                                    {problem.header.map((item, index) => (
+                                        <HeaderText key={index}>
+                                            {item}
+                                        </HeaderText>
+                                    ))}
+                                </Headergrid>
+                                {problem.list.map((elem, index) => (
+                                    <InfoGrid key={index}>
+                                        <AnswerText>{elem.type}</AnswerText>
+                                        <AnswerText>
+                                            {typeof elem.description ===
+                                            'string'
+                                                ? elem.description
+                                                : elem.description.map(
+                                                      (x, i) => (
+                                                          <div key={i}>{x}</div>
+                                                      )
+                                                  )}
+                                        </AnswerText>
+                                        <AnswerText>
+                                            {typeof elem.value === 'string'
+                                                ? elem.value
+                                                : elem.value.map((x, i) => (
+                                                      <div key={i}>{x}</div>
+                                                  ))}
+                                        </AnswerText>
+                                    </InfoGrid>
+                                ))}
+                            </InfoBody>
+                        </div>
+                        <br />
+                        <div>
+                            <SourceText>{`Final estimate: ${problem['Final estimate']}`}</SourceText>
+                            <br />
+                            <SourceText>{`Source estimate sanity check: ${problem['Source estimate sanity check'].value}`}</SourceText>
+                            (
+                            <SourceText>
+                                Source:{' '}
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href={
+                                        problem['Source estimate sanity check']
+                                            .source_link
+                                    }
+                                >
+                                    {
+                                        problem['Source estimate sanity check']
+                                            .source_text
+                                    }
+                                </a>
+                            </SourceText>
+                            )
+                        </div>
+                    </div>
+                </React.Fragment>
+            )}
+            <br />
+            <br />
+            {showResults && problem['Follow up question'] && (
+                <div>
+                    <InfoHeader>
+                        <InfoText>Follow up question</InfoText>
+                    </InfoHeader>
+                    <div>
+                        <InfoBody>
+                            <HeaderText>
+                                {problem['Follow up question'].question}
+                            </HeaderText>
+                            <div>
+                                <Radio.Group onChange={handleRadioChange} disabled={isFollowUpSubmit}>
+                                    {problem['Follow up question'].options.map(
+                                        (item, index) => (
+                                            <Radio
+                                                key={item}
+                                                value={index}
+                                                style={radioStyle}
+                                            >
+                                                {item}
+                                            </Radio>
+                                        )
+                                    )}
+                                </Radio.Group>
+                                <br />
+                                <div>
+                                <br />
+                                    {isFollowUpCorrect && isFollowUpSubmit && (
+                                        <Title level={4}>
+                                            Correct Answer !!
+                                        </Title>
+                                    )}
+                                    {!isFollowUpCorrect && isFollowUpSubmit && (
+                                        <Title level={4}>Wrong Answer !!</Title>
+                                    )}
+                                </div>
+
+                                <br />
+                                <div>
+                                    {isFollowUpSubmit && (
+                                        <Title
+                                            level={5}
+                                        >{`Explination : ${problem['Follow up question'].explanation}`}</Title>
+                                    )}
+                                </div>
+                            </div>
+                        </InfoBody>
+                    </div>
+                    <br />
+                </div>
+            )}
         </Wrapper>
     )
 }

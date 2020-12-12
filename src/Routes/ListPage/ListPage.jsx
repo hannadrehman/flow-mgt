@@ -29,8 +29,11 @@ const GridItem = styled.div`
 
 const GridImage = styled.div`
     width: 300px;
-    height: 300px;
-    background-color: ${(props) => props.color};
+    height: 150px;
+    background-image: url(${(props) => props.bgSrc});
+    background-size: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
 `
 const Container = styled.div`
     display: flex;
@@ -53,11 +56,13 @@ export default function HomePage() {
             <Header>
                 <PageHeader subTitle="Back to Home" onBack={goBack} />
             </Header>
-
+<br />
+<br />
+<br />
             <Grid>
                 {listItems.map((item) => (
                     <GridItem key={item.id}>
-                        <GridImage color={item.color} />
+                        <GridImage bgSrc={item.url} />
                         <Container>
                             <Title level={5}>{item.title}</Title>
                         </Container>

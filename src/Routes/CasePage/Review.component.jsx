@@ -105,7 +105,7 @@ export default function Review({ selectedOptions, allQuestions, caseDetails }) {
                             <Question
                                 header={
                                     <HeadContent>
-                                        {question.question}
+                                        {question.alternate_question_text || question.question}
                                     </HeadContent>
                                 }
                                 key={question.questionId}

@@ -48,7 +48,7 @@ const Accordion = styled(Collapse)`
 
 export default function Relevance({ usersScore, maxScore, caseDetails }) {
     const questions = React.useMemo(() => {
-        const items = JSON.parse(localStorage.getItem('questions'))
+        const items = JSON.parse(localStorage.getItem('questions') || "[]")
         const map = {
             relevent: [],
             irrelevent: [],

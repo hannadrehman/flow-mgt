@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import { Typography, Button, PageHeader } from 'antd'
 
-const { Title } = Typography
+const { Title,Text } = Typography
 
 const Wrapper = styled.div`
     margin: 0 auto;
@@ -14,39 +14,42 @@ const Header = styled.div`
 `
 const Grid = styled.div`
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
     justify-content: space-between;
     padding: 16px;
-    flex-wrap: wrap;
-    margin: -32px auto;
-    justify-content: center;
 `
 const GridItem = styled.div`
-    max-width: 300px;
-    margin-top: 32px;
-    margin: 16px;
+    width: 603px;
+    border-radius: 8px;
+    border: 1px solid #eceaea;
+    margin-bottom: 16px;
+    display:flex;
+    height: 100px;
+    justify-content: space-between;
+    padding: 0 24px;
 `
 
-const GridImage = styled.div`
-    width: 300px;
-    height: 300px;
-    background-color: ${(props) => props.color};
-`
 const Container = styled.div`
     display: flex;
     align-items: center;
     min-height: 48px;
     align-content: center;
+    flex-direction: ${props=>props.dir || 'row'};
+    justify-content: center;
+    align-items: flex-start;
 `
 
 export default function MarketSizingList() {
     const { push, goBack } = useHistory()
     const [listItems, setlistItems] = React.useState([])
-    
+
     React.useEffect(() => {
         async function getData() {
             try {
                 const res = await fetch(
-                    `http://app.casesninja.com/json/final_market_sizing-1.json`,
+                    `http://app.casesninja.com/json/final_market_sizing-1.json?q=f`,
                     {}
                 )
                 const resp = await res.json()
@@ -68,19 +71,20 @@ export default function MarketSizingList() {
             </Header>
 
             <Grid>
-                {Object.entries(listItems).map(([key,item]) => (
+                {Object.entries(listItems).map(([key, item]) => (
                     <GridItem key={key}>
-                        <GridImage color="#cbffa0"/>
-                        <Container>
+                        <Container dir="column">
                             <Title level={5}>{item.Title}</Title>
+                            <Text >{item.Subtitle}</Text>
+
                         </Container>
-                        <Container>
+                        <Container dir="column">
                             <Button
                                 block
                                 danger
                                 onClick={() => handleClick(key)}
                             >
-                                Try {item.Title}
+                                Try
                             </Button>
                         </Container>
                     </GridItem>

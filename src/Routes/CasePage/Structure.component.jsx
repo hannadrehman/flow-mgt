@@ -46,6 +46,7 @@ const StructureMain = styled.div`
 `
 const StructureChild = styled.div`
     min-height: 48px;
+    width: 50%;
 `
 const RecommendedHeading = styled.div`
     min-height: 48px;
