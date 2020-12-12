@@ -42,7 +42,7 @@ const Container = styled.div`
 `
 
 export default function MarketSizingList() {
-    const { push, goBack } = useHistory()
+    const { push } = useHistory()
     const [listItems, setlistItems] = React.useState([])
 
     React.useEffect(() => {
@@ -64,10 +64,13 @@ export default function MarketSizingList() {
     function handleClick(id) {
         push(`/market-sizing/${id}`)
     }
+    function handleBack(){
+        window.location.assign('https://alpha.casesninja.com/')
+    }
     return (
         <Wrapper>
             <Header>
-                <PageHeader subTitle="Back to Home" onBack={goBack} />
+                <PageHeader subTitle="Back to Home" onBack={handleBack} />
             </Header>
 
             <Grid>

@@ -43,18 +43,21 @@ const Container = styled.div`
 `
 
 export default function HomePage() {
-    const { push, goBack } = useHistory()
+    const { push } = useHistory()
 
     const listItems = casesList
 
     function handleClick(id) {
         push(`/details/${id}`)
     }
+    function handleBack(){
+        window.location.assign('https://alpha.casesninja.com/')
+    }
 
     return (
         <Wrapper>
             <Header>
-                <PageHeader subTitle="Back to Home" onBack={goBack} />
+                <PageHeader subTitle="Back to Home" onBack={handleBack} />
             </Header>
 <br />
 <br />
