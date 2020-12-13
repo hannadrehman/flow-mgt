@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useParams } from 'react-router-dom'
 import { Typography } from 'antd'
 import * as utils from './utilities'
 
@@ -55,6 +56,8 @@ const RecommendedHeading = styled.div`
 `
 
 export default function Structure({ caseDetails }) {
+    const params = useParams();
+    console.log(params)
     const [recommended, setRecommended] = React.useState({
         answers: [],
         extraInfo: [],
@@ -63,7 +66,7 @@ export default function Structure({ caseDetails }) {
         async function getData() {
             try {
                 const res = await fetch(
-                    `http://app.casesninja.com/json/success-structure.json`,
+                    `http://app.casesninja.com/json/success-structure-${params.id}.json`,
                     {}
                 )
                 const resp = await res.json()
